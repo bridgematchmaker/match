@@ -1,0 +1,233 @@
+.member-profile input[type="text"],
+.member-profile textarea,
+.member-profile input[type="tel"]{
+    background: #ece6d4;
+    border: 1px solid #cbba85;
+    border-radius: 3px;
+    margin-bottom: 12px;
+    padding: .15rem .75rem;
+}
+.member-profile input[type="tel"]{
+    background: #d4d4d4;
+}
+span.required{
+    color: #e95000;
+    font-weight: 700;
+    margin-left: 3px;
+}
+.member-profile input[type="text"]:focus{
+    border:1px solid #e95000;
+    box-shadow: none;
+}
+
+.member-profile textarea:focus{
+    border:1px solid #e95000;
+	background: #ece6d4;
+    box-shadow: none;
+}
+
+.member-profile .form-group{
+    margin-bottom: 0.8rem;
+}
+.member-profile h2{
+    font-size: 24px;
+    color: #e95000;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 45px;
+}
+.member-profile h4{
+    font-size: 14px;
+    color: #222222;
+    font-weight: 700;
+}
+h3.title-lady-search{
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.member-profile select{
+    max-width: 195px;
+    width: 100%;
+    background: #ece6d4;
+    border: 1px solid #cbba85;
+    padding: .15rem .75rem;
+    height: auto!important;
+}
+p.message-profile-message {
+    font-size: 16px;
+    color: #222222;
+    font-weight: 600;
+    margin-bottom:25px;
+}
+.member-profile-form label{
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.member-profile .form-check{
+    padding-left: 0;
+}
+input[type=checkbox] { display:none; }
+input[type=checkbox] + label:before {
+    font-family: FontAwesome;
+    display: inline-block;
+}
+input[type=checkbox] + label:before {
+    content: "\f096";
+}
+input[type=checkbox] + label:before {
+    letter-spacing: 10px;
+    color: #cebe8c;
+    font-size: 20px;
+}
+input[type=checkbox]:checked + label:before {
+    content: "\f046";
+    color: #5f9a01;
+}
+.member-profile-form .search-for-lady{
+    border-top: 2px solid #f19766;
+    border-bottom: 2px solid #f19766;
+    padding: 20px 0;
+    margin-top: 25px;
+}
+.list-agree-disagree{
+    border-top: 2px solid #f19766;
+    border-bottom: 2px solid #f19766;
+    padding: 20px 0;
+}
+.skilled{
+    border-top: 2px solid #f19766;
+}
+.login-with-social-network{
+    margin-bottom: 35px;
+}
+.save-prifile input[type=submit]{
+    font-size: 20px;
+    color: #ffffff;
+    border:none;
+    border-radius: 3px;
+    padding: 0 30px;
+    cursor: pointer;
+    line-height: 2.1;
+    background: -moz-linear-gradient(270deg, rgba(255,137,0,1) 0%, rgba(234,82,0,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,137,0,1)), color-stop(100%, rgba(234,82,0,1)));
+    background: -webkit-linear-gradient(270deg, rgba(255,137,0,1) 0%, rgba(234,82,0,1) 100%);
+    background: -o-linear-gradient(270deg, rgba(255,137,0,1) 0%, rgba(234,82,0,1) 100%);
+    background: -ms-linear-gradient(270deg, rgba(255,137,0,1) 0%, rgba(234,82,0,1) 100%);
+    background: linear-gradient(180deg, rgba(255,137,0,1) 0%, rgba(234,82,0,1) 100%);
+    transition: background 0.2s ease-in-out;
+}
+.save-prifile input[type=submit]:hover{
+    background: -moz-linear-gradient(270deg, rgba(234,82,0,1) 0%, rgba(255,137,0,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(234,82,0,1)), color-stop(100%, rgba(255,137,0,1))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(270deg, rgba(234,82,0,1) 0%, rgba(255,137,0,1) 100%);
+    background: -o-linear-gradient(270deg, rgba(234,82,0,1) 0%, rgba(255,137,0,1) 100%);
+    background: -ms-linear-gradient(270deg, rgba(234,82,0,1) 0%, rgba(255,137,0,1) 100%);
+    background: linear-gradient(180deg, rgba(234,82,0,1) 0%, rgba(255,137,0,1) 100%);
+}
+.save-prifile .danger-alert{
+    font-size: 14px;
+    color: #ff0000;
+    font-weight: 600;
+    margin: 5px 0;
+}
+.login-with-social-network{
+    border-top: 2px solid #f19766;
+    border-bottom: 2px solid #f19766;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+.login-with-social-network .social-button-login{
+    margin-bottom: 15px;
+}
+.login-with-social-network .social-button-login button{
+    padding: 0;
+    line-height: 3;
+    border-radius: 3px;
+    font-size:12px;
+    font-weight: 700;
+}
+.login-with-social-network .social-button-login button .icon{
+    border-right: 1px solid #7575754d;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    line-height: 2;
+    float: left;
+}
+.login-with-social-network .social-button-login.twitter-button button{
+    background: #4fbae4;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+.login-with-social-network .social-button-login button {
+    max-width: 190px;
+    width: 100%;
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.5);
+    transition: box-shadow 0.3s ease-in-out;
+}
+.login-with-social-network .social-button-login button:hover{
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+}
+.login-with-social-network p{
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.login-with-social-network .social-button-login.facebook-button button{
+    background: #3b5a9b;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+.login-with-social-network .social-button-login.skype-button button{
+    background: #44bbff;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+.login-with-social-network .social-button-login.google-button-plus button{
+    background: #c2392a;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+.messenger-connected {
+    padding: 25px 0;
+}
+.messenger-connected .form-check{
+    display:inline-block;
+    margin-right: 25px;
+}
+.skilled{
+    padding-top: 20px;
+}
+.member-profile #lady-city{
+    width: 100%;
+    max-width: 100%;
+}
+.required-field{
+    color: #e95000;
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 3px;
+}
+.empty-field.field-bordered{
+    border: 1px solid #e95000!important;
+}
+.member-profile select.form-control:focus{
+    background: #ece6d4;
+    border: 1px solid #e95000;
+    box-shadow: none;
+}

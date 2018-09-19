@@ -1,0 +1,23 @@
+html body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+header{
+    background: #222222;
+    color:#cbba85;
+    padding: 18px 0;
+    border-bottom:5px solid #cbba85;
+	position: fixed;
+	width: 100%;
+}
+
+footer{
+    background: #222222;
+    color:#696969;
+    padding: 30px 0;
+    text-transform: uppercase;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+

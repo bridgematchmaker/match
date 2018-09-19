@@ -1,0 +1,193 @@
+.gallery-text-info{
+    font-size: 14px;
+    color: #696969;
+}
+.gallery-item-wrapper{
+    max-width: 220px;
+    border:1px solid #cbba85;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.gallery-item-wrapper .image-wrapper{
+    position: relative;
+}
+.gallery-item-wrapper .image-wrapper .count-matchmaker{
+    position: absolute;
+    bottom: 7px;
+    right: 4px;
+}
+.gallery-item-wrapper .image-wrapper .count-matchmaker span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -53%);
+}
+.gallery-item-wrapper .image-wrapper .count-matchmaker{
+    position: absolute;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+}
+.gallery-item-wrapper .image-wrapper .count-matchmaker i.fa{
+    font-size: 40px;
+    color: #e95000;
+}
+.button-area{
+    padding-bottom: 12px;
+    margin-bottom: 14px;
+}
+.button-area ul{
+    padding:0;
+    margin: 0;
+    justify-content: space-between;
+    display: flex;
+    align-items: center!important;
+}
+.button-area ul li{
+    display: inline-block;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
+.button-area ul li .icon{
+    color:#e95000;
+    font-size: 40px;
+    line-height: 1;
+}
+.button-area ul li p{
+    margin: 0;
+}
+.button-area ul li a{
+    font-size: 12px;
+    color:#e95000;
+    text-decoration: underline;
+}
+.button-area ul li:last-child .icon{
+    font-size: 42px;
+}
+.button-area ul li:nth-child(2) .icon{
+    font-size: 51px;
+    margin-top: -7px;
+    display: inline-block;
+}
+.button-area ul li:nth-child(1) p{
+    margin-top: 2px;
+}
+.gallery-item-wrapper .name-id .name{
+    font-size: 16px;
+    font-weight: 600;
+    color: #e95000;
+    text-decoration: underline;
+}
+.gallery-item-wrapper .name-id .id span{
+    color: #696969;
+}
+.gallery-item-wrapper .name-id .id{
+    font-size: 14px;
+    color: #222222;
+}
+.gallery-item-wrapper .name-id{
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+.gallery-item-wrapper .age-height-weight .title{
+    font-size: 12px;
+    font-weight: 600;
+    color: #222222;
+}
+.gallery-item-wrapper .age-height-weight .col-md-4:first-child{
+    padding-right:0;
+    border-right: 1px solid #cbba85;
+}
+.gallery-item-wrapper .age-height-weight .col-md-4:last-child{
+    padding-left:0;
+    border-left: 1px solid #cbba85;
+}
+.gallery-item-wrapper .age-height-weight .col-md-4:nth-child(2){
+    padding:0;
+}
+.gallery-item-wrapper .age-height-weight .value{
+    font-size: 13px;
+    color: #696969;
+}
+.gallery-item-wrapper .age-height-weight p{
+    margin-bottom: 0;
+}
+.gallery-item-wrapper .video-dating{
+    background: #3c86d8;
+}
+.gallery-item-wrapper .age-height-weight{
+    margin-bottom: 5px;
+}
+.gallery-item-wrapper .video-dating a{
+    font-size: 18px;
+    text-transform: uppercase;
+    color:#ffffff;
+    text-decoration: none!important;
+}
+.gallery-item-wrapper .video-dating a i.fa{
+    margin-right: 5px;
+}
+.gallery-item-wrapper .video-dating{
+    margin-bottom: 8px;
+}
+.gallery-item-wrapper .black-list{
+    background: #000000;
+}
+.gallery-item-wrapper .black-list a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+    display: block;
+}
+.gallery-item-wrapper .black-list a i.fa{
+    margin-right: 5px;
+}
+.page-title .count-gallery{
+    background: #e95000;
+    color: #ffffff;
+    padding: 0 10px;
+    border-radius: 5px;
+    line-height: 40px;
+    display: inline-block;
+    margin-left: 10px;
+}
+.page-title-count{
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #bfbfbf;
+}
+.page-title-count .count-gallery-data{
+    background: #bfbfbf;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin-right: 36px;
+    margin-left: 35px;
+}
+
+@media (max-width: 800px) {
+    .gallery-item-wrapper{
+        margin: 0 auto 40px auto;
+    }
+}
+@media (max-width: 820px) and (min-width: 760px) {
+	.gallery-item-wrapper .name-id .name,
+	.gallery-item-wrapper .name-id .id{
+		font-size:12px;
+	}
+	.container.age-height-weight .col-4{
+		padding:0 5px;
+	}
+	.button-area ul{
+		display:block;
+	}
+	.button-area ul li {
+		display: block;
+		margin-bottom:10px;
+	}
+	.gallery-item-wrapper .video-dating a{
+		font-size:14px;
+	}
+}

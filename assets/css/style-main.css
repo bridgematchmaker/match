@@ -1,0 +1,298 @@
+/* Init Fonts (start) */
+
+/* Init Fonts (end) */
+
+/* Custom Style Reset (start) */
+* {
+	outline: 0 !important;
+}
+
+table {
+	width: 100%;
+}
+
+/* Custom Style Reset (end) */
+
+.page {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	min-height: 100vh;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	color: #222222;
+	background: #fff;
+}
+a {
+	display: inline-block;
+	transition: all .3s;
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+ul {
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style: none;
+}
+.list-two-column {
+	column-count: 2;
+	column-gap: 30px;
+}
+
+h3 {
+	font-size: 24px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+h5 {
+	font-weight: 600;
+	font-size: 16px;
+}
+
+
+h3 + h5 {
+	margin-top: 20px;
+}
+h5 + p {
+	margin-top: 17px;
+}
+
+
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1440px;
+	}
+}
+
+.text-accent {
+	color: #e95000;
+}
+.text-spacing-25 {
+	letter-spacing: -.025em;
+}
+* + .list-marked {
+	margin-top: 15px;
+}
+.list-marked  + *{
+	margin-top: 15px;
+}
+.list-marked > li + li  {
+	margin-top: 8px;
+}
+.list-marked > li {
+	position: relative;
+	padding-left: 20px;
+}
+.list-marked > li:before {
+	position: absolute;
+	content: '';
+	left: 0;
+	top: 8px;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: #e95000;
+}
+
+
+	/* soc icon*/
+h5 +.soc-list {
+	margin-top: 20px;
+}
+.soc-list {
+	margin-left: -4px;
+	margin-right: -4px;
+}
+.soc-list > * {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0 4px;
+}
+.soc-list .icon-circle {
+	text-align: center;
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+	font-size: 20px;
+	border-radius: 50%;
+	background: #fff;
+	color: #58585a;
+	transition: all .3s;
+}
+.soc-list .icon-circle:hover {
+	background: #e95000;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/* Style left menu (start) */
+.menu-left {
+	background: #fBf9f3;
+}
+
+.aside-left {
+	margin-bottom: 4rem;
+}
+
+.menu-left h3 {
+	position: relative;
+	font-size: 14px;
+	padding: 0 15px;
+	line-height: 2.4;
+	color: #cbba85;
+	background: #222222;
+	margin-bottom: 0;
+}
+
+.menu-left h3 .icon-left {
+	font-size: 19px;
+	margin-right: 15px;
+	line-height: 1;
+}
+
+.menu-left h3 .icon-right {
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	line-height: 1;
+	transform: translateY(-50%);
+}
+
+.menu-left h3 .icon-right i {
+	color: #cbba85;
+}
+
+.menu-left ul {
+	padding: 0;
+}
+
+.menu-left ul li {
+	list-style: none;
+}
+
+.menu-left ul li {
+	list-style: none;
+	border-bottom: 1px solid #cbba85;
+}
+
+.menu-left ul li a {
+	font-size: 14px;
+	font-weight: 600;
+	display: block;
+	padding: 0 12px;
+	text-decoration: none;
+	line-height: 2.1;
+	color: #877c58;
+	transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
+}
+
+.menu-left ul li a:hover {
+	background: #cbba85;
+	color: #ffffff;
+}
+
+/* Style left menu (end) */
+
+/* Style footer menu (start) */
+
+
+/* Style footer menu (end) */
+
+/* header nav list*/
+.header-nav-list {
+	vertical-align: middle;
+	margin-bottom: 0;
+}
+.header-nav-list .list-inline-item + .list-inline-item {
+	margin-left: 25px;
+}
+
+.lang-box,
+.login-box {
+	text-align: center;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: -.05em;
+}
+.lang-box span {
+	margin-top: 5px;
+}
+
+.lang-box a,
+.login-box a {
+	display: inline-block;
+	color: #ffffff;
+	transition: all .3s;
+}
+
+.lang-box a:hover,
+.login-box a:hover {
+	text-decoration: none;
+	color: #e95000;
+}
+
+.icon-login {
+	fill: #cbba85;
+}
+
+/* Header style*/
+.header {
+	padding: 15px;
+	background: #222222;
+	color: #ffffff;
+	border-bottom: 3px solid #cbba85;;
+}
+
+.header-brand {
+	display: inline-block;
+}
+
+
+/* footer*/
+.footer {
+	padding: 35px 0;
+	background: #222222;
+}
+.footer h5 {
+	font-weight: 400;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+.site-copyright {
+	text-transform: uppercase;
+	color: #696969;
+	font-size: 12px;
+	font-weight: 600;
+}
+.footer-list {
+	font-size: 12px;
+	font-weight: 400;
+
+}
+.footer-list li {
+	margin-bottom: 8px;
+}
+.footer-list a {
+	color: #ffffff;
+}
+.footer-list a:hover {
+	color: #e95000;
+	text-decoration: none;
+}
+
+/* section main content*/
+.section-main-content {
+	padding: 35px 0  60px;
+	flex: 1;
+}
+@media (min-width: 992px) {
+	.section-main-content {
+		padding: 35px 0  100px;
+	}
+}

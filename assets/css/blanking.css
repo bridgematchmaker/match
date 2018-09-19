@@ -1,0 +1,132 @@
+.blanking-page{
+    font-family: 'Open Sans', sans-serif;
+    background: rgba(255,255,255, 0.5);
+    padding: 40px 60px;
+    border-radius: 20px;
+    margin: 0 40px;
+}
+.blanking-background{
+    background: url(../images/blanking.jpg) no-repeat center center;
+    padding: 45px 0;
+    background-size: 109%;
+    background-attachment: fixed!important;
+    background-position: 47% 90%!important;
+}
+.blanking-page ul{
+    margin-left: 0;
+    padding-left: 0;
+}
+.blanking-page ul li{
+    background: #ffffff;
+    list-style-type: none;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    justify-content: space-between;
+    align-items: center;
+    color: #777777;
+    font-size: 20px;
+    line-height: 1.2;
+}
+.blanking-page ul li span{
+    height: 82px;
+    background: #cbba85;
+    color: #ffffff;
+    max-width: 82px;
+    width: 100%;
+    align-self: center;
+    text-align: center;
+    font-size: 60px;
+    line-height: 82px;
+}
+.blanking-page ul li:nth-child(odd) span{
+     border-radius: 5px 0 0 5px;
+ }
+.blanking-page ul li:nth-child(even) span{
+    border-radius: 0 5px 5px 0;
+}
+.blanking-page ul li p{
+    padding:0 20px;
+    margin-bottom: 0;
+}
+.blanking-page ul li.last{
+    text-align: center;
+    font-size: 30px;
+}
+.blanking-page ul li.last p{
+    margin: 0 auto;
+}
+.blanking-page .registred{
+    color: #ffffff;
+    font-size: 14px;
+}
+.blanking-page .registred a{
+    color: #ffffff;
+    text-decoration: underline;
+    transition: color 0.2s ease-in-out;
+}
+.blanking-page .registred a:hover{
+    color: #eaeaea;
+}
+.blanking-page .button-register{
+    font-size: 17px;
+    background: #597af5;
+    text-transform: uppercase;
+    color: #ffffff;
+    max-width: 244px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    text-align: center;
+    margin-bottom: 15px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 15px;
+    height: 56px;
+    line-height: 1.2;
+    border: 2px solid #708df9;
+    -webkit-box-shadow: 0px 3px 0px 0px rgba(63,92,200,1);
+    -moz-box-shadow: 0px 3px 0px 0px rgba(63,92,200,1);
+    box-shadow: 0px 3px 0px 0px rgba(63,92,200,1);
+    transition: box-shadow 0.2s ease-in-out;
+}
+.blanking-page .button-register:hover{
+    box-shadow: 0px 2px 0px 0px rgba(63,92,200,1);
+}
+@media (max-width: 800px){
+    .blanking-background{
+        background-size: cover;
+    }
+    .blanking-page{
+        margin: 0;
+        padding: 20px 15px;
+    }
+    .blanking-page ul li{
+        font-size: 15px;
+    }
+    .blanking-page ul li span{
+        max-width: 60px;
+        font-size: 50px;
+    }
+    .blanking-page ul li p{
+        padding: 0px 15px;
+    }
+}
+@media (max-width: 340px){
+    .blanking-page ul li{
+        font-size: 13px;
+    }
+    .blanking-page ul li span {
+        max-width: 40px;
+        font-size: 40px;
+    }
+    .site-wrapper.blanking-background .container{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .blanking-page {
+        padding: 20px 10px;
+    }
+    .blanking-page ul li.last {
+        font-size: 22px;
+    }
+}

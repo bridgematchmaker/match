@@ -1,0 +1,123 @@
+.welcome {
+    color: #696969;
+    font-family: 'Open Sans:600i', 'Arial';
+    font-size: 30px;
+    line-height: 22px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    display: inline-block;
+}
+
+.activated_text p:nth-child(1) {
+    color: #e95000;
+    font-family: 'Open Sans', 'Arial';
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+.activated_text p:nth-child(3) {
+    color: #222222;
+    font-family: 'Open Sans:600', 'Arial';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+}
+.activated_text span {
+    color: #e95000;
+}
+.bridge_of_love {
+    padding-left: 0;
+}
+.bridge_of_love img {
+    margin: 0 0 5px 15px;
+}
+.bridge_of_love li, .bridge_of_love_match li {
+    color: #e95000;
+}
+.bridge_of_love span, .bridge_of_love_match span {
+    color: #313131;
+    font-family: 'Open Sans', 'Arial';
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+}
+.bridge_of_love_match {
+     padding-left: 0;
+}
+.bridge_of_love_match img {
+    margin: 10px 0 13px 25px
+}
+.inside {
+    background: url(../images/check_box2.png) no-repeat 100% 100%;
+    border: none!important;
+}
+
+#check1, #check2 {
+    margin-left: 50%!important;
+    margin-right: 50%!important;
+    display: none;
+}
+
+.radio-custom {
+    margin-left: 50%!important;
+    margin-right: 50%!important;
+    margin-bottom: 30px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    padding: 0!important;
+    background-image: url(../images/check_box1.png);
+    display: inline-block;
+}
+
+#check1:checked + span::before {
+    content:url(../images/check_box2.png);
+}
+#check2:checked + span::before  {
+    content:url(../images/check_box2.png);
+}
+.fotter_text {
+    color: #222222;
+    font-family: 'Open Sans:600', 'Arial';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+    
+}
+
+.button {
+     color: #fff;
+    font-family: 'Open Sans', 'Arial';
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 18px;
+    text-transform: uppercase;
+    background: linear-gradient(to top, #e95000, #ff8a00);
+    padding: 10px 40px;
+    border: 1px solid #e95000;
+    display: block;
+     margin: 0 auto;
+    text-align: center;
+}
+#choice {
+    color: #ff0000;
+    font-family: 'Open Sans', 'Arial';
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.button a {
+    text-decoration: none;
+    color: #fff;
+}
+.account_options a {
+    background-color: #cbba85!important;
+    color: #fff!important;
+}

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>BridgeMatchmaker</title>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<!--<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">-->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:600" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:600i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300i" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+</style>
+<script>
+    function disp(form) {
+        if (form.style.display == "none") {
+            form.style.display = "block";
+        } else {
+            form.style.display = "none";
+        }
+    }
+</script>
+</head>
+<body>
+
+<!--Menu-->
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container header">
+      <div class="navbar-header">
+       <a class="navbar-brand" href="#"><img src="BridgeMatchmaker_Site_Picture/LOGO.jpg" /></a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse menu">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#send_message" value="" onclick="disp(document.getElementById('send_message'))">Оставить заявку</a></li>
+          <li class="list"><a href="#">Новости</a></li>
+          <li class="list"><a href="#">Правила</a></li>
+          <li class="list"><a href="#">Контакты</a></li>
+          <!--<li class="list"><a href="#">Язык</a></li>-->
+          <li class="menu_list"><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </div>
+</div>
+
+
+<!--Header-->
+
+<div id="headerwrap">
+    <div class="container">
+        <div class="row centered banner_text">
+            <div class="col-lg-12">
+               <hr />
+                <h1><i>«Давайте признаем - не всем нужна «половинка».<br />
+Точнее, ее поиск не должен становиться целью всей жизни».</i></h1>
+           <hr />
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Form-->
+
+<div class="container form_container" id="send_message"  style="display: none;">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+           <h2>Хотите стать нашей участницей?</h2>
+           <span class="content_1_text_2">Все очень просто, расскажите нам немного о себе<br />
+и пришлите нам несколько ваших фото и мы обязательно рассмотрим вашу заявку.</span><br /><br />
+            
+        </div>
+    </div>
+    <div id="contentwrap_4"  class="form_form">
+        <div class="row">
+            <form action="order.php" method="post">
+                <label for="name" class="content_1_text_1">Заполните анкету</label>
+                <div class="col-lg-1 col-md-1 hidden-sm hidden-xs"></div>
+                <div class="form_1 col-lg-4 col-md-4 col-sm-4 col-xs-offset-1">
+                    <input type="text" id="name" name="name" placeholder="Имя" />
+                    <input type="email" id="email" name="email" placeholder="Ваша электронная почта" />
+                    <input type="text" id="phone" name="phone" placeholder="Телефон" />
+                    <input type="text" id="age" name="birthday" placeholder="Возраст" />
+                </div>
+                <div class="form_2 col-lg-4 col-md-4 col-sm-4 col-xs-offset-1">
+                    <input type="text" id="status" name="marital_status" placeholder="Семейное положение, дети" />
+                    <textarea id="message" name="message" placeholder="Каковы ваши намерения на нашем сайте?"></textarea>
+                </div>
+<!--
+                <div class="foto_upload"><br />
+                    <span>Загрузите несколько фото</span>
+                    <p>Пожелания к фотографиям:</p>
+                    <ul>
+                        <li><p>До 50М</p></li>
+                        <li><p>Хорошее качество</p></li>
+                        <li><p>Максимально 3 фото</p></li>
+                    </ul>
+                    <input type="file" class="" name="photo" multiple accept="image/*,image/jpeg">
+                </div>
+-->
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><button class="button_upload" type="submit">Отправить</button></div>
+            </form>
+        </div><br /><br />
+
+    </div>
+</div>
+
+
+
+
+
+<!--Content_1-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12 content_1">
+            <span class="content_1_text_1">БриджМатчмейкер</span><br />
+            <span class="content_1_text_2">Международная служба премиум класса<br />
+                для реальных знакомств и серьезных отношений.</span><br /><br />
+            <span class="content_1_text_3"><i>Предлагает вам помощь в поиске вашего избранника. Если Вы одиноки и устали от бесконечных свиданий, если на вашем пути попадаются мужчины которые оценивают только вашу внешность, не расстраивайтесь. Наша профессиональная команда психологов и матчмейкеров предложит квалифицированную консультацию и примет участие в выборе мужчины вашей мечты. Наш высокий профессионализм, конфиденциальность и  эффективность даст вам гарантию в поиске мужчины вашей мечты.</i></span>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 content_1_img">
+           <img class="content_1_img" src="BridgeMatchmaker_Site_Picture/Content_1.png" />
+        </div>
+    </div>
+</div>
+
+<!--Content_2-->
+
+<div id="contentwrap_2">
+    <div class="container">
+        <div class="row content_2_h2">
+            <h2>Что предлагает команда БриджМатчмейкер</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content_2"><img src="BridgeMatchmaker_Site_Picture/Content_2_img_1.png" />
+            <h3>Знакомства и общение</h3>
+            <p>Вы ищите уверенного и сильного мужчину, который готов к созданию семейных отношений? Бридж Матчмейкер помогает тебе знакомиться с такими мужчина по всему миру.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content_2"><img src="BridgeMatchmaker_Site_Picture/Content_2_img_2.png" />
+            <h3>Реальные встречи</h3>
+            <p>Тебе интересно узнать о другой культуре и и найти свою любовь. Тебе не понадобиться прилагать к этому никаких усилий. Пригласи мужчину из любой страны и  покажи ему свой город. А наша команда организует вашу встречу и поможет тебе подготовится к такому событию.
+</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content_2"><img src="BridgeMatchmaker_Site_Picture/Content_2_img_3.png" />
+            <h3>Помощь свахи</h3>
+            <p>Вы получите консультацию опытной свахи, которая лично поможет в  создании правильной анкеты, даст совет как вести себя с иностранными мужчинами и  будет участвовать в поиске, выборе , вашего избранника. Матчмеккер поможет вашей паре как на пути к созданию крепких отношений так и в период временных трудностей.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content_2_img_4"><img src="BridgeMatchmaker_Site_Picture/Content_2_img_4.png" />
+            <h3>Приятные сюрпризы</h3>
+            <p>Мы не хотим превратить ваш поиск в скучное занятие отнимающее массу времени. Мы поможем создать романтическую и уютную атмосферу во время вашего свидания и сделаем его незабываемым. Мы сделаем так, что это свидание окажется началом вашей love story. Вы также можете поучаствовать в различных конкурсах на нашем сайте и получить подарки в праздничные даты.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Content_3-->
+
+<div class="container">
+    <div class="row content_3_h2">
+        <h2>Мужчины на нашем сайте</h2>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content_3_text_1">
+        <span>Вы познакомитесь с разными мужчинами, разной веры, соц статуса, разных интересов и целей в жизни. Наши мужчины знают, что такое вежливость в общении с девушкой, для такого мужчины ты будешь королевой и он будет носить тебя на руках,  они любят делать приятные сюрпризы и готовы к серьезным отношениям. На сайте только верифицированные профили мужчин прошедшие провеку службами сайта.</span>
+        </div>
+    </div>
+</div>
+
+<!--Content_4-->
+
+<div id="contentwrap_4">
+    <div class="container">
+        <div class="row content_4_h2">
+            <h2>Сделай свой выбор</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 content_4_img_1">
+                <img src="BridgeMatchmaker_Site_Picture/Content_4_img_1.png" />
+            </div>
+            <div class="col-lg-7 col-md-8 col-sm-10 col-xs-10 content_4_text_1">
+                <span><b>Майкл</b><br /><i>
+                “У меня свой бизнес. Мне будет приятно баловать свою девушку и каждый день дарить ей цветы”</i></span>
+            </div>
+            <div class="col-lg-4 col-md-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-3"></div>
+            <div class="col-lg-7 col-md-8 col-sm-10 col-xs-10 content_4_text_2">
+                <span><b>Кристиан</b><br /><i>
+                “Мне нравиться работа менеджера в IT компании. Мой график позволяет уделять достаточно времени своей женщине”</i></span>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 content_4_img_2">
+                <img src="BridgeMatchmaker_Site_Picture/Content_4_img_2.png" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 content_4_img_1">
+                <img src="BridgeMatchmaker_Site_Picture/Content_4_img_3.png" />
+            </div>
+            <div class="col-lg-7 col-md-8 col-sm-10 col-xs-10 content_4_text_1">
+                <span><b>Альберт</b><br /><i>
+                “Моя работа связана с деревом. Моя девушка не будет переживать что в доме что-то поломалось”</i></span>
+            </div>
+            <div class="col-lg-4 col-md-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-3"></div>
+            <div class="col-lg-7 col-md-8 col-sm-10 col-xs-10 content_4_text_2">
+                <span><b>Джонатан</b><br /><i>
+                “Я уже вышел на пенсию, но можешь не переживать. Наше государство заботится о нас и мне не нужно работать чтобы обеспечить тебя”
+</i></span>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 content_4_img_2">
+                <img src="BridgeMatchmaker_Site_Picture/Content_4_img_4.png" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Content_5-->
+
+<div class="container">
+    <div class="row content_5_h2">
+        <h2>Чего вы не найдете на Бридж Матчмейкер:</h2>
+    </div>
+</div>
+<div class="container content_5_background">
+    <div class="row content_5">
+        <div class="col-lg-1 col-md-1"></div>
+        <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><img src="BridgeMatchmaker_Site_Picture/Content_5_img_1.png" /></div>
+        <div class="col-lg-9 col-md-9 col-sm-10 col-xs-10 content_5">
+            <p>Мужчин, которые настроены только на флирт и которые
+ищут развлечения на одну ночь</p>
+        </div>
+        <div class="col-lg-1 col-md-1"></div>
+    </div>
+    <div class="row content_5">
+        <div class="col-lg-1 col-md-1"></div>
+        <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><img src="BridgeMatchmaker_Site_Picture/Content_5_img_2.png" /></div>
+        <div class="col-lg-9 col-md-9 col-sm-10 col-xs-10 content_5">
+            <p>Мужчин, которые не знают как общаться и ухаживать за с девушкой</p>
+        </div>
+        <div class="col-lg-1 col-md-1"></div>
+    </div>
+    <div class="row content_5">
+        <div class="col-lg-1 col-md-1"></div>
+        <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><img src="BridgeMatchmaker_Site_Picture/Content_5_img_3.png" /></div>
+        <div class="col-lg-9 col-md-9 col-sm-10 col-xs-10 content_5">
+            <p>Мужчин, которые ищут эскорт услуги</p>
+        </div>
+        <div class="col-lg-1 col-md-1"></div>
+    </div>
+    <div class="row content_5">
+        <div class="col-lg-1 col-md-1"></div>
+        <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><img src="BridgeMatchmaker_Site_Picture/Content_5_img_4.png" /></div>
+        <div class="col-lg-9 col-md-9 col-sm-10 col-xs-10 content_5">
+            <p>Мужчин, которые используют фейковые анкеты </p>
+        </div>
+        <div class="col-lg-1 col-md-1"></div>
+    </div>
+    <div class="row content_5">
+        <div class="col-lg-1 col-md-1"></div>
+        <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><img src="BridgeMatchmaker_Site_Picture/Content_5_img_5.png" /></div>
+        <div class="col-lg-9 col-md-9 col-sm-10 col-xs-10">
+            <p>Мужчин, которые ищут домработницу</p>
+        </div>
+        <div class="col-lg-1 col-md-1"></div>
+    </div>
+</div>
+<div style="height: 50px;"></div>
+
+<!--Content_6-->
+
+<div id="contentwrap_6">
+    <div class="container">
+        <div class="row content_6_h2">
+            <h2>Галерея наших мужчин</h2>
+            <button type="button" class="button center-block"><a href="#">Больше мужчин</a></button>
+        </div>
+    </div>
+</div>
+<div style="height: 50px;"></div>
+
+<!--Content_7-->
+
+<div class="container">
+    <div class="row content_7_h2">
+        <h2>Как связаться с нами:</h2>
+    </div>
+</div>
+<div class="container content_7_background">
+   <div class="row content_7">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content_5">
+            <p>Вы можете связаться с нами любым удобным для вас способом.</p>
+        </div>
+    </div>
+    <div class="row content_5">
+        <div class="col-lg-3 col-md-1"></div>
+        <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><img src="BridgeMatchmaker_Site_Picture/Content_7_img_1.png" /></div>
+        <div class="col-lg-7 col-md-9 col-sm-10 col-xs-10 content_5">
+            <p>Отправить заявку по электронной почте</p>
+        </div>
+        <div class="col-lg-2 col-md-1"></div>
+    </div>
+    <div class="row content_5">
+        <div class="col-lg-3 col-md-1"></div>
+        <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><img src="BridgeMatchmaker_Site_Picture/Content_7_img_2.png" /></div>
+        <div class="col-lg-7 col-md-9 col-sm-10 col-xs-10 content_5">
+            <p>Позвоните нам по телефону</p>
+        </div>
+        <div class="col-lg-2 col-md-1"></div>
+    </div>
+    <div class="row content_5">
+        <div class="col-lg-3 col-md-1"></div>
+        <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><img src="BridgeMatchmaker_Site_Picture/Content_7_img_3.png" /></div>
+        <div class="col-lg-7 col-md-9 col-sm-10 col-xs-10 content_5">
+            <p>Напишите нам сообщение в  наших соцсетях.</p>
+        </div>
+        <div class="col-lg-2 col-md-1"></div>
+    </div>
+</div>
+<div style="height: 50px;"></div>
+
+<!--Footer-->
+
+<div id="footerwrap">
+    <div class="container">
+        <div class="row">
+           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <ul class="footer_menu">
+                  <li><a href="#">О нас</a></li>
+                  <li><a href="#">Новости</a></li>
+                  <li><a href="#">Правила</a></li>
+                  <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <p class="footer_text_1">Подписывайтесь на нас:</p>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer_social">
+                <a href="#"><img src="BridgeMatchmaker_Site_Picture/facebook.png" alt=""></a>
+                <a href="#"><img src="BridgeMatchmaker_Site_Picture/twitter.png" alt=""></a>
+                <a href="#"><img src="BridgeMatchmaker_Site_Picture/instagram.png" alt=""></a>
+                <a href="#"><img src="BridgeMatchmaker_Site_Picture/google-plus.png" alt=""></a>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <p class="footer_right">2018 All rigts reserved.</p>
+            </div>
+      </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,335 @@
+/* Style content member page (start) */
+.main-content{
+    margin-top: 30px;
+    margin-bottom:60px;
+}
+.main-content a{
+    font-size: 14px;
+    font-weight: 600;
+    color: #e95000;
+    text-decoration: none;
+    border-bottom: 1px solid #e95000;
+}
+.main-content a:hover{
+    color: #e95000;
+    text-decoration: none;
+}
+.welcome-wrapper{
+    margin-bottom: 30px;
+}
+.welcome-wrapper .welcome-text h2{
+    font-size: 30px;
+    margin-bottom: 0;
+}
+.welcome-wrapper .welcome-text{
+    color:#696969;
+}
+.member-info-wrapper .member-main-foto{
+    margin-bottom: 30px;
+}
+.member-info-wrapper{
+    margin-bottom: 45px;
+}
+.member-info-wrapper .member-info{
+    margin-bottom: 35px;
+}
+.member-info-wrapper .member-info > div{
+    margin-bottom: 3px;
+    font-weight: 600;
+}
+.member-info-wrapper .member-info > div i.fa{
+    font-size: 20px;
+    margin-right: 5px;
+}
+.member-info-wrapper .member-info span{
+    color: #696969;
+    font-size: 14px;
+    font-weight: 600;
+}
+.member-info-wrapper .member-info .member-gallery{
+    margin-bottom:10px;
+}
+.member-info-wrapper .member-info .member-full-profile{
+    margin-bottom:25px;
+}
+.member-activity table tr td:first-child{
+    text-align: right;
+}
+.member-activity table tr.member-servises td:first-child{
+    vertical-align: top;
+    padding-top: 3px;
+}
+.member-info-wrapper .member-servises span,
+.member-info-wrapper .member-status span,
+.member-info-wrapper .member-tariff-plan span{
+    font-size:14px;
+    font-weight: 600;
+    color: #696969;
+    margin-right: 25px;
+}
+.member-info-wrapper .member-status td{
+    line-height: 1.8;
+}
+.member-info-wrapper .available-services{
+    margin-top: 45px;
+}
+.member-info-wrapper .available-services i.fa-info-circle{
+    font-size: 21px;
+    color:#e95000;
+    margin-bottom: 20px;
+}
+.member-info-wrapper .available-services table.table-services{
+    font-size: 14px;
+    font-weight: 600;
+}
+.member-info-wrapper .personal-matchmaker{
+    position: relative;
+    margin-top: 40px;
+    text-align: right;
+    background: rgb(243,235,211);
+    background: linear-gradient(180deg, rgba(243,235,211,1) 0%, rgba(255,255,255,1) 100%);
+    border-radius: 5px;
+    border: 1px solid #ccbc88;
+}
+.personal-matchmaker-text{
+    position: absolute;
+    text-align: left;
+    padding: 10px 15px;
+}
+.personal-matchmaker-text h3{
+    color: #e95000;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+.personal-matchmaker-text .phone-matchmaker{
+    color: #0285bb;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+.personal-matchmaker-text .phone-matchmaker i.fa{
+    background: #0285bb;
+    color:#ffffff;
+    margin-right: 5px;
+    padding: 3px 5px;
+    border-radius: 50%;
+    font-size: 17px;
+}
+.personal-matchmaker-text .name-matchmaker{
+    color: #222222;
+    font-size: 24px;
+    font-weight: 600;
+}
+.personal-matchmaker-text .work-our-matchmaker .title{
+    color: #696969;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+.personal-matchmaker-text .work-our-matchmaker .hour{
+    font-size: 18px;
+    font-weight: 600;
+    color: #222222;
+}
+.member-info-wrapper .available-services table.table-services tr td{
+    padding: 4px 12px;
+    line-height: 1.2;
+}
+.member-info-wrapper .available-services table.table-services tr td .read-more{
+    display: inline-block;
+    font-size:12px;
+    font-weight: 600;
+    color: #ffffff;
+    border-color: #ffffff;
+    margin-bottom: 2px;
+}
+.member-info-wrapper .available-services table.table-services tr:nth-child(even) td .read-more{
+    color: #877c58;
+    border-color: #877c58;
+}
+.member-info-wrapper .available-services table.table-services tr td:first-child{
+    width: 38%;
+}
+.member-info-wrapper .available-services table.table-services tr td:last-child{
+    width: 38%;
+}
+.member-info-wrapper .available-services .purchse-more{
+    float: right;
+    font-size: 12px;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    padding: 0 6px;
+    background: #e95000;
+    margin-top: 10px;
+}
+.member-info-wrapper .available-services:after{
+    content: '';
+    display: block;
+    clear: none;
+}
+.member-info-wrapper .available-services .table-services-wrapper{
+    border-radius: 5px;
+    border:1px solid  #cbba85;
+    display: table;
+    width: 100%;
+}
+.member-info-wrapper .available-services table.table-services tr:nth-child(odd){
+    background: #cbba85;
+    color: #ffffff;
+}
+.member-info-wrapper .available-services table.table-services tr:nth-child(even){
+    color: #877c58;
+}
+.member-info-wrapper .available-services h3{
+    font-size: 18px;
+    font-weight: 600;
+    color: #222222;
+}
+.member-info-wrapper .member-status span.status,
+.member-info-wrapper .member-tariff-plan span.tariff-plan{
+    font-size: 18px;
+    font-weight: 600;
+    color: #35a100;
+}
+.member-info-wrapper .member-status span.tariff-plan span{
+    font-size:14px;
+    font-weight: 600;
+    color: #696969;
+}
+.member-info-wrapper .member-servises{
+    margin-bottom: 12px;
+}
+.member-info-wrapper .member-servises div.services{
+    display: inline-block;
+    vertical-align: top;
+    font-size:18px;
+    font-weight: 600;
+    color: #222222;
+}
+.member-lady-like h3{
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 20px;
+}
+.lady-carousel .item .image-wrapper{
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid #cbba85;
+    overflow: hidden;
+    width: 220px;
+    margin: 0 auto;
+}
+.lady-carousel .item .button-like-wrapper{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.lady-carousel .item .overlay .message-like,
+.lady-carousel .item .overlay .message-unlike{
+    font-size: 14px;
+    background: #e95000;
+    bottom: -65px;
+    line-height: 1.2;
+    color: #ffffff;
+    position: absolute;
+    padding: 15px;
+    transition: bottom 0.2s ease-in-out;
+}
+.lady-carousel .item .overlay .message-like.show,
+.lady-carousel .item .overlay .message-unlike.show{
+    bottom: 0;
+}
+.lady-carousel .item .button-like-wrapper .like-lady a,
+.lady-carousel .item .button-like-wrapper .unlike-lady a{
+    background: #e95000;
+    color: #ffffff;
+    font-size: 28px;
+    border:none;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+}
+.lady-carousel .item .button-like-wrapper .like-lady a{
+    margin-right: 40px;
+}
+.lady-carousel .item .button-like-wrapper .like-lady a i.fa,
+.lady-carousel .item .button-like-wrapper .unlike-lady a  i.fa{
+    display: inline-block;
+    vertical-align: text-top;
+    display: inline-block;
+    vertical-align: text-top;
+    line-height: 1.2;
+}
+.lady-carousel .item .overlay{
+    position: absolute;
+    top: 0;
+    width:100%;
+    height: 100%;
+    background: rgba(0,0,0, 0.5);
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+}
+.lady-carousel .item:hover .overlay{
+    opacity: 1;
+}
+.member-lady-like .owl-nav{
+    position: absolute;
+    top: 40%;
+    z-index: 1;
+    width: 104%;
+    left: -2%;
+    margin-top: 0!important;
+    font-size: 11px;
+    transform: translateY(-50%);
+    height: 0;
+}
+.member-lady-like .owl-nav button{
+    background: #e95000!important;
+    color:#ffffff!important;
+    width:18px;
+    height: 18px;
+    border-radius: 50%!important;
+}
+.member-lady-like .owl-nav button.owl-prev{
+    float: left;
+}
+.member-lady-like .owl-nav button.owl-next{
+    float: right;
+}
+.member-lady-like .owl-nav button.owl-next .fa-chevron-right{
+    margin-left: 2px;
+}
+.member-lady-like .owl-nav button.owl-next .fa-chevron-left{
+    margin-right: 2px;
+}
+.member-lady-like .owl-theme .owl-nav .disabled{
+    opacity: 1;
+}
+.member-lady-like .lady-name{
+    font-size: 16px;
+    font-weight: 600;
+}
+.member-lady-like .id,
+.member-lady-like .id-number{
+    font-size: 14px;
+    color:#696969;
+    font-weight: 600;
+}
+.member-lady-like .id-number{
+    color: #222222;
+}
+    /*Mobile style (start) */
+@media (max-width: 800px) {
+    .justify-content-end.site-usage-rules{
+        justify-content: flex-start!important;
+        margin-top: 10px;
+    }
+}
+    /*Mobile style (end) */
+
+/* Style content member page (end) */

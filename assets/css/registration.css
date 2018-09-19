@@ -1,0 +1,233 @@
+.member-registration-page{
+    margin: 2.2rem 0;
+}
+.member-registration-page input[type="text"],
+.member-registration-page input[type="tel"],
+.member-registration-page input[type="password"],
+.member-registration-page input[type="email"],
+.member-registration-page textarea,
+.select2-selection.select2-selection--single,
+.select2-selection.select2-selection--multiple{
+    background: #ece6d4;
+    border: 1px solid #cbba85;
+    border-radius: 3px;
+    padding: .15rem .75rem;
+    transition: border-color .15s ease-in-out;
+    height: 32px;
+    color: #313131;
+    font-size: 14px;
+}
+.member-registration-page .left input,
+.member-registration-page .left select{
+    max-width: 200px;
+}
+.select2-results__options li,
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+    background: #fbf9f3;
+    font-size: 14px;
+    border-bottom: 1px solid #cebd89;
+    transition: background 0.3s ease-in-out;
+    color:#313131!important;
+    height: 32px;
+}
+.select2-dropdown{
+    border-left: 1px solid #cebd89;
+    border-right: 1px solid #cebd89;
+    border-bottom: none;
+}
+.select2-results__options li:hover{
+    background:#ece6d4!important;
+    color:#313131!important;
+}
+.member-registration-page textarea{
+    width: 100%;
+    height: auto;
+}
+.member-registration-page input[type="text"]:focus,
+.member-registration-page select:focus,
+.member-registration-page textarea:focus,
+.member-registration-page input[type="password"]:focus,
+.member-registration-page input[type="email"]:focus,
+.member-registration-page input[type="tel"]:focus,
+.select2-container--open .select2-selection.select2-selection--single,
+.select2-container--open .select2-selection.select2-selection--multiple,
+.select2-container--default.select2-container--focus .select2-selection--multiple{
+    border:1px solid #e95000;
+    box-shadow: none;
+    background: #fbf9f3;
+}
+.member-registration-page label {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.member-registration-page select{
+    background: #ece6d4;
+    border: 1px solid #cbba85;
+    padding: .15rem .75rem;
+    height: auto!important;
+}
+.photo-avarat{
+    border-top: 2px solid #F19766;
+    border-bottom: 2px solid #F19766;
+    padding: 30px 0;
+    margin-bottom: 22px;
+}
+.email-pas-tel{
+    border-top: 2px solid #F19766;
+    padding: 15px 0;
+    margin-top: 15px;
+}
+span.required{
+    color: #e95000;
+    font-weight: 700;
+    margin-left: 3px;
+}
+.member-registration-page h2{
+    font-size: 24px;
+    color: #e95000;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+p.message-registration {
+    font-size: 16px;
+    color: #222222;
+    font-weight: 600;
+    margin-bottom:15px;
+    line-height: 1.2;
+}
+h3.page-title.title-registration{
+    font-size: 16px;
+    color: #e95000;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.member-register-form{
+    margin-top: 35px;
+}
+.member-registration-page .license-agreement label{
+    color: #222222;
+    font-weight: 600;
+}
+.member-registration-page  .form-check {
+    padding-left: 0;
+}
+input[type=checkbox] + label:before {
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f096";
+    letter-spacing: 5px;
+    color: #cebe8c;
+    font-size: 28px;
+    margin-right: 15px;
+}
+input[type=checkbox]:checked + label:before {
+    content: "\f046";
+    color: #5f9a01;
+}
+input[type=checkbox] {
+    display: none;
+}
+.form-group.password p{
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 4px;
+}
+.photo-avarat h4{
+    font-size: 18px;
+    font-weight: 700;
+    color: #e95000;
+    margin-bottom: 15px;
+}
+.save-registration input[type=submit] {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    padding: 0 30px;
+    cursor: pointer;
+    line-height: 2.1;
+    background: -moz-linear-gradient(270deg, rgba(255,137,0,1) 0%, rgba(234,82,0,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,137,0,1)), color-stop(100%, rgba(234,82,0,1)));
+    background: -webkit-linear-gradient(270deg, rgba(255,137,0,1) 0%, rgba(234,82,0,1) 100%);
+    background: -o-linear-gradient(270deg, rgba(255,137,0,1) 0%, rgba(234,82,0,1) 100%);
+    background: -ms-linear-gradient(270deg, rgba(255,137,0,1) 0%, rgba(234,82,0,1) 100%);
+    background: linear-gradient(180deg, rgba(255,137,0,1) 0%, rgba(234,82,0,1) 100%);
+    transition: background 0.2s ease-in-out;
+}
+
+.save-registration input[type=submit]:hover {
+    background: -moz-linear-gradient(270deg, rgba(234,82,0,1) 0%, rgba(255,137,0,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(234,82,0,1)), color-stop(100%, rgba(255,137,0,1)));
+    background: -webkit-linear-gradient(270deg, rgba(234,82,0,1) 0%, rgba(255,137,0,1) 100%);
+    background: -o-linear-gradient(270deg, rgba(234,82,0,1) 0%, rgba(255,137,0,1) 100%);
+    background: -ms-linear-gradient(270deg, rgba(234,82,0,1) 0%, rgba(255,137,0,1) 100%);
+    background: linear-gradient(180deg, rgba(234,82,0,1) 0%, rgba(255,137,0,1) 100%);
+}
+.form-group {
+    position: relative;
+}
+.left .form-group {
+    max-width: 200px;
+}
+.required-field {
+    color: #e95000;
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 3px;
+}
+.save-registration .danger-alert {
+    font-size: 14px;
+    color: #ff0000;
+    font-weight: 600;
+    margin: 5px 0;
+}
+.message-upload{
+    font-size: 14px;
+    font-weight: 600;
+    color: #222222;
+    margin-bottom: 0;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    margin-left: -7px;
+    margin-top: 1px;
+}
+b.presentation{
+    border-color: #888 transparent transparent transparent;
+    border-style: solid;
+    border-width: 5px 4px 0 4px;
+    height: 0;
+    right: 10px;
+    margin-left: 7px;
+    margin-top: -2px;
+    position: absolute;
+    bottom: 26%;
+    width: 0;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #fbf9f3;
+    border: 1px solid #cbba85;
+    border-radius: 4px;
+    cursor: default;
+    float: left;
+    margin-right: 4px;
+    margin-top: 1px;
+    padding: 0 5px;
+    color:#313131;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove{
+    color: #e95000;
+}
+@media  (max-width: 800px) {
+    .left .form-group,
+    .member-registration-page .left input, .member-registration-page .left select{
+        max-width: 100%;
+    }
+}

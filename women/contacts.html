@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>BridgeMatchmaker</title>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<!--<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">-->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:600" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:600i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300i" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="style_contacts.css">
+<style>
+</style>
+<script>
+    function disp(form) {
+        if (form.style.display == "none") {
+            form.style.display = "block";
+        } else {
+            form.style.display = "none";
+        }
+    }
+</script>
+</head>
+<body>
+
+<!--Menu-->
+
+<div class="navbar navbar-inverse navbar-fixed-top" style="border-bottom: 1px solid #e3eeff">
+    <div class="container header">
+      <div class="navbar-header">
+       <a class="navbar-brand" href="index.html"><img src="BridgeMatchmaker_Site_Picture/LOGO.jpg" /></a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse menu">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#send_message" value="" onclick="disp(document.getElementById('send_message'))">Оставить заявку</a></li>
+          <li class="list"><a href="#">Новости</a></li>
+          <li class="list"><a href="pravila.html">Правила</a></li>
+          <li class="list"><a href="contacts.html">Контакты</a></li>
+          <!--<li class="list"><a href="#">Язык</a></li>-->
+          <li class="menu_list"><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </div>
+</div>
+
+
+<!--Header-->
+
+
+<!--Form-->
+
+<div class="container form_container" id="send_message"  style="display: none;">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+           <h2>Хотите стать нашей участницей?</h2>
+           <span class="content_1_text_2">Все очень просто, расскажите нам немного о себе<br />
+и пришлите нам несколько ваших фото и мы обязательно рассмотрим вашу заявку.</span><br /><br />
+            
+        </div>
+    </div>
+    <div id="contentwrap_4"  class="form_form">
+        <div class="row">
+            <form action="order.php" method="post">
+                <label for="name" class="content_1_text_1">Заполните анкету</label>
+                <div class="col-lg-1 col-md-1 hidden-sm hidden-xs"></div>
+                <div class="form_1 col-lg-4 col-md-4 col-sm-4 col-xs-offset-1">
+                    <input type="text" id="name" name="name" placeholder="Имя" />
+                    <input type="email" id="email" name="email" placeholder="Ваша электронная почта" />
+                    <input type="text" id="phone" name="phone" placeholder="Телефон" />
+                    <input type="text" id="age" name="birthday" placeholder="Возраст" />
+                </div>
+                <div class="form_2 col-lg-4 col-md-4 col-sm-4 col-xs-offset-1">
+                    <input type="text" id="status" name="marital_status" placeholder="Семейное положение, дети" />
+                    <textarea id="message" name="message" placeholder="Каковы ваши намерения на нашем сайте?"></textarea>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><button class="button_upload" type="submit">Отправить</button></div>
+            </form>
+        </div><br /><br />
+
+    </div>
+</div>
+
+<!--breadcrumb-->
+
+<div class="container" id="breadcrumb">
+    <div class="row">
+<!--        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>-->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <ol class="breadcrumb">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+              <li><a href="index.html">Главная</a></li>
+			  <span class="glyphicon glyphicon-chevron-right"></span>
+              <li><a href="contacts.html">Контакты</a></li>
+<!--
+			  <span class="glyphicon glyphicon-chevron-right"></span>
+              <li>Статья</li>
+-->
+            </ol>
+        </div>
+    </div>
+</div>
+
+<!--menu_left-->
+
+<div class="container" id="container_1">
+    <div class="row">
+<!--
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 nav-menu_left">
+            <ul class="nav nav-tabs nav-stacked">
+                <li class="active_li"><a href="#">Знакомства и общение</a></li>
+                <li><a href="#">Реальные встречи</a></li>
+                <li><a href="#">Помощь свахи</a></li>
+                <li><a href="#">Приятные сюрприцы</a></li>
+                <li><a href="#">Счастливые истории</a></li>
+                <li><a href="#">Вопросы</a></li>
+            </ul>
+        </div>
+-->
+        
+        <!--s_1_content_1-->
+       <!-- Form_отправка_сообщений-->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="s_1_content_1">
+                <p>Телефон : &nbsp;<i>+38&nbsp;(066)&nbsp;894-58-52</i></p>
+                <p>E-mail : &nbsp;<i><a href="mailto:alexandra.berezyanskaya@bridgematchmaker.com">alexandra.berezyanskaya@bridgematchmaker.com</a></i></p>
+                <p>Skype: &nbsp;<i>matchmakerbol</i></p>
+                <p>Facebook : &nbsp;<i><a href="https://www.facebook.com/173522496680785/" target="_blank">https://www.facebook.com/173522496680785/</a></i></p><br />
+                <form action="contact_us.php" method="post">
+               <small style="padding-left: 10px;">E-Mail</small>
+                <p>
+                <input type="text" name="email" id="author" value="" size="40" />
+                </p>
+                <small style="padding-left: 10px;"> Сообщение</small>
+                <p><textarea name="question" id="comment" cols="68" rows="8"> </textarea>
+                </p>
+                <p><input name="submit" type="submit" id="submit" value="Отправить" />
+                </p>
+                <div class="col-md-12">
+                                    <div class="form-group">
+                                       
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+            </form><br />
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!--Footer-->
+
+<div id="footerwrap">
+    <div class="container">
+        <div class="row">
+           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <ul class="footer_menu">
+                  <li><a href="#">О нас</a></li>
+                  <li><a href="#">Новости</a></li>
+                  <li><a href="#">Правила</a></li>
+                  <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <p class="footer_text_1">Подписывайтесь на нас:</p>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer_social">
+                <a href="#"><img src="BridgeMatchmaker_Site_Picture/facebook.png" alt=""></a>
+                <a href="#"><img src="BridgeMatchmaker_Site_Picture/twitter.png" alt=""></a>
+                <a href="#"><img src="BridgeMatchmaker_Site_Picture/instagram.png" alt=""></a>
+                <a href="#"><img src="BridgeMatchmaker_Site_Picture/google-plus.png" alt=""></a>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <p class="footer_right">2018 All rigts reserved.</p>
+            </div>
+      </div>
+    </div>
+</div>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>
