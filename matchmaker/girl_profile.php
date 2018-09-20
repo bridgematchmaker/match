@@ -11,6 +11,9 @@ while($row_match = mysql_fetch_array($requirest_match)) { $status_match = $row_m
 if($status_match == "2") { echo("<script>alert('Аккаунт заблокирован');</script><script>javascript:window.location='index.php?logout'</script>");}
 //////////////////////////////////////////////////////////////////////////////////////
 $girl_id = $_GET['girl_id'];
+/////////////Фильтрация///////////////////
+$girl_id = htmlspecialchars($girl_id);
+$girl_id = mysql_escape_string($girl_id);
 
 $zapros = "SELECT * FROM girls WHERE girl_id='".$girl_id."'";
 
