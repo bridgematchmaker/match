@@ -76,6 +76,10 @@ switch ($msg_id)
 		case 6:
 			$msg = "You can not send letters, because you are not assigned a personal machmaker."; // Введите сообщение
 		break;
+
+		case 7:
+			$msg = "Your message was successfully sent"; // Введите сообщение
+		break;
 	}
 
 ?>

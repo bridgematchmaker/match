@@ -77,7 +77,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="./contact_us.php">
 									Contact Us
 								</a>
 							</li>
