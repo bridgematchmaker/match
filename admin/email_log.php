@@ -83,7 +83,7 @@ include "menu.php";
 		<img src="./img/next.png" class="next"/> 
 		<img src="./img/last.png" class="last"/> 
 		<select class="pagesize"> 
-			<option selected="selected"  value="10">50</option> 
+			<option selected="selected"  value="50">50</option> 
 			<option value="100">100</option> 
 			<option value="200">200</option> 
 		</select> 

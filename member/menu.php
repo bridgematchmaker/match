@@ -81,7 +81,7 @@
                             <li class="menu-item"><a href="./temp_msg.php">Success Stories</a></li>
                             <li class="menu-item"><a href="./temp_msg.php">Beauty Contents</a></li>
                             <li class="menu-item"><a href="./temp_msg.php">Dating Tips</a></li>
-                            <li class="menu-item"><a href="./temp_msg.php">Help & FAQ</a></li>
+                            <li class="menu-item"><a href="../faq.php">Help & FAQ</a></li>
                         </ul>
                     </div>
                 </div>

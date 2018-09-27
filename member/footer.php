@@ -28,12 +28,12 @@
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="../how_it_works.php">
 									How it Works
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="../faq.php">
 									FAQ
 								</a>
 							</li>

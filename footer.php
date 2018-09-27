@@ -28,12 +28,12 @@
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="./how_it_works.php">
 									How it Works
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="./faq.php">
 									FAQ
 								</a>
 							</li>
@@ -77,7 +77,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="./contact_us.php">
 									Contact Us
 								</a>
 							</li>
