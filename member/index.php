@@ -27,7 +27,6 @@ $page_menu_name = "Home";
         <link href="assets/css/owl.carousel.min.css" rel="stylesheet" type="text/css">
         <!-- Favicon -->
         <link rel="icon" href="" type="image/png" />
-
     </head>
 
 <body>
@@ -124,7 +123,9 @@ require "./header.php";
 																		<div class="title">Working hours</div>
 																		<div class="hour">'.$time_match.'</div>
 																	</div>
-																	<a href="./personal_matchmaker.php" class="">More information</a>
+                                                                   
+                                                                    <a href="./personal_matchmaker.php" class="button-matchmaker-index">More information</a>
+                                                                    <a href="./chat_matchmaker.php" class="button-matchmaker-index">Write questions</a>
 																</div>
 																<img src="assets/images/matchmaker.jpg" alt="Matchmaker" class="mr-1">
 															</div>

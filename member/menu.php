@@ -53,7 +53,21 @@
 					 </a>
                     <div id="collapseThree" class="collapse show" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
                         <ul>
-							<li class="menu-item"><a href="./temp_msg.php">Feed of Messages</a></li>
+                        <li class="menu-item"><a href="./temp_msg.php">Message Feed</a></li>
+                            <?
+                            if($matchmaker_login !== "None") 
+                                {
+                                    if($page_menu_name == "Chat with Matchmaker")
+                                        {
+                                            echo('<li class="menu-item active-menu"><a href="./chat_matchmaker.php">Chat with Matchmaker</a></li>');
+                                        }
+                                    else
+                                        {
+                                            echo('<li class="menu-item"><a href="./chat_matchmaker.php">Chat with Matchmaker</a></li>');
+                                        }
+                                   
+                                }
+                            ?>
                             <li class="menu-item  <? if($page_menu_name == "Send E-mail to lady") echo("active-menu"); ?>"><a href="./send_email.php">Send E-mail to lady</a></li>
                             <li class="menu-item"><a href="./temp_msg.php">Skype-Conference</a></li>
                             <li class="menu-item"><a href="./temp_msg.php">Send a Gift</a></li>

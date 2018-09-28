@@ -182,7 +182,7 @@ switch ($rating_match)
                             </div>
                         </div>
                         <div  class="text-center py-4">
-                            <a href="#" class="btn btn-gradient">
+                            <a href="./contact_us.php" class="btn btn-gradient">
                                 Change matchmaker
                             </a>
                         </div>

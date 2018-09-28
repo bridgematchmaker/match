@@ -25,7 +25,7 @@ input[type=checkbox] {
 }
 a.button-matchmaker{
     display: inline-block;
-    font-size: 14px;
+    font-size: 12px;
     text-transform: uppercase;
     text-decoration: none!important;
     color: #ffffff!important;
@@ -121,7 +121,7 @@ a.button-matchmaker{
 }
 .personal-matchmaker-text h3{
     color: #e95000;
-    font-size: 19px;
+    font-size: 14px;
     font-weight: 600;
     margin-bottom: 2px;
 }

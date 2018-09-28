@@ -53,7 +53,7 @@ require "./header.php";
 					<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 activated_text">
 						<p>Thank you! Your account is fully activated.</p><br>
 						<p>Dear client!<br /><br />
-							We offer you  to choose one of <span>two service packages</span>. Their comparison you can see in table  below.<br />
+							We offer you  to <span>choose one of two service packages</span>. Their comparison you can see in table  below.<br />
 							Pay attention, you have alternative in your choice. You always can come back to this page and change your settings.<br /><br />
 							We fully rely on your conscious choice and welcome any of your decisions.
 						</p><br>

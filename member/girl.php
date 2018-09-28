@@ -156,20 +156,28 @@ for ($i=0; $i<31; $i++)
                                 <iframe width="270" height="180" src="<? echo $girl_video; ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                             </div>
 
-                            <div class="personal-matchmaker">
-                                <div class="personal-matchmaker-text">
-                                    <h3>Your personal matchmaker</h3>
-                                    <div class="name-matchmaker"><? echo $match_fio[0]; ?></div>
-                                    <div class="phone-matchmaker"><i class="fa fa-phone" aria-hidden="true"></i><? echo $phone_match; ?></div>
-                                    <div class="work-our-matchmaker">
-                                        <div class="title">Working hours</div>
-                                        <div class="hour"><? echo $time_match; ?></div>
-                                    </div>
-                                    <a href="#" class="button-matchmaker">Write questions</a>
-                                </div>
-                                <img src="assets/images/matchmaker.jpg" alt="Matchmaker" class="mr-1">
-                            </div>
+							<?
+								if($matchmaker_login !== "None")
+								{
+									echo('
+											<div class="personal-matchmaker">
+												<div class="personal-matchmaker-text">
+													<h3>Your personal matchmaker</h3>
+													<div class="name-matchmaker">'.$match_fio[0].'</div>
+													<div class="phone-matchmaker"><i class="fa fa-phone" aria-hidden="true"></i>'.$phone_match.'</div>
+													<div class="work-our-matchmaker">
+														<div class="title">Working hours</div>
+														<div class="hour">'.$time_match.'</div>
+													</div>
+													<a href="./chat_matchmaker.php" class="button-matchmaker">Write questions</a>
+												</div>
+												<img src="assets/images/matchmaker.jpg" alt="Matchmaker" class="mr-1">
+											</div>
+									');
+								}
+							?>
 
+                        
 
                         </div>
                         <div class="col-md-7">

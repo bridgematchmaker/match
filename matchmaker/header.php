@@ -68,6 +68,18 @@
 		</li>
 		');
 		} ?>
+
+		<? if($status_match == "1") {
+		echo('
+        <li class="dropdown '); if($page_name == "tickets") { echo('active'); } echo('"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Тикеты<span class="caret"></span></a>
+			<ul class="dropdown-menu">
+            <li><a href="./tickets.php?view=all">Все тикеты</a></li>
+			<li><a href="./tickets.php?view=new_tickets">Не обработаные тикеты</a></li>
+
+          </ul>
+		</li>
+		');
+		} ?>
 		
 		<? if($status_match == "1") {
 		echo('
