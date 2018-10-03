@@ -191,7 +191,19 @@ include "menu.php";
 								<br>
 								<button type="submit" class="btn btn-success btn-md" data-original-title="" title="">Загрузить</button></p>
 							</form>
-							<hr><br>
+							<hr>
+
+							<form method='post' action='./function/match_edit_pass.php'>
+								<input name="login" type="hidden" value="<? echo $login ?>">
+								<input name="match_id" type="hidden" value="<? echo $match_id ?>">
+								<div class="form-group">
+									<label>Новый пароль</label>
+									<input name="password" type="password" class="form-control rounded" value="">
+								</div>
+								<button type="submit" class="btn btn-success btn-md" data-original-title="" title="">Изменить пароль</button></p>
+							</form>
+							<hr>
+							<br>
 							<a href="./function/match_del.php?match_id=<? echo $match_id; ?>"><button type="button" class="btn btn-danger">Удалить мачмекера</button></a>
 						</div>
 					</div>

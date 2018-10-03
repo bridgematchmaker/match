@@ -176,14 +176,7 @@ require "./header.php";
 
                                     </div>
                                 </div>
-
-                                <div class="member-lady-like">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <h3>Random girls profile:</h3>
-                                            <div class="lady-carousel owl-carousel owl-theme owl-loaded owl-drag">
-
-<?
+                                <?
 ////////////////////////Загружаем массив девушек добавленных клиенту в профиль/////////////////////////
 $data_girl_id = Array(); // Масив с id девушек
 $count = 0;
@@ -196,8 +189,30 @@ while($row_client_girl = mysql_fetch_array($result_client_girl))
     }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-///////////Загрузка девушек из галереи, которые не добавленны у пользователя///////////////////////////
+
 $sql_gellary_girl = "SELECT * FROM girls WHERE gallery_status='1' AND activation_status='1' ORDER BY RAND()";
+
+///////////////////Считаем сколько девушек будет в выдаче//////////////////////////////////////////////
+$result_gellary_girl  = mysql_query($sql_gellary_girl);
+while($row_gellary_girl = mysql_fetch_array($result_gellary_girl)) 
+    {
+        if (!in_array($row_gellary_girl['girl_id'], $data_girl_id)) 
+            {
+                $num++;
+            }
+    }
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+?>
+                                <div class="member-lady-like">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <? if($num > 0) { echo('<h3>Random girls profile:</h3>'); } ?>
+                                            <div class="lady-carousel owl-carousel owl-theme owl-loaded owl-drag">
+
+<?
+
+///////////Загрузка девушек из галереи, которые не добавленны у пользователя///////////////////////////
 $result_gellary_girl  = mysql_query($sql_gellary_girl);
 while($row_gellary_girl = mysql_fetch_array($result_gellary_girl)) 
     {

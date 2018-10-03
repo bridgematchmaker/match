@@ -9,8 +9,8 @@ if(($service == '0') AND ($page_menu_name <> "Select service") AND ($status_syst
 		echo("<script>javascript:window.location='./choose_service.php'</script>");
 	}
 	
-if(($service == '2') AND ($page_menu_name <> "Select service")) 
+if(($service == '2') AND ($page_menu_name <> "Select service") AND ($page_menu_name <> "Bridge_of_love")) 
 	{
-		//echo("<script>javascript:window.location='".$_SERVER['HTTP_REFERER']."'</script>");
+		echo("<script>javascript:window.location='./bridge_of_love.php'</script>");
 	}
 ?>

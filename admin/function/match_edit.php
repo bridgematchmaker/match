@@ -63,7 +63,7 @@ $rating = mysql_escape_string($rating);
 /////////////////////////////////////////////
 
 
-////////////////¬носим изменени¤ в анкету//////////////
+////////////////Вносим изменения в анкету//////////////
 $sql = "UPDATE matchmakers SET name='$name', email='$email', skype='$skype', age='$age', phone='$phone', time='$time', country='$country', description='$description', rating='$rating', meetings='$meetings', answers='$answers' WHERE login='$login'";
 $result = mysql_query($sql) or die("<script>alert('Ошибка при записи в таблицу');</script><script>javascript:window.location='../match_profile.php?match_id=".$match_id."'</script>");
 ///////////////////////////////////////////////////////
