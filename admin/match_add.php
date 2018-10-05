@@ -72,6 +72,11 @@ include "menu.php";
 				</div>
 
 				<div class="form-group">
+					<label>Город</label>
+					<input name="city" type="text" class="form-control rounded">
+				</div>
+
+				<div class="form-group">
 					<label>Количество успешных встреч</label>
 					<input name="meetings" type="text" class="form-control rounded">
 				</div>

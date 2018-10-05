@@ -14,6 +14,7 @@ $time = $_POST['time'];
 $skype = $_POST['skype'];
 $age = $_POST['age'];
 $country = $_POST['country'];
+$city = $_POST['city'];
 $description = $_POST['description'];
 $rating = $_POST['rating'];
 $meetings = $_POST['meetings'];
@@ -44,10 +45,11 @@ $phone = mysql_escape_string($phone);
 $time = htmlspecialchars($time);
 $time = mysql_escape_string($time);
 
-
 $country = htmlspecialchars($country);
 $country = mysql_escape_string($country);
 
+$city = htmlspecialchars($city);
+$city = mysql_escape_string($city);
 
 $description = htmlspecialchars($description);
 $description = mysql_escape_string($description);
@@ -64,7 +66,7 @@ $rating = mysql_escape_string($rating);
 
 
 ////////////////¬носим изменени¤ в анкету//////////////
-$sql = "UPDATE matchmakers SET name='$name', email='$email', skype='$skype', age='$age', phone='$phone', time='$time', country='$country', description='$description', rating='$rating', meetings='$meetings', answers='$answers' WHERE login='$login'";
+$sql = "UPDATE matchmakers SET name='$name', email='$email', skype='$skype', age='$age', phone='$phone', time='$time', country='$country', city='$city', description='$description', rating='$rating', meetings='$meetings', answers='$answers' WHERE login='$login'";
 $result = mysql_query($sql) or die("<script>alert('ќшибка при записи в таблицу matchmakers');</script><script>javascript:window.location='../match.php'</script>");
 ///////////////////////////////////////////////////////
 

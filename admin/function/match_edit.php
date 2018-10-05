@@ -15,6 +15,7 @@ $age = $_POST['age'];
 $phone = $_POST['phone'];
 $time = $_POST['time'];
 $country = $_POST['country'];
+$city = $_POST['city'];
 $description = $_POST['description'];
 $status = $_POST['status'];
 $rating = $_POST['rating'];
@@ -49,6 +50,9 @@ $age = mysql_escape_string($age);
 $country = htmlspecialchars($country);
 $country = mysql_escape_string($country);
 
+$city = htmlspecialchars($city);
+$city = mysql_escape_string($city);
+
 $description = htmlspecialchars($description);
 $description = mysql_escape_string($description);
 
@@ -64,7 +68,7 @@ $rating = mysql_escape_string($rating);
 
 
 ////////////////Вносим изменения в анкету//////////////
-$sql = "UPDATE matchmakers SET name='$name', email='$email', skype='$skype', age='$age', phone='$phone', time='$time', country='$country', description='$description', rating='$rating', meetings='$meetings', answers='$answers' WHERE login='$login'";
+$sql = "UPDATE matchmakers SET name='$name', email='$email', skype='$skype', age='$age', phone='$phone', time='$time', country='$country', city='$city', description='$description', rating='$rating', meetings='$meetings', answers='$answers' WHERE login='$login'";
 $result = mysql_query($sql) or die("<script>alert('Ошибка при записи в таблицу');</script><script>javascript:window.location='../match_profile.php?match_id=".$match_id."'</script>");
 ///////////////////////////////////////////////////////
 

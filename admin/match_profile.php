@@ -22,6 +22,7 @@ $zapros = "SELECT * FROM matchmakers WHERE id='".$match_id."'";
 	  $skype = $row['skype'];
 	  $age = $row['age'];
 	  $country = $row['country'];
+	  $city = $row['city'];
 	  $login = $row['login'];
 	  $status = $row['status'];  
 	  $phone = $row['phone']; 
@@ -38,7 +39,7 @@ switch ($status)
 		break;
 			
 		case 1:
-			$status_print = "Активный";
+			$status_print = "Матчмеккер";
 		break;
 		
 		case 2:
@@ -104,6 +105,7 @@ include "menu.php";
 									<tr><td class="active">Телефон:</td><td><? echo $phone ?></td></tr>
 									<tr><td class="active">Рабочие часы:</td><td><? echo $time ?></td></tr>
 									<tr><td class="active">Страна:</td><td><? echo $country ?></td></tr>
+									<tr><td class="active">Город:</td><td><? echo $city ?></td></tr>
 									<tr><td class="active">О себе:</td><td><? echo $description ?></td></tr>
 									<tr><td class="active">Ответы на вопросы:</td><td><? echo $answers ?></td></tr>
 									<tr><td class="active">Количество встреч:</td><td><? echo $meetings ?></td></tr>
@@ -149,6 +151,11 @@ include "menu.php";
 								<div class="form-group">
 									<label>Страна</label>
 									<input name="country" type="text" class="form-control rounded" placeholder="Ваш страна" value="<? echo $country ?>">
+								</div>
+
+								<div class="form-group">
+									<label>Город</label>
+									<input name="city" type="text" class="form-control rounded" placeholder="Ваш город" value="<? echo $city ?>">
 								</div>
 								
 								<div class="form-group">

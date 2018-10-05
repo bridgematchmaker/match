@@ -23,6 +23,7 @@ $email = $_POST['email'];
 $skype = $_POST['skype'];
 $age = $_POST['age'];
 $country = $_POST['country'];
+$city = $_POST['city'];
 $description = $_POST['description'];
 $phone = $_POST['phone'];
 $time = $_POST['time'];
@@ -60,6 +61,9 @@ $time = mysql_escape_string($time);
 
 $country = htmlspecialchars($country);
 $country = mysql_escape_string($country);
+
+$city = htmlspecialchars($city);
+$city = mysql_escape_string($city);
 
 $description = htmlspecialchars($description);
 $description = mysql_escape_string($description);
@@ -148,7 +152,7 @@ function make_upload($file){
 
 	$foto = 'uploads/match/'.$name_foto;
 	/////////////SQL запрос//////////////////////
-	$sql = "INSERT INTO matchmakers ( login, pass, name, email, skype, age, country, description, foto, time, phone, rating, meetings, answers, status) VALUES ('".$GLOBALS['login']."', '".$GLOBALS['password_md5']."', '".$GLOBALS['name']."', '".$GLOBALS['email']."', '".$GLOBALS['skype']."', '".$GLOBALS['age']."', '".$GLOBALS['age']."', '".$GLOBALS['description']."', '$foto', '".$GLOBALS['time']."', '".$GLOBALS['phone']."', '".$GLOBALS['rating']."', '".$GLOBALS['meetings']."', '".$GLOBALS['answers']."', '".$GLOBALS['status']."')";
+	$sql = "INSERT INTO matchmakers ( login, pass, name, email, skype, age, country, city, description, foto, time, phone, rating, meetings, answers, status) VALUES ('".$GLOBALS['login']."', '".$GLOBALS['password_md5']."', '".$GLOBALS['name']."', '".$GLOBALS['email']."', '".$GLOBALS['skype']."', '".$GLOBALS['age']."', '".$GLOBALS['country']."', '".$GLOBALS['city']."', '".$GLOBALS['description']."', '$foto', '".$GLOBALS['time']."', '".$GLOBALS['phone']."', '".$GLOBALS['rating']."', '".$GLOBALS['meetings']."', '".$GLOBALS['answers']."', '".$GLOBALS['status']."')";
 	/////////////////////////////////////////////
 	$result = mysql_query($sql) or die("Ошибка при записи в базу");
 }
@@ -181,7 +185,7 @@ else
 	{
 		$foto = 'uploads/match/avatar.jpg';
 		/////////////SQL запрос//////////////////////
-		$sql = "INSERT INTO matchmakers ( login, pass, name, email, skype, age, country, description, foto, time, phone, rating, meetings, answers, status) VALUES ('$login', '$password_md5', '$name', '$email', '$skype', '$age', '$country', '$description', '$foto', '$time', '$phone', '$rating', '$meetings', '$answers', '$status')";
+		$sql = "INSERT INTO matchmakers ( login, pass, name, email, skype, age, country, city, description, foto, time, phone, rating, meetings, answers, status) VALUES ('$login', '$password_md5', '$name', '$email', '$skype', '$age', '$country', '$city', '$description', '$foto', '$time', '$phone', '$rating', '$meetings', '$answers', '$status')";
 		/////////////////////////////////////////////
 		$result = mysql_query($sql) or die("Ошибка при записи в базу");
 		///////////загружем id нового мачмеккера//////////
