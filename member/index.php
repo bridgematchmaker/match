@@ -19,6 +19,7 @@ $page_menu_name = "Home";
         <link href="assets/css/style.css" rel="stylesheet" type="text/css">
         <!--Style Content Page-->
         <link href="assets/css/style.content.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/style.bridge_of_love.css" rel="stylesheet" type="text/css">
         <!-- Bootstrap -->
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <!-- Font Awesome -->
@@ -261,6 +262,44 @@ while($row_gellary_girl = mysql_fetch_array($result_gellary_girl))
 	<script src="assets/js/member.js"></script>
 <!-- Site Scripts (end)-->
 
+<?
+if ($status_anketa2 === "0") {
+    echo('
+            <!-- Modal -->
+            <script>
+                $(document).ready(function() {
+                    var ancor = window.location.hash.replace("#","");
+                    if (ancor == "login") {
+                        $("#login").modal("show");
+                    }
+                });
+            </script>
+            <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" id="login">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>Please, make your profile complete!</h3>
+                        </div>
+                        <div class="modal-body">
+                            <p> Dear client.</p>
+                            <p>
+                                For doing our job and find best candidates based on your criteria please fill up additional info about you. This will be very helpful to know what lady will be most suitable for you.
+                                Please find time to fill up the mentioned info and raise your
+                                chances on success.
+                            </p>
+                            <p>Thank you!</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="./profile_about_me.php" class="btn btn-gradient-green">Start NOw</a>
+                            <a href="#" class="btn btn-gradient" data-dismiss="modal">Remind later</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal (end)-->
+        ');
+}
+?>
 
 </body>
 

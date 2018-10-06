@@ -127,7 +127,7 @@ if (!isset($_SESSION['email_client'])) {
 isset($_SESSION['email_client']) or die(); // здесь если функция вернула false то выполняется die()
 
 echo	("
-			<script>javascript:window.location='./member/index.php'</script>
+			<script>javascript:window.location='./member/index.php#login'</script>
 		");
 
 ?>
