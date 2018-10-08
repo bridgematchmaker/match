@@ -94,13 +94,17 @@ include "header.php";
 							<hr>
 							<h4>Статус - <? echo $status_print ?></h4>
 							<hr>
-							<table class="table table-striped table-bordered">
-									<tr><td class="active">Заявок от девушек:</td><td><? echo $num_order_girls; ?></td></tr>
-									<tr><td class="active">Мои клиенты:</td><td><? echo $num_my_clients; ?></td></tr>
-									<tr><td class="active">В статусе "Новый":</td><td><? echo $num_new_clients; ?></td></tr>
-									<tr><td class="active">В статусе "Активный"</td><td><? echo $num_active_clients; ?></td></tr>	
-							</table>
-							
+							<? if($status_match == "1") {
+								echo('
+										<table class="table table-striped table-bordered">
+											<tr><td class="active">Заявок от девушек:</td><td>'.$num_order_girls.'</td></tr>
+											<tr><td class="active">Мои клиенты:</td><td>'.$num_my_clients.'</td></tr>
+											<tr><td class="active">В статусе "Новый":</td><td>'.$num_new_clients.'</td></tr>
+											<tr><td class="active">В статусе "Активный"</td><td>'.$num_active_clients.'</td></tr>	
+										</table>
+									');
+								}
+							?>
 						</div>
 					</div>
 			</div>

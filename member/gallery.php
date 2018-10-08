@@ -154,13 +154,33 @@ require "./header.php";
                 <div class="row">
 
                     <div class="col-md-6">
-                        <h2 class="page-title">Gallery <span class="count-gallery"><? echo $num; ?></span></h2>
+                        <h2 style="font-size: 20px;" class="page-title"><? if($view == "gallery") { echo('Women profiles'); } if($view == "recomendation") { echo('Matchmaker\'s recomendation'); } if($view == "blacklist") { echo('Black List'); } ?> <span class="count-gallery"><? echo $num; ?></span></h2>
                     </div>
 
                     <div class="col-md-6 text-right d-flex align-items-center justify-content-end">
                         <h3 class="page-title-count">Profiles Database<span class="count-gallery-data">1235</span></h3>
                     </div>
 
+					<?
+						if($num == 0) {
+							echo('
+									<div class="temp_msg offset-1 col-md-10">
+										<div class="row">
+											<div class="temp_img col-md-2">
+												<img width="75" src="./assets/images/warning.png"/>
+											</div>
+											<div class="temp_text col-md-8">
+												<b>
+													Unfortunately at the moment we still don\'t add ladies who match your criteria. There maybe  many reasons for this, we ask you to fill in <a href="./profile_about_me.php">more information about you</a> on this page and be patient. Also you can <a href="./chat_matchmaker.php">write to your matchmaker</a> to get more information.
+												</b>
+												<br>
+											</div>
+										</div>
+									</div>  
+								');
+						}
+					?>
+					
                         
 						
 						<?
@@ -470,8 +490,14 @@ require "./header.php";
 
                     <div class="col-md-12">
                         <p class="gallery-text-info">
-                            On this page are all available profiles which were selected in accordance with your search criteria and based on our assumption of your possible interest. Each profile has short video where lady tells about herself  and her search.
-                            To watch this video is free for you.
+						<?
+							if($num != 0) {
+							echo('
+                            	On this page are all available profiles which were selected in accordance with your search criteria and based on our assumption of your possible interest. Each profile has short video where lady tells about herself  and her search.
+								To watch this video is free for you.
+								');
+							}
+						?>
                         </p>
                     </div>
 

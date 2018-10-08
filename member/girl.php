@@ -116,7 +116,7 @@ for ($i=0; $i<31; $i++)
 							<div class="girl-gallery-foto">
                                 <div id="sync1" class="owl-carousel owl-theme">
 									<?
-										$zapros_foto = "SELECT * FROM girls_foto WHERE girl_id='".$girl_id."'";
+										$zapros_foto = "SELECT * FROM girls_foto WHERE girl_id='".$girl_id."' AND status_foto='1'";
 										$requirest_foto = mysql_query($zapros_foto);
 										while($row_foto = mysql_fetch_array($requirest_foto)) 
 											{
@@ -133,7 +133,7 @@ for ($i=0; $i<31; $i++)
 
                                 <div id="sync2" class="owl-carousel owl-theme owl-thumbs">
 									<?
-										$zapros_foto = "SELECT * FROM girls_foto WHERE girl_id='".$girl_id."'";
+										$zapros_foto = "SELECT * FROM girls_foto WHERE girl_id='".$girl_id."' AND status_foto='1'";
 										$requirest_foto = mysql_query($zapros_foto);
 										while($row_foto = mysql_fetch_array($requirest_foto)) 
 											{

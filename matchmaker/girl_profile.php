@@ -818,28 +818,45 @@ include "header.php";
 								$status_foto_print = "Публичное фото";
 							}
 						
-						////////////////////////////Вывод таблицы на экран/////////////////////////////// 
-						if($status_foto == 0)
-						echo ("
-								<tr>
-									<td>
-										<img src='../$foto' width='150'><a href='./function/girl_del_foto.php?foto_id=$foto_id&girl_id=$girl_id'><span style='font-size:22px; margin-left:10px;' class='glyphicon glyphicon-remove'></span></a> <a href='./function/girl_foto_status.php?foto_id=$foto_id&girl_id=$girl_id&status_foto_set=1'><span style='font-size:22px; margin-left:10px;' class='glyphicon glyphicon-eye-close'></span></a>
-										<br>
-										<b> $status_foto_print</b>
-									</td>
-								</tr>
-							");
-						if($status_foto == 1)
-						echo ("
-								<tr>
-									<td>
-										<img src='../$foto' width='150'><a href='./function/girl_del_foto.php?foto_id=$foto_id&girl_id=$girl_id'><span style='font-size:22px; margin-left:10px;' class='glyphicon glyphicon-remove'></span></a> <a href='./function/girl_foto_status.php?foto_id=$foto_id&girl_id=$girl_id&status_foto_set=0'><span style='font-size:22px; margin-left:10px;' class='glyphicon glyphicon-eye-open'></span></a>
-										<hr>
-										<b>Статус фото: $status_foto_print</b> 
-									</td>
-								</tr>
-							");
-						////////////////////////////////////////////////////////////////////////////////////////
+						////////////////////////////Вывод таблицы на экран для мачмеккера/////////////////////////////// 
+						if($status_match == "1") {
+							if($status_foto == 0)
+							echo ("
+									<tr>
+										<td>
+											<img src='../$foto' width='150'><a href='./function/girl_del_foto.php?foto_id=$foto_id&girl_id=$girl_id'><span style='font-size:22px; margin-left:10px;' class='glyphicon glyphicon-remove'></span></a> <a href='./function/girl_foto_status.php?foto_id=$foto_id&girl_id=$girl_id&status_foto_set=1'><span style='font-size:22px; margin-left:10px;' class='glyphicon glyphicon-eye-close'></span></a>
+											<br>
+											<b> $status_foto_print</b>
+										</td>
+									</tr>
+								");
+							if($status_foto == 1)
+							echo ("
+									<tr>
+										<td>
+											<img src='../$foto' width='150'><a href='./function/girl_del_foto.php?foto_id=$foto_id&girl_id=$girl_id'><span style='font-size:22px; margin-left:10px;' class='glyphicon glyphicon-remove'></span></a> <a href='./function/girl_foto_status.php?foto_id=$foto_id&girl_id=$girl_id&status_foto_set=0'><span style='font-size:22px; margin-left:10px;' class='glyphicon glyphicon-eye-open'></span></a>
+											<hr>
+											<b>Статус фото: $status_foto_print</b> 
+										</td>
+									</tr>
+								");
+						}
+						/////////////////////////////////////////////////////////////////////////////////////////////
+
+						////////////////////////////Вывод таблицы на экран для агенства/////////////////////////////// 
+						if($status_match == "0") {	
+							echo ("
+									<tr>
+										<td>
+											<img src='../$foto' width='150' />
+											<br>
+											<b> $status_foto_print</b>
+										</td>
+									</tr>
+								");
+						
+						}
+						/////////////////////////////////////////////////////////////////////////////////////////////
 					}
 			?>
 		</table>
