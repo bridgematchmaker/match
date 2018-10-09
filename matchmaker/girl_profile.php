@@ -82,6 +82,7 @@ while($row = mysql_fetch_array($requirest))
 		$question46 = $row['question46'];
 		$question47 = $row['question47'];
 		$question48 = $row['question48'];
+		$question49 = $row['question49'];
 		
 		$ask1 = $row['ask1'];
 		$ask2 = $row['ask2'];
@@ -334,6 +335,7 @@ include "header.php";
 									<tr><td>Viber/Skype/WhatsApp </td><td><? echo $question46; ?></td></tr>
 									<tr><td>Do you have social nets? (Facebook Twitter Google+) </td><td><? echo $question47; ?></td></tr>
 									<tr><td>Preferred days and time of communication with you </td><td><? echo $question48; ?></td></tr>
+									<tr><td>Information for men who order Skype conference with this lady</td><td><? echo $question49; ?></td></tr>
 									
 									
 							</table>		
@@ -776,6 +778,11 @@ include "header.php";
 								<div class="form-group">
 									<label>Preferred days and time of communication with you</label>
 									<input name="question48" type="text" class="form-control rounded" value="<? echo $question48; ?>">
+								</div>
+
+								<div class="form-group">
+									<label>Information for men who order Skype conference with this lady *</label>
+									<input name="question49" type="text" class="form-control rounded" value="<? echo $question49; ?>">
 								</div>
 				
 								<div class="form-group">

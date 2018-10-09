@@ -1195,6 +1195,11 @@ include "header.php";
 					<label>Preferred days and time of communication with you</label>
 					<input name="question48" type="text" class="form-control rounded">
 				</div>
+
+				<div class="form-group">
+					<label>Information for men who order Skype conference with this lady *</label>
+					<input name="question49" type="text" class="form-control rounded" required="required">
+				</div>
 				
 				<div class="form-group">
 					<label>URL Video</label>

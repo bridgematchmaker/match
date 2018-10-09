@@ -65,6 +65,7 @@ while($row = mysql_fetch_array($requirest))
 		$question46 = $row['question46'];
 		$question47 = $row['question47'];
 		$question48 = $row['question48'];
+		$question49 = $row['question49'];
 		
 		$ask1 = $row['ask1'];
 		$ask2 = $row['ask2'];

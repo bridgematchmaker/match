@@ -5,7 +5,7 @@ isset($_SESSION['login_match']) or die("<script>javascript:window.location='../i
 include ("../../connect.php");
 $girl_id = $_POST['girl_id'];
 
-if(empty($_POST['first_name']) or empty($_POST['last_name']) or empty($_POST['country']) or empty($_POST['city']) or empty($_POST['question2']) or empty($_POST['birthday']) or empty($_POST['question3']) or empty($_POST['question4']) or empty($_POST['question5']) or empty($_POST['question6']) or empty($_POST['question7']) or empty($_POST['question8']) or empty($_POST['question9']) or empty($_POST['question10']) or empty($_POST['question11']) or empty($_POST['question12']) or empty($_POST['question13']) or empty($_POST['question14']) or empty($_POST['question15']) or empty($_POST['question17']) or empty($_POST['question21']) or empty($_POST['question22']) or empty($_POST['question23']) or empty($_POST['question25']) or empty($_POST['question30']) or empty($_POST['question32']) or empty($_POST['question33']) or empty($_POST['question34']) or empty($_POST['question35']) or empty($_POST['question36']) or empty($_POST['question37']) or empty($_POST['question38']) or empty($_POST['question39']) or empty($_POST['question40']) or empty($_POST['question43']) or empty($_POST['question44']) or empty($_POST['question45']) or empty($_POST['question46']) or empty($_POST['question47'])) 
+if(empty($_POST['first_name']) or empty($_POST['last_name']) or empty($_POST['country']) or empty($_POST['city']) or empty($_POST['question2']) or empty($_POST['birthday']) or empty($_POST['question3']) or empty($_POST['question4']) or empty($_POST['question5']) or empty($_POST['question6']) or empty($_POST['question7']) or empty($_POST['question8']) or empty($_POST['question9']) or empty($_POST['question10']) or empty($_POST['question11']) or empty($_POST['question12']) or empty($_POST['question13']) or empty($_POST['question14']) or empty($_POST['question15']) or empty($_POST['question17']) or empty($_POST['question21']) or empty($_POST['question22']) or empty($_POST['question23']) or empty($_POST['question25']) or empty($_POST['question30']) or empty($_POST['question32']) or empty($_POST['question33']) or empty($_POST['question34']) or empty($_POST['question35']) or empty($_POST['question36']) or empty($_POST['question37']) or empty($_POST['question38']) or empty($_POST['question39']) or empty($_POST['question40']) or empty($_POST['question43']) or empty($_POST['question44']) or empty($_POST['question45']) or empty($_POST['question46']) or empty($_POST['question47']) or empty($_POST['question49'])) 
 	{ 
 		echo("
 			<script>alert('Заполните все обязательные поля');</script>
@@ -71,6 +71,7 @@ $question45 = $_POST['question45'];
 $question46 = $_POST['question46'];
 $question47 = $_POST['question47'];
 $question48 = $_POST['question48'];
+$question49 = $_POST['question49'];
 
 //////////////////////////////////////////
 
@@ -238,6 +239,9 @@ $question47 = mysql_escape_string($question47);
 $question48 = htmlspecialchars($question48);
 $question48 = mysql_escape_string($question48);
 
+$question49 = htmlspecialchars($question49);
+$question49 = mysql_escape_string($question49);
+
 /////////////////////////////////////////////
 
 //////////Проверка на повторы в базе/////////
@@ -265,7 +269,7 @@ if($old_email <> $question45)
 
 
 /////////////SQL запрос//////////////////////
-$sql = "UPDATE girls SET first_name='".$first_name."', last_name='".$last_name."', birthday='".$birthday."', country='".$country."', city='".$city."', video='".$video."', question1='".$question1."', question2='".$question2."', question3='".$question3."', question4='".$question4."', question5='".$question5."', question6='".$question6."', question7='".$question7."', question8='".$question8."', question9='".$question9."', question10='".$question10."', question11='".$question11."', question12='".$question12."', question13='".$question13."', question14='".$question14."', question15='".$question15."', question16='".$question16."', question17='".$question17."', question18='".$question18."', question19='".$question19."', question20='".$question20."', question21='".$question21."', question22='".$question22."', question23='".$question23."', question24='".$question24."', question25='".$question25."', question26='".$question26."', question27='".$question27."', question28='".$question28."', question29='".$question29."', question30='".$question30."', question31='".$question31."', question32='".$question32."', question33='".$question33."', question34='".$question34."', question35='".$question35."', question36='".$question36."', question37='".$question37."', question38='".$question38."', question39='".$question39."', question40='".$question40."', question41='".$question41."', question42='".$question42."', question43='".$question43."', question44='".$question44."', question45='".$question45."', question46='".$question46."', question47='".$question47."', question48='".$question48."' WHERE girl_id='".$girl_id."'";
+$sql = "UPDATE girls SET first_name='".$first_name."', last_name='".$last_name."', birthday='".$birthday."', country='".$country."', city='".$city."', video='".$video."', question1='".$question1."', question2='".$question2."', question3='".$question3."', question4='".$question4."', question5='".$question5."', question6='".$question6."', question7='".$question7."', question8='".$question8."', question9='".$question9."', question10='".$question10."', question11='".$question11."', question12='".$question12."', question13='".$question13."', question14='".$question14."', question15='".$question15."', question16='".$question16."', question17='".$question17."', question18='".$question18."', question19='".$question19."', question20='".$question20."', question21='".$question21."', question22='".$question22."', question23='".$question23."', question24='".$question24."', question25='".$question25."', question26='".$question26."', question27='".$question27."', question28='".$question28."', question29='".$question29."', question30='".$question30."', question31='".$question31."', question32='".$question32."', question33='".$question33."', question34='".$question34."', question35='".$question35."', question36='".$question36."', question37='".$question37."', question38='".$question38."', question39='".$question39."', question40='".$question40."', question41='".$question41."', question42='".$question42."', question43='".$question43."', question44='".$question44."', question45='".$question45."', question46='".$question46."', question47='".$question47."', question48='".$question48."', question49='".$question49."' WHERE girl_id='".$girl_id."'";
 /////////////////////////////////////////////
 $result = mysql_query($sql) or die("Ошибка при записи в базу");
 ///////////////////////////////////////////
