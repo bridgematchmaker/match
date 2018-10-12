@@ -16,6 +16,7 @@
 					<li><a href="https://twitter.com/BridgeMatchmak1" class="icon-circle fa fa-twitter"></a><br></li><br>
 					<li><a href="https://www.facebook.com/bridgematchmaker" class="icon-circle fa fa-facebook-square"></a></li>
 					<li><a href="https://www.instagram.com/bridgematchmaker" class="icon-circle fa fa-instagram"></a></li>
+					<li><a href="https://t.me/bridgematchmaker" class="icon-circle fa fa-telegram"></a></li>
 				</ul>
 			</div>
 			<div class="col-10 col-lg-6 col-xl-7 mt-3 mt-lg-0 order-lg-2">
