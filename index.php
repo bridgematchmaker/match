@@ -55,7 +55,10 @@ if (isset($_SESSION['email_client']))
 
                 <div class="col-md-10 col-sm-12 offset-md-1">
                     <div class="blanking-page">
-
+                        <div class="thumb-wrap">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/DrQBqwafvvo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                        <br>
                         <ul>
                             <li class="d-flex align-middle"><span class="number">1</span><p>First project, that unites matchmakers and people who look for serious relationships.</p></li>
                             <li class="d-flex align-middle"><p>Unique method of  profiles reality control based on a blockchain technology. Fully isolated from spam, fraud and scam.</p><span class="number">2</span></li>

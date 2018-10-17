@@ -420,7 +420,7 @@ include "header.php";
 				</div>
 				
 				<div class="form-group">
-					<label>What country I'd dont like to meet my man from? *</label>
+					<label>What country I don't like to meet my man from? *</label>
 					<input name="question23" type="text" class="form-control rounded" required="required">
 				</div>
 				
@@ -472,6 +472,7 @@ include "header.php";
 					<label>Country</label>
 					<select name="question31" class="form-control">
 						<option value="" ></option>
+						<option value="Doesn't matter">Doesn't matter </option>
 						<option value="United States">United States</option> 
 						<option value="United Kingdom">United Kingdom</option> 
 						<option value="Afghanistan">Afghanistan</option> 
@@ -702,7 +703,7 @@ include "header.php";
 				</div>
 				
 				<div class="form-group">
-					<label>Height *</label>
+					<label>Height from*</label>
 					 <select name="question32" class="form-control" required="required">
 						<option value=""></option>
 						<option value="4 feet 0 inches (121.92 cm)">4 feet 0 inches (121.92 cm)</option>
@@ -742,7 +743,7 @@ include "header.php";
 				</div>
 				
 				<div class="form-group">
-					<label>Weight *</label>
+					<label>Weight from*</label>
 					<select name="question33" class="form-control" required="required">
 						<option value=""></option>
 						<option value="90 lbs (40.8 kg)">90 lbs (40.8 kg)</option>

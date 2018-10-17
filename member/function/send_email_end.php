@@ -29,7 +29,7 @@ $matchmaker_login = mysql_escape_string($matchmaker_login);
 $mail_text = htmlspecialchars($mail_text);
 $mail_text = mysql_escape_string($mail_text);
 
-$description1 = "Клиент ID:".$user_id." отправил E-Mail для девушки ID:".$girl_id;
+
 
 ///////////////////////////////////////////
 
@@ -40,6 +40,9 @@ while($row_client = mysql_fetch_array($requirest_client))
 	{
 		$user_id = $row_client['user_id'];
 	}
+
+
+$description1 = "Клиент ID:".$user_id." отправил E-Mail для девушки ID:".$girl_id;
 ////////////Загружаем баланс клиента/////////////////////////////////////////	
 $zapros_balance = "SELECT * FROM clients_services WHERE client_id='".$user_id."'";	
 $requirest_balance = mysql_query($zapros_balance);

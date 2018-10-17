@@ -162,7 +162,7 @@ require "./header.php";
                     </div>
 
 					<?
-						if($num == 0) {
+						if(($num == 0) AND ($view !== 'blacklist')) {
 							echo('
 									<div class="temp_msg offset-1 col-md-10">
 										<div class="row">
@@ -174,6 +174,26 @@ require "./header.php";
 													Unfortunately at the moment we still don\'t add ladies who match your criteria. There maybe  many reasons for this, we ask you to fill in <a href="./profile_about_me.php">more information about you</a> on this page and be patient. Also you can <a href="./chat_matchmaker.php">write to your matchmaker</a> to get more information.
 												</b>
 												<br>
+											</div>
+										</div>
+									</div>  
+								');
+						}
+
+						if(($num == 0) AND ($view == 'blacklist')) {
+							echo('
+									<div class="temp_msg offset-1 col-md-10">
+										<div class="row">
+											<div class="temp_img col-md-2">
+												<img width="75" src="./assets/images/warning.png"/>
+											</div>
+											<div class="temp_text col-md-8">
+												<p class="text-center">
+													<b>
+														Your blacklist is empty
+													</b><br><br>
+													<a href="'.$_SERVER['HTTP_REFERER'].'"><button type="button" class="btn btn-warning btn-md"><b><div style="margin-left:20px; margin-right:20px;">Go back</div></b></button></a>
+												</p>
 											</div>
 										</div>
 									</div>  

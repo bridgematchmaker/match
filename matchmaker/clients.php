@@ -36,7 +36,7 @@ switch ($view)
 	{
 		case all:
 			// Узнаем количество всех доступных записей 
-			$result2 = mysql_query("SELECT * FROM clients;");
+			$result2 = mysql_query("SELECT * FROM clients WHERE status_system<>'4';");
 			$num = mysql_num_rows($result2);
 		break;
 		
@@ -89,7 +89,7 @@ $list=--$page*$quantity;
 switch ($view) 
 	{
 		case all:
-			$zapros = "SELECT clients.*,matchmakers.name FROM clients LEFT JOIN matchmakers ON clients.matchmaker_login = matchmakers.login ORDER BY user_id DESC LIMIT $quantity OFFSET $list;";
+			$zapros = "SELECT clients.*,matchmakers.name FROM clients LEFT JOIN matchmakers ON clients.matchmaker_login = matchmakers.login WHERE status_system<>'4' ORDER BY user_id DESC LIMIT $quantity OFFSET $list;";
 		break;
 		
 		case active:
