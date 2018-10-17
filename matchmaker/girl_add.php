@@ -45,6 +45,9 @@ if($status_match == "2") { echo("<script>alert('Аккаунт заблокир�
                 if(response == 'on'){
                     $("#responseEmailSpan").text("Such E-mail already exists").css("color","red");
                     document.reg.releEmail.value = 'off';
+                }else{
+                    $("#responseEmailSpan").text("").css("color","green");
+                    document.reg.releEmail.value = 'on';
                 };
             }
         });
