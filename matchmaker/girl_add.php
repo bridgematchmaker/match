@@ -34,6 +34,21 @@ if($status_match == "2") { echo("<script>alert('Аккаунт заблокир�
 	    locale: 'ru'
 	  });
     });
+
+	function responseEmail(){
+        $.ajax({
+            type: "POST",
+            url: "/matchmaker/function/girl_check_email.php",
+            data: { action: 'email', email: document.reg.question45.value },
+            cache: false,
+            success: function(response){
+                if(response == 'on'){
+                    $("#responseEmailSpan").text("Such E-mail already exists").css("color","red");
+                    document.reg.releEmail.value = 'off';
+                };
+            }
+        });
+    };
   </script>
 	
 </head>
@@ -50,7 +65,7 @@ include "header.php";
 <body>
 	<div class="container" style="margin-top:40px;">
 	<div class="col-lg-6 col-md-6 col-sm-9 col-xs-12">
-		<form action="./function/girl_add_end.php" method="POST" role="form">
+		<form name="reg" action="./function/girl_add_end.php" method="POST" role="form">
 				<input name="login_match" type="hidden" value="<? echo $_SESSION['login_match']; ?>">
 				
 				<div class="form-group">
@@ -1178,8 +1193,9 @@ include "header.php";
 				</div>
 				
 				<div class="form-group">
-					<label>Email address *</label>
-					<input name="question45" type="email" class="form-control rounded" required="required">
+					<label>Email address * <span id="responseEmailSpan" style="margin-left: 10px;"></span></label>
+					<input name="question45" type="email" class="form-control rounded" required="required" onchange="responseEmail();">
+					
 				</div>
 				
 				<div class="form-group">
