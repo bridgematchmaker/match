@@ -318,7 +318,7 @@ if($girl_id <> '') {
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/select2.min.js"></script>
+    <script src="assets/js/select2_2.min.js"></script>
     <script src="assets/js/timepicker.min.js"></script>
     <script src="assets/js/scriptTimepicker.js"></script>
     <script src="assets/js/select2.js"></script>
