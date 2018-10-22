@@ -438,11 +438,6 @@ include "header.php";
 				</div>
 				
 				<div class="form-group">
-					<label>What country I don't like to meet my man from? *</label>
-					<input name="question23" type="text" class="form-control rounded" required="required">
-				</div>
-				
-				<div class="form-group">
 					<label>Describe your perfect morning (you are a night owl or an early bird?)</label>
 					<input name="question24" type="text" class="form-control rounded">
 				</div>

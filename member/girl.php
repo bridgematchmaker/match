@@ -324,10 +324,6 @@ for ($i=0; $i<31; $i++)
                                                 <p class="value"><? if($question21 == "" ) { $question21 = "-"; } echo $question21; ?></p>
                                             </li>
                                             <li>
-                                                <p class="title">What country I'd  like to meet my man from? </p>
-                                                <p class="value"><? if($question23 == "" ) { $question23 = "-"; } echo $question23; ?></p>
-                                            </li>
-                                            <li>
                                                 <p class="title">My perfect morning (you are a night owl or an early bird?)</p>
                                                 <p class="value"><? if($question24 == "" ) { $question24 = "-"; } echo $question24; ?></p>
                                             </li>

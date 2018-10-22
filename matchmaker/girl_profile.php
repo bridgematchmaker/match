@@ -304,7 +304,6 @@ include "header.php";
 									<tr><td>Write briefly about yourself, about your lifestyle, your likes and dislikes </td><td><? echo $question20; ?></td></tr>
 									<tr><td>What are your hobbies and interests? </td><td><? echo $question21; ?></td></tr>
 									<tr><td>Do you want children in a new relation? </td><td><? echo $question22; ?></td></tr>
-									<tr><td>What country I'd dont like to meet my man from? </td><td><? echo $question23; ?></td></tr>
 									<tr><td>Describe your perfect morning (you are a night owl or an early bird?) </td><td><? echo $question24; ?></td></tr>
 									<tr><td>Describe your desired future (goals, lifestyle, relationships in the family) </td><td><? echo $question25; ?></td></tr>
 									<tr><td>Attitude to pets </td><td><? echo $question26; ?></td></tr>
@@ -646,11 +645,6 @@ include "header.php";
 								<div class="form-group">
 									<label>Do you want children in a new relation? *</label>
 									<input name="question22" type="text" class="form-control rounded" value="<? echo $question22; ?>">
-								</div>
-				
-								<div class="form-group">
-									<label>What country I'd dont like to meet my man from? *</label>
-									<input name="question23" type="text" class="form-control rounded" value="<? echo $question23; ?>">
 								</div>
 				
 								<div class="form-group">
