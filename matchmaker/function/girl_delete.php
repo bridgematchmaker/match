@@ -37,9 +37,6 @@ while($row = mysql_fetch_array($requirest))
 $sql0 = "DELETE FROM girls_foto WHERE girl_id='$girl_id';";
 $result0 = mysql_query($sql0) or die("<script>alert('Ошибка при записи в таблицу');</script><script>javascript:window.location='../girl_profile.php?girl_id=".$girl_id."'</script>");
 
-$sql1 = "DELETE FROM clients_girl_ask WHERE girl_id='$girl_id';";
-$result1 = mysql_query($sql1) or die("<script>alert('Ошибка при записи в таблицу');</script><script>javascript:window.location='../girl_profile.php?girl_id=".$girl_id."'</script>");
-
 $sql2 = "DELETE FROM clients_girl WHERE girl_id='$girl_id';";
 $result2 = mysql_query($sql2) or die("<script>alert('Ошибка при записи в таблицу');</script><script>javascript:window.location='../girl_profile.php?girl_id=".$girl_id."'</script>");
 

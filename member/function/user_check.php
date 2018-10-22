@@ -1,4 +1,9 @@
 <?
+if($status_system == '4' )
+{
+	echo("<script>alert('Your profile is locked!');</script><script>javascript:window.location='../login.php?logout'</script>");
+}
+
 if(($status_system == '0' ) AND ($page_menu_name <> "Activation_profile"))
 	{
 		echo("<script>javascript:window.location='./activation_profile.php'</script>");

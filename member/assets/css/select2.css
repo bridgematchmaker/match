@@ -193,6 +193,9 @@ Version: 3.5.4 Timestamp: Sun Aug 30 13:30:32 EDT 2015
 	overflow-y: auto;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+.info-block .select2-results {
+	height: 160px;
+}
 
 .select2-result {
 	border-radius: 0;

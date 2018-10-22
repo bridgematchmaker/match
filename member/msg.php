@@ -80,6 +80,14 @@ switch ($msg_id)
 		case 7:
 			$msg = "Your message was successfully sent"; // Введите сообщение
 		break;
+
+		case 8:
+			$msg = "You already have a conference scheduled at this time."; // Введите сообщение
+		break;
+
+		case 9:
+			$msg = "Conference successfully scheduled."; // Введите сообщение
+		break;
 	}
 
 ?>

@@ -4,9 +4,8 @@
 "use strict";
 
 var plugins = {
-	selectFilter: $("select"),
+	selectFilter: $("select")
 };
-
 
 /**
  * Initialize All Scripts

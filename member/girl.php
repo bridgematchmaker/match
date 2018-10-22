@@ -428,7 +428,7 @@ for ($i=0; $i<31; $i++)
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="./temp_msg.php">
+                                        <a href="./conference_1.php?girl_id=<? echo $girl_id; ?>">
                                             <span class="icon"><i class="fa fa-skype" aria-hidden="true"></i></span>
                                             <p>Skype conference</p>
                                         </a>

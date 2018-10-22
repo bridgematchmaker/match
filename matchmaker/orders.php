@@ -41,7 +41,7 @@ switch ($view)
 		
 		case my_pending:
 			// Узнаем количество всех доступных записей 
-			$result2 = mysql_query("SELECT orders.*,clients.matchmaker_login FROM orders LEFT JOIN clients ON orders.user_id = clients.user_id WHERE clients.matchmaker_login='".$_SESSION['login_match']."' AND orders.status='0';");
+			$result2 = mysql_query("SELECT orders.*,clients.matchmaker_login FROM orders LEFT JOIN clients ON orders.user_id = clients.user_id WHERE clients.matchmaker_login='".$_SESSION['login_match']."' AND orders.status='0' OR orders.status='1';");
 			$num = mysql_num_rows($result2);
 		break;
 		
@@ -85,7 +85,7 @@ switch ($view)
 		break;
 		
 		case my_pending:
-			$zapros = "SELECT orders.*,clients.matchmaker_login FROM orders LEFT JOIN clients ON orders.user_id = clients.user_id WHERE clients.matchmaker_login='".$_SESSION['login_match']."' AND orders.status='0' ORDER BY order_id DESC LIMIT $quantity OFFSET $list;";
+			$zapros = "SELECT orders.*,clients.matchmaker_login FROM orders LEFT JOIN clients ON orders.user_id = clients.user_id WHERE clients.matchmaker_login='".$_SESSION['login_match']."' AND orders.status='0' OR orders.status='1' ORDER BY order_id DESC LIMIT $quantity OFFSET $list;";
 		break;
 		
 		case all:

@@ -286,7 +286,7 @@ require "./header.php";
 																					</a>
 																				</li>
 																				<li>
-																					<a href="./temp_msg.php">
+																					<a href="./conference_1.php?girl_id='.$girl_id.'">
 																						<span class="icon"><i class="fa fa-skype" aria-hidden="true"></i></span>
 																						<p>Skype conference</p>
 																					</a>
@@ -404,7 +404,7 @@ require "./header.php";
 																			</a>
 																		</li>
 																		<li>
-																			<a href="./temp_msg.php">
+																			<a href="./conference_1.php?girl_id='.$girl_id.'">
 																				<span class="icon"><i class="fa fa-skype" aria-hidden="true"></i></span>
 																				<p>Skype conference</p>
 																			</a>

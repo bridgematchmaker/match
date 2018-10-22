@@ -26,10 +26,13 @@ while($row1 = mysql_fetch_array($requirest1))
 		$user_id = $row1['user_id'];
 		$girl_id = $row1['girl_id'];
 		$user_email = $row1['user_email'];
+		$user_skype = $row1['user_skype'];
+		$skype_time = $row1['skype_time'];
 		$match_login_processed = $row1['match_login_processed'];
 		$type = $row1['type'];
 		$status = $row1['status'];
 		$description1 = $row1['description1'];
+		$description2 = $row1['description2'];
 		$mail_client = $row1['mail_client'];
 		$mail_girl = $row1['mail_girl'];
 		$foto_client = $row1['foto_client'];
@@ -159,6 +162,7 @@ include "header.php";
 							<h4>Статус заказа: <b><? echo $status_print; ?></b></h4>
 							<? if(($status == '0') AND ($type == '0')) { echo('<hr><button onClick="return window.confirm(\'Отправив письмо - Вы подтверждаете что девушка останется активновной в системе еще 90 дней.\');" type="submit" form="send_email_girl" class="btn btn-success">Отправить письмо девушке</button><br> На E-Mail: '.$girl_email); } ?>
 							<? if(($status == '1') AND ($type == '0')) { echo('<hr><button onClick="return window.confirm(\'Действительно отправить ответ от девушки клиенту?\');" type="submit" form="send_email_client" class="btn btn-success">Отправить письмо клиенту</button><br> На E-Mail: '.$user_email); } ?>
+							<? if(($status == '1') AND ($type == '1')) { echo('<hr><a onClick="return window.confirm(\'Подтвердить выполнение заказа?\');" href="./function/order_skype_confirm.php?order_id='.$order_id.'&user_id='.$user_id.'"><button class="btn btn-success">Подтвердить выполнение</button></a>'); } ?>
 							<? if(($status == '0') OR ($status == '1')) { echo('<hr><a onClick="return window.confirm(\'Действительно отменить заказ?\');" href="./function/order_cancel.php?order_id='.$order_id.'&type='.$type.'&user_id='.$user_id.'"><button class="btn btn-danger">Отменить заказ</button></a>'); } ?>
 							<hr>
 						</div>
@@ -176,14 +180,17 @@ include "header.php";
 						<div class="tab-pane fade active in" id="order">
 							<table class="table table-striped table-bordered">
 									<tr><td class="active">Дата создания заказа:</td><td><? echo $date_add; ?></td></tr>
+									<tr><td class="active">Тип заказа:</td><td><? echo $type_print; ?></td></tr>
+									<tr><td class="active">Описание заказа:</td><td><? echo $description1; ?></td></tr>
 									<tr><td class="active">ID клиента:</td><td><? echo $user_id; ?></td></tr>
 									<tr><td class="active">Имя клиента:</td><td><? echo $first_name; ?></td></tr>
 									<tr><td class="active">Фамилия клиента:</td><td><? echo $last_name; ?></td></tr>
 									<tr><td class="active">Email клиента:</td><td><? echo $user_email; ?></td></tr>
-									<tr><td class="active">Мачмекер клиента:</td><td><? echo $matchmaker_login_print; ?></td></tr>
-									<tr><td class="active">Тип заказа:</td><td><? echo $type_print; ?></td></tr>
+									<? if($type == "1") { echo("<tr><td class='active'>Skype клиента:</td><td>$user_skype</td></tr>"); } ?>
+									<? if($type == "1") { echo("<tr><td class='active'>Дата / Время Skype конференции:</td><td>$skype_time</td></tr>"); } ?>
+									<? if($type == "1") { echo("<tr><td class='active'>Коментирий клиента к заказу:</td><td>$description2</td></tr>"); } ?>
 									<tr><td class="active">ID девушки:</td><td><? echo $girl_id; ?></td></tr>
-									<tr><td class="active">Описание заказа:</td><td><? echo $description1; ?></td></tr>
+									<tr><td class="active">Мачмекер клиента:</td><td><? echo $matchmaker_login_print; ?></td></tr>
 									<tr><td class="active">Мачмекер выполнивший заказ:</td><td><? echo $match_login_processed; ?></td></tr>
 									<tr><td class="active">Дата выполнения заказа:</td><td><? echo $date_end; ?></td></tr>
 							</table>
