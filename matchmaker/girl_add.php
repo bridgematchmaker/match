@@ -724,6 +724,7 @@ include "header.php";
 					<label>Height from*</label>
 					 <select name="question32" class="form-control" required="required">
 						<option value=""></option>
+						<option value="Doesn't matter">Doesn't matter</option>
 						<option value="4 feet 0 inches (121.92 cm)">4 feet 0 inches (121.92 cm)</option>
 						<option value="4 feet 1 inches (124.46 cm)">4 feet 1 inches (124.46 cm)</option>
 						<option value="4 feet 2 inches (127.00 cm)">4 feet 2 inches (127.00 cm)</option>
@@ -764,6 +765,7 @@ include "header.php";
 					<label>Weight from*</label>
 					<select name="question33" class="form-control" required="required">
 						<option value=""></option>
+						<option value="Doesn't matter">Doesn't matter</option>
 						<option value="90 lbs (40.8 kg)">90 lbs (40.8 kg)</option>
 						<option value="91 lbs (41.3 kg)">91 lbs (41.3 kg)</option>
 						<option value="92 lbs (41.7 kg)">92 lbs (41.7 kg)</option>
@@ -902,6 +904,7 @@ include "header.php";
 					<label>Eye color *</label>
 					<select name="question34" class="form-control" required="required">
 						<option value=""></option>
+						<option value="Doesn't matter">Doesn't matter</option>
 						<option value="Black">Black</option>
 						<option value="Light-brown">Light-brown</option>
 						<option value="Grey-blue">Grey-blue</option>
@@ -919,6 +922,7 @@ include "header.php";
 					<label>Hair color *</label>
 					<select name="question35" class="form-control" required="required">
 						<option value=""></option>
+						<option value="Doesn't matter">Doesn't matter</option>
 						<option value="Black">Black</option>
 						<option value="Ligh-brown">Ligh-brown</option>
 						<option value="Blond">Blond</option>
@@ -934,6 +938,7 @@ include "header.php";
 					<label>Nationality *</label>
 					<select name="question36" class="form-control" required="required">
 						  <option value=""></option>
+						  <option value="Doesn't matter">Doesn't matter</option>
 						  <option value="afghan">Afghan</option>
 						  <option value="albanian">Albanian</option>
 						  <option value="algerian">Algerian</option>
@@ -1147,6 +1152,7 @@ include "header.php";
 						<option value="Scientologist">Scientologist</option>
 						<option value="Unitarian">Unitarian</option>
 						<option value="Orthodox">Orthodox</option>
+						<option value="Doesn't matter">Doesn't matter</option>
 					</select>
 				</div>
 				

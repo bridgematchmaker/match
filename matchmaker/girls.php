@@ -10,6 +10,17 @@ while($row_match = mysql_fetch_array($requirest_match)) { $status_match = $row_m
 if($status_match == "2") { echo("<script>alert('Аккаунт заблокирован');</script><script>javascript:window.location='index.php?logout'</script>");}
 //////////////////////////////////////////////////////////////////////////////////////
 
+//////////Функция вычесления возраста по дате рождения//////////
+function calculate_age($birthday) {
+	$birthday_timestamp = strtotime($birthday);
+	$age = date('Y') - date('Y', $birthday_timestamp);
+	if (date('md', $birthday_timestamp) > date('md')) {
+	  $age--;
+	}
+	return $age;
+  }
+/////////////////////////////////////////////////////////////////
+
 
 $quantity=15; // Количество записей на странице
 $limit=3; // Ограничиваем количество ссылок, которые будут выводиться перед и после текущей страницы
@@ -147,6 +158,7 @@ include "header.php";
 				<th>Фамилия:</th>
 				<th>Город:</th>
 				<th>Дата рождения:</th>
+				<th>Возраст:</th>
 				<th>Email:</th>
 				<th>Добавил:</th>
 				
@@ -172,6 +184,7 @@ include "header.php";
 						$last_name = $row['last_name'];
 						$city = $row['city'];
 						$birthday = $row['birthday'];
+						$age = calculate_age($birthday);
 						$email = $row['question45'];
 						$login_match = $row['login_match'];
 						$activation_status = $row['activation_status'];
@@ -200,6 +213,9 @@ include "header.php";
 									</td>
 									<td>
 										$birthday
+									</td>
+									<td>
+										$age
 									</td>
 									<td>
 										$email
