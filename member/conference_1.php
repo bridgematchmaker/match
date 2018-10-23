@@ -190,7 +190,18 @@ require "./header.php";
                                         </div>
                                     </div>
                                     <div class="mt-4 text-center form-footer">
-                                        <a href="./contact_us.php" class="form-link">Please contact your personal matchmaker </a>
+                                    <?
+											if($matchmaker_login !== "None")
+												{
+													echo('
+                                                            <a href="./chat_matchmaker.php" class="form-link">Please contact your personal matchmaker </a>
+                                                        ');
+                                                } else {
+                                                    echo('
+                                                            <a href="./contact_us.php" class="form-link">Please contact your personal matchmaker </a>
+                                                        ');
+                                                }
+                                    ?>
                                         <p class="mt-4">
                                             <button type="submit" class="btn btn-gradient disabled">
                                                 Next step
