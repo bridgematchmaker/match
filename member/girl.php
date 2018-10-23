@@ -149,12 +149,13 @@ for ($i=0; $i<31; $i++)
                           
                                 </div>
 
-                            </div>
-
+							</div>
+							
                             <div class="girl-video">
                                 <i class="fa fa-video-camera" aria-hidden="true"></i>Introduction video
                                 <iframe width="270" height="180" src="<? echo $girl_video; ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                            </div>
+							</div>
+							
 
 							<?
 								if($matchmaker_login !== "None")
@@ -216,8 +217,8 @@ for ($i=0; $i<31; $i++)
                                         <div class="col-md-6">
                                             <ul>
                                                 <li>
-                                                    <p class="title">Birthday</p>
-                                                    <p class="value"><? echo $girl_birthday; ?></p>
+                                                    <p class="title">Age</p>
+                                                    <p class="value"><? echo $girl_age; ?></p>
                                                 </li>
                                                 <li>
                                                     <p class="title">Height</p>
@@ -436,7 +437,9 @@ for ($i=0; $i<31; $i++)
 									<? if($status_ask > 0) { echo(' <div class="col-md-12"><button class="girl-info-question" data-toggle="modal" data-target="#firstQuestion"><i class="fa fa-question" aria-hidden="true"></i>Ask me your question</button></div>'); }?>
                 
                                     <div class="col-md-6"><button class="girl-info-dreams" data-toggle="collapse" href="#girl-info-dreams"><i class="fa fa-chain-broken" aria-hidden="true"></i>My dreams</button></div>
-                                    <div class="col-md-6"><button class="girl-info-meet" data-toggle="collapse" href="#girl-info-meet"><i class="fa fa-clock-o" aria-hidden="true"></i>How to meet this lady</button></div>
+									<div class="col-md-6"><button class="girl-info-meet" data-toggle="collapse" href="#girl-info-meet"><i class="fa fa-clock-o" aria-hidden="true"></i>How to meet this lady</button></div>
+									
+									<div class="col-md-12"><a href="./function/blacklist_add.php?girl_id=<? echo $girl_id; ?>&user_id=<? echo $user_id; ?>"><button class="girl-info-black"><i class="fa fa-plus" aria-hidden="true"></i>Add to black list</button></a></div>
 
                                     <div class="collapse col-md-12" id="girl-info-dreams">
                                         <div class="card card-body">

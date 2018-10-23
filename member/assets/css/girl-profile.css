@@ -214,6 +214,21 @@ a.button-matchmaker{
     margin-bottom: 7px;
     cursor: pointer;
 }
+
+.girl-info-black{
+    background: #000000;
+    font-size: 16px;
+    color: #ffffff;
+    width:100%;
+    height: 28px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+    cursor: pointer;
+}
+
 .girl-info-dreams,
 .girl-info-meet{
     background: #3c86d8;

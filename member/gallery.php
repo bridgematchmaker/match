@@ -6,6 +6,15 @@ include("../connect.php");
 include("./function/user_bd.php");
 include("./function/user_check.php");
 
+function calculate_age($birthday) {
+	$birthday_timestamp = strtotime($birthday);
+	$age = date('Y') - date('Y', $birthday_timestamp);
+	if (date('md', $birthday_timestamp) > date('md')) {
+	  $age--;
+	}
+	return $age;
+  }
+
 $quantity=9; // Количество записей на странице
 $limit=5; // Ограничиваем количество ссылок, которые будут выводиться перед и после текущей страницы
 $page = $_GET[page];
@@ -29,17 +38,17 @@ switch ($view)
 		case gallery:
 			$page_menu_name = "Women profiles";
 
-			////////////////////////Загружаем массив девушек добавленных в блек лист///////////////////////////////
+			////////////////////////Загружаем массив девушек добавленных в блек лист и рекомендации///////////////////////////////
 			$data_girl_id = Array(); // Масив с id девушек
 			$count = 0;
-			$sql_client_girl = "SELECT * FROM clients_girl WHERE user_id='".$user_id."' AND girl_status='2'";
+			$sql_client_girl = "SELECT * FROM clients_girl WHERE user_id='".$user_id."' AND girl_status='0' OR girl_status='2'";
 			$result_client_girl  = mysql_query($sql_client_girl);
 			while($row_client_girl = mysql_fetch_array($result_client_girl)) 
 				{ 
 					$data_girl_id[$count] = $row_client_girl['girl_id'];
 					$count++;
 				}
-			///////////////////////////////////////////////////////////////////////////////////////////////////////
+			/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			
 			
 			// Узнаем количество всех доступных записей 
@@ -222,6 +231,7 @@ require "./header.php";
 											$girl_id = $row['girl_id'];
 											$girl_first_name = $row['first_name'];
 											$girl_birthday = $row['birthday'];
+											$girl_age = calculate_age($girl_birthday);
 											$girl_foto = $row['foto'];
 											$girl_height = $row['question3'];
 											$girl_weight = $row['question4'];
@@ -246,8 +256,8 @@ require "./header.php";
 																	<div class="container age-height-weight">
 																		<div class="row">
 																			<div class="col-4 text-left">
-																				<p class="title">Birthday</p>
-																				<p class="value">'.$girl_birthday.'</p>
+																				<p class="title">Age</p>
+																				<p class="value">'.$girl_age.'</p>
 																			</div>
 																			<div class="col-4 text-center">
 																				<p class="title">Height</p>
@@ -335,6 +345,7 @@ require "./header.php";
 												{ 
 													$girl_first_name = $row_recomendation['first_name'];
 													$girl_birthday = $row_recomendation['birthday'];
+													$girl_age = calculate_age($girl_birthday);
 													$girl_foto = $row_recomendation['foto'];
 													$girl_height = $row_recomendation['question3'];
 													$girl_weight = $row_recomendation['question4'];
@@ -364,8 +375,8 @@ require "./header.php";
 															<div class="container age-height-weight">
 																<div class="row">
 																	<div class="col-4 text-left">
-																		<p class="title">Birthday</p>
-																		<p class="value">'.$girl_birthday.'</p>
+																		<p class="title">Age</p>
+																		<p class="value">'.$girl_age.'</p>
 																	</div>
 																	<div class="col-4 text-center">
 																		<p class="title">Height</p>
@@ -446,6 +457,7 @@ require "./header.php";
 												{ 
 													$girl_first_name = $row_blacklist['first_name'];
 													$girl_birthday = $row_blacklist['birthday'];
+													$girl_age = calculate_age($girl_birthday);
 													$girl_foto = $row_blacklist['foto'];
 													$girl_height = $row_blacklist['question3'];
 													$girl_weight = $row_blacklist['question4'];
@@ -471,8 +483,8 @@ require "./header.php";
 															<div class="container age-height-weight">
 																<div class="row">
 																	<div class="col-4 text-left">
-																		<p class="title">Birthday</p>
-																		<p class="value">'.$girl_birthday.'</p>
+																		<p class="title">Age</p>
+																		<p class="value">'.$girl_age.'</p>
 																	</div>
 																	<div class="col-4 text-center">
 																		<p class="title">Height</p>

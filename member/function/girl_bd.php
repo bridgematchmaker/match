@@ -1,4 +1,16 @@
 <?
+
+//////////Функция вычесления возраста по дате рождения//////////
+function calculate_age($birthday) {
+	$birthday_timestamp = strtotime($birthday);
+	$age = date('Y') - date('Y', $birthday_timestamp);
+	if (date('md', $birthday_timestamp) > date('md')) {
+	  $age--;
+	}
+	return $age;
+  }
+/////////////////////////////////////////////////////////////////
+
 $zapros = "SELECT * FROM girls WHERE girl_id='".$girl_id."'";
 
 //////////////////////////////Загрузка данных из базы////////////////////////
@@ -12,6 +24,7 @@ while($row = mysql_fetch_array($requirest))
 		$girl_foto = $row['foto'];
 		$girl_video = $row['video'];
 		$girl_birthday = $row['birthday'];
+		$girl_age = calculate_age($girl_birthday);
 		$girl_gallery_status = $row['gallery_status'];
 		$girl_login_match = $row['login_match'];
 		$girl_dreams = $row['dreams'];
