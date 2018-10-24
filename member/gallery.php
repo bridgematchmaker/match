@@ -47,6 +47,7 @@ switch ($view)
 				{ 
 					$data_girl_id[$count] = $row_client_girl['girl_id'];
 					$count++;
+					$sql_into = $sql_into . " AND girl_id <> '" . $row_client_girl['girl_id'] . "'";
 				}
 			/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			
@@ -106,7 +107,7 @@ $list=--$page*$quantity;
 switch ($view) 
 	{
 		case gallery:
-			$girl_zapros = "SELECT * FROM girls WHERE gallery_status='1' AND activation_status='1' LIMIT $quantity OFFSET $list;";
+			$girl_zapros = "SELECT * FROM girls WHERE gallery_status='1' AND activation_status='1' $sql_into LIMIT $quantity OFFSET $list;";
 		break;
 		
 		case recomendation:
