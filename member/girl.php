@@ -35,6 +35,7 @@ isset($_SESSION['email_client']) or die("<script>javascript:window.location='../
 include("../connect.php");
 include("./function/user_bd.php");
 include("./function/user_check.php");
+include("./function/user_blacklist.php");
 require "./header.php";
 
 
@@ -438,8 +439,14 @@ for ($i=0; $i<31; $i++)
                 
                                     <div class="col-md-6"><button class="girl-info-dreams" data-toggle="collapse" href="#girl-info-dreams"><i class="fa fa-chain-broken" aria-hidden="true"></i>My dreams</button></div>
 									<div class="col-md-6"><button class="girl-info-meet" data-toggle="collapse" href="#girl-info-meet"><i class="fa fa-clock-o" aria-hidden="true"></i>How to meet this lady</button></div>
-									
-									<div class="col-md-12"><a href="./function/blacklist_add.php?girl_id=<? echo $girl_id; ?>&user_id=<? echo $user_id; ?>"><button class="girl-info-black"><i class="fa fa-plus" aria-hidden="true"></i>Add to black list</button></a></div>
+									<?
+										if (!in_array($girl_id, $data_blacklist)) 
+										{
+											echo('<div class="col-md-12"><a href="./function/blacklist_add.php?girl_id='.$girl_id.'&user_id='.$user_id.'"><button class="girl-info-black"><i class="fa fa-plus" aria-hidden="true"></i> Add to black list</button></a></div>');
+										} else {
+											echo('<div class="col-md-12"><a href="./function/blacklist_remove.php?girl_id='.$girl_id.'&user_id='.$user_id.'"><button class="girl-info-black"><i class="fa fa-minus" aria-hidden="true"></i> Remove from Blacklist</button></a></div>');
+										}
+									?>
 
                                     <div class="collapse col-md-12" id="girl-info-dreams">
                                         <div class="card card-body">
