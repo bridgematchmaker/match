@@ -332,7 +332,7 @@ include "header.php";
 									<tr><td>Contact phone number </td><td><? echo $question44; ?></td></tr>
 									<tr><td>Email address </td><td><? echo $question45; ?></td></tr>
 									<tr><td>Viber/Skype/WhatsApp </td><td><? echo $question46; ?></td></tr>
-									<tr><td>Do you have social nets? (Facebook Twitter Google+) </td><td><? echo $question47; ?></td></tr>
+									<tr><td>Do you have social nets? (If yes, please insert the link one of your social nets. Facebook Twitter Google+)</td><td><? echo $question47; ?></td></tr>
 									<tr><td>Preferred days and time of communication with you </td><td><? echo $question48; ?></td></tr>
 									<tr><td>Information for men who order Skype conference with this lady</td><td><? echo $question49; ?></td></tr>
 									
@@ -765,7 +765,7 @@ include "header.php";
 								</div>
 				
 								<div class="form-group">
-									<label>Do you have social nets? (Facebook Twitter Google+) *</label>
+									<label>Do you have social nets? (If yes, please insert the link one of your social nets. Facebook Twitter Google+) *</label>
 									<input name="question47" type="text" class="form-control rounded" value="<? echo $question47; ?>">
 								</div>
 				

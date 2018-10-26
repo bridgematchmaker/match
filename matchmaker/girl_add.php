@@ -1208,7 +1208,7 @@ include "header.php";
 				</div>
 				
 				<div class="form-group">
-					<label>Do you have social nets? (Facebook Twitter Google+) *</label>
+					<label>Do you have social nets? (If yes, please insert the link one of your social nets. Facebook Twitter Google+) *</label>
 					<input name="question47" type="text" class="form-control rounded" required="required">
 				</div>
 				

@@ -41,7 +41,7 @@ switch ($view)
 			////////////////////////Загружаем массив девушек добавленных в блек лист и рекомендации///////////////////////////////
 			$data_girl_id = Array(); // Масив с id девушек
 			$count = 0;
-			$sql_client_girl = "SELECT * FROM clients_girl WHERE user_id='".$user_id."' AND girl_status='0' OR girl_status='2'";
+			$sql_client_girl = "SELECT * FROM clients_girl WHERE user_id='".$user_id."' AND (girl_status='0' OR girl_status='2')";
 			$result_client_girl  = mysql_query($sql_client_girl);
 			while($row_client_girl = mysql_fetch_array($result_client_girl)) 
 				{ 
