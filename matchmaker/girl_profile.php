@@ -4,6 +4,13 @@ isset($_SESSION['login_match']) or die("<script>javascript:window.location='inde
 
 include("../connect.php");
 
+function checkInputError($str)
+{
+	if(trim(explode('||', $str)[1]) == "Некорректное заполнение поля!") { 
+		return "class='danger'";
+	}
+}
+
 ///////////////////////////////Проверка статуса мачмеккера////////////////////////////
 $zapros_match = "SELECT * FROM matchmakers WHERE login='".$_SESSION['login_match']."'";
 $requirest_match = mysql_query($zapros_match);
@@ -264,12 +271,12 @@ include "header.php";
 					<div id="myTabContent" class="tab-content">
 						<div class="tab-pane fade active in" id="user">
 							<table class="table table-striped table-bordered">
-									<tr><td class="active">Имя:</td><td <? if(trim(explode('||', $first_name)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $first_name; ?></td></tr>
-									<tr><td class="active">Фамилия:</td><td <? if(trim(explode('||', $last_name)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $last_name; ?></td></tr>
-									<tr><td class="active">Email:</td><td <? if(trim(explode('||', $question45)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question45; ?></td></tr>
+									<tr><td class="active">Имя:</td><td <? echo checkInputError($first_name); ?> ><? echo $first_name; ?></td></tr>
+									<tr><td class="active">Фамилия:</td><td <? echo checkInputError($last_name); ?> ><? echo $last_name; ?></td></tr>
+									<tr><td class="active">Email:</td><td <? echo checkInputError($question45); ?> ><? echo $question45; ?></td></tr>
 									<tr><td class="active">Дата рождения:</td><td><? echo $birthday; ?></td></tr>
 									<tr><td class="active">Страна:</td><td><? echo $country; ?></td></tr>
-									<tr><td class="active">Город:</td><td <? if(trim(explode('||', $city)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $city; ?></td></tr>
+									<tr><td class="active">Город:</td><td <? echo checkInputError($city); ?> ><? echo $city; ?></td></tr>
 									<tr><td class="active">Добавил в базу:</td><td><? echo $login_match; ?></td></tr>
 									<tr><td class="active">Video URL:</td><td><? echo $video; ?></td></tr>
 									<? if($video <> "") { echo('<tr><td class="active"></td><td><iframe width="270" height="180" src="'.$video.'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></td></tr>'); } ?>
@@ -301,50 +308,50 @@ include "header.php";
 									<tr><td>Hair color </td><td><? echo $question7; ?></td></tr>
 									<tr><td>Education </td><td><? echo $question8; ?></td></tr>
 									<tr><td>Attitude to smoking, alcohol, drugs </td><td><? echo $question9; ?></td></tr>
-									<tr><td>Marital status </td><td <? if(trim(explode('||', $question10)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question10; ?></td></tr>
-									<tr><td>What is your native language? </td><td <? if(trim(explode('||', $question11)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question11; ?></td></tr>
-									<tr><td>What languages can you speak? </td><td <? if(trim(explode('||', $question12)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question12; ?></td></tr>
-									<tr><td>Have children </td><td <? if(trim(explode('||', $question13)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question13; ?></td></tr>
-									<tr><td>My character traits </td><td <? if(trim(explode('||', $question14)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question14; ?></td></tr>
-									<tr><td>What do I expect from the search here? </td><td <? if(trim(explode('||', $question15)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question15; ?></td></tr>
-									<tr><td>Profession </td><td <? if(trim(explode('||', $question16)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question16; ?></td></tr>
-									<tr><td>Occupation </td><td <? if(trim(explode('||', $question17)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question17; ?></td></tr>
-									<tr><td>Which countries did you visit? </td><td <? if(trim(explode('||', $question18)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question18; ?></td></tr>
-									<tr><td>What countries would you like to visit? </td><td <? if(trim(explode('||', $question19)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question19; ?></td></tr>
-									<tr><td>Write briefly about yourself, about your lifestyle, your likes and dislikes </td><td <? if(trim(explode('||', $question20)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question20; ?></td></tr>
-									<tr><td>What are your hobbies and interests? </td><td <? if(trim(explode('||', $question21)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question21; ?></td></tr>
-									<tr><td>Do you want children in a new relation? </td><td <? if(trim(explode('||', $question22)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question22; ?></td></tr>
-									<tr><td>Describe your perfect morning (you are a night owl or an early bird?) </td><td <? if(trim(explode('||', $question24)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question24; ?></td></tr>
-									<tr><td>Describe your desired future (goals, lifestyle, relationships in the family) </td><td <? if(trim(explode('||', $question25)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question25; ?></td></tr>
-									<tr><td>Attitude to pets </td><td <? if(trim(explode('||', $question26)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question26; ?></td></tr>
-									<tr><td>What could you forgive and what can not? </td><td <? if(trim(explode('||', $question27)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question27; ?></td></tr>
-									<tr><td>Why did you decide to choose an online dating site for your search? </td><td <? if(trim(explode('||', $question28)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question28; ?></td></tr>
-									<tr><td>Why do you think that you haven’t found a suitable partner yet? </td><td <? if(trim(explode('||', $question29)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question29; ?></td></tr>
+									<tr><td>Marital status </td><td <? echo checkInputError($question10); ?> ><? echo $question10; ?></td></tr>
+									<tr><td>What is your native language? </td><td <? echo checkInputError($question11); ?> ><? echo $question11; ?></td></tr>
+									<tr><td>What languages can you speak? </td><td <? echo checkInputError($question12); ?> ><? echo $question12; ?></td></tr>
+									<tr><td>Have children </td><td <? echo checkInputError($question13); ?> ><? echo $question13; ?></td></tr>
+									<tr><td>My character traits </td><td <? echo checkInputError($question14); ?> ><? echo $question14; ?></td></tr>
+									<tr><td>What do I expect from the search here? </td><td <? echo checkInputError($question15); ?> ><? echo $question15; ?></td></tr>
+									<tr><td>Profession </td><td <? echo checkInputError($question16); ?> ><? echo $question16; ?></td></tr>
+									<tr><td>Occupation </td><td <? echo checkInputError($question17); ?> ><? echo $question17; ?></td></tr>
+									<tr><td>Which countries did you visit? </td><td <? echo checkInputError($question18); ?> ><? echo $question18; ?></td></tr>
+									<tr><td>What countries would you like to visit? </td><td <? echo checkInputError($question19); ?> ><? echo $question19; ?></td></tr>
+									<tr><td>Write briefly about yourself, about your lifestyle, your likes and dislikes </td><td <? echo checkInputError($question20); ?> ><? echo $question20; ?></td></tr>
+									<tr><td>What are your hobbies and interests? </td><td <? echo checkInputError($question21); ?> ><? echo $question21; ?></td></tr>
+									<tr><td>Do you want children in a new relation? </td><td <? echo checkInputError($question22); ?> ><? echo $question22; ?></td></tr>
+									<tr><td>Describe your perfect morning (you are a night owl or an early bird?) </td><td <? echo checkInputError($question24); ?> ><? echo $question24; ?></td></tr>
+									<tr><td>Describe your desired future (goals, lifestyle, relationships in the family) </td><td <? echo checkInputError($question25); ?> ><? echo $question25; ?></td></tr>
+									<tr><td>Attitude to pets </td><td <? echo checkInputError($question26); ?> ><? echo $question26; ?></td></tr>
+									<tr><td>What could you forgive and what can not? </td><td <? echo checkInputError($question27); ?> ><? echo $question27; ?></td></tr>
+									<tr><td>Why did you decide to choose an online dating site for your search? </td><td <? echo checkInputError($question28); ?> ><? echo $question28; ?></td></tr>
+									<tr><td>Why do you think that you haven’t found a suitable partner yet? </td><td <? echo checkInputError($question29); ?> ><? echo $question29; ?></td></tr>
 							</table>	
 						</div>
 						
 						<div class="tab-pane fade" id="anketa2">
 							<table class="table table-striped table-bordered">
-									<tr><td>Age Range </td><td <? if(trim(explode('||', $question30)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question30; ?></td></tr>
-									<tr><td>Country </td><td <? if(trim(explode('||', $question31)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question31; ?></td></tr>
-									<tr><td>Height </td><td <? if(trim(explode('||', $question32)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question32; ?></td></tr>
-									<tr><td>Weight </td><td <? if(trim(explode('||', $question33)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question33; ?></td></tr>
-									<tr><td>Eye color </td><td <? if(trim(explode('||', $question34)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question34; ?></td></tr>
-									<tr><td>Hair color </td><td <? if(trim(explode('||', $question35)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question35; ?></td></tr>
-									<tr><td>Nationality </td><td <? if(trim(explode('||', $question36)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question36; ?></td></tr>
-									<tr><td>Religion </td><td <? if(trim(explode('||', $question37)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question37; ?></td></tr>
-									<tr><td>Have children </td><td <? if(trim(explode('||', $question38)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question38; ?></td></tr>
-									<tr><td>Desired traits of character in a man </td><td <? if(trim(explode('||', $question39)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question39; ?></td></tr>
-									<tr><td>Character traits that you can not be tolerate with </td><td <? if(trim(explode('||', $question40)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question40; ?></td></tr>
-									<tr><td>Do you want the man to know your native language or another language in which you can communicate? </td><td <? if(trim(explode('||', $question41)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question41; ?></td></tr>
-									<tr><td>A man should prefer an active or passive rest? </td><td <? if(trim(explode('||', $question42)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question42; ?></td></tr>
-									<tr><td>Describe the man you would like to meet on our website. What is most important for you? </td><td <? if(trim(explode('||', $question43)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question43; ?></td></tr>
-									<tr><td>Contact phone number </td><td <? if(trim(explode('||', $question44)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question44; ?></td></tr>
-									<tr><td>Email address </td><td <? if(trim(explode('||', $question45)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question45; ?></td></tr>
-									<tr><td>Viber/Skype/WhatsApp </td><td <? if(trim(explode('||', $question46)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question46; ?></td></tr>
-									<tr><td>Do you have social nets? (If yes, please insert the link one of your social nets. Facebook Twitter Google+)</td><td <? if(trim(explode('||', $question47)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question47; ?></td></tr>
-									<tr><td>Preferred days and time of communication with you </td><td <? if(trim(explode('||', $question48)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question48; ?></td></tr>
-									<tr><td>Information for men who order Skype conference with this lady</td><td <? if(trim(explode('||', $question49)[1]) == "Некорректное заполнение поля!") { echo('class="danger"'); } ?> ><? echo $question49; ?></td></tr>
+									<tr><td>Age Range </td><td <? echo checkInputError($question30); ?> ><? echo $question30; ?></td></tr>
+									<tr><td>Country </td><td <? echo checkInputError($question31); ?> ><? echo $question31; ?></td></tr>
+									<tr><td>Height </td><td <? echo checkInputError($question32); ?> ><? echo $question32; ?></td></tr>
+									<tr><td>Weight </td><td <? echo checkInputError($question33); ?> ><? echo $question33; ?></td></tr>
+									<tr><td>Eye color </td><td <? echo checkInputError($question34); ?> ><? echo $question34; ?></td></tr>
+									<tr><td>Hair color </td><td <? echo checkInputError($question35); ?> ><? echo $question35; ?></td></tr>
+									<tr><td>Nationality </td><td <? echo checkInputError($question36); ?> ><? echo $question36; ?></td></tr>
+									<tr><td>Religion </td><td <? echo checkInputError($question37); ?> ><? echo $question37; ?></td></tr>
+									<tr><td>Have children </td><td <? echo checkInputError($question38); ?> ><? echo $question38; ?></td></tr>
+									<tr><td>Desired traits of character in a man </td><td <? echo checkInputError($question39); ?> ><? echo $question39; ?></td></tr>
+									<tr><td>Character traits that you can not be tolerate with </td><td <? echo checkInputError($question40); ?> ><? echo $question40; ?></td></tr>
+									<tr><td>Do you want the man to know your native language or another language in which you can communicate? </td><td <? echo checkInputError($question41); ?> ><? echo $question41; ?></td></tr>
+									<tr><td>A man should prefer an active or passive rest? </td><td <? echo checkInputError($question42); ?> ><? echo $question42; ?></td></tr>
+									<tr><td>Describe the man you would like to meet on our website. What is most important for you? </td><td <? echo checkInputError($question43); ?> ><? echo $question43; ?></td></tr>
+									<tr><td>Contact phone number </td><td <? echo checkInputError($question44); ?> ><? echo $question44; ?></td></tr>
+									<tr><td>Email address </td><td <? echo checkInputError($question45); ?> ><? echo $question45; ?></td></tr>
+									<tr><td>Viber/Skype/WhatsApp </td><td <? echo checkInputError($question46); ?> ><? echo $question46; ?></td></tr>
+									<tr><td>Do you have social nets? (If yes, please insert the link one of your social nets. Facebook Twitter Google+)</td><td <? echo checkInputError($question47); ?> ><? echo $question47; ?></td></tr>
+									<tr><td>Preferred days and time of communication with you </td><td <? echo checkInputError($question48); ?> ><? echo $question48; ?></td></tr>
+									<tr><td>Information for men who order Skype conference with this lady</td><td <? echo checkInputError($question49); ?> ><? echo $question49; ?></td></tr>
 									
 									
 							</table>		
