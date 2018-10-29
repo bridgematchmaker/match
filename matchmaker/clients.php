@@ -193,18 +193,22 @@ include "header.php";
 							{
 								case 0:
 									$status_system_print = "Новый";
+									$td_class = "info";
 								break;
 			
 								case 1:
 									$status_system_print = "Активный";
+									$td_class = "danger";
 								break;
 		
 								case 2:
 									$status_system_print = "Верефицированый";
+									$td_class = "success";
 								break;
 		
 								case 3:
 									$status_system_print = "Верефицированый полный";
+									$td_class = "success";
 								break;	
 		
 								case 4:
@@ -258,7 +262,7 @@ include "header.php";
 									<td>
 										$match_name
 									</td>
-									<td>
+									<td class='$td_class'>
 										$status_system_print
 									</td>
 									<td>

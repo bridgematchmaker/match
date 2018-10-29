@@ -137,6 +137,9 @@ switch ($activation_status)
 		break;
 	}
 
+if($status_match == "1" AND $activation_status == "0") {
+	$status_error_btn = 1;
+}
 /////////////////////////////////////////////////////////////////////
 
 ///////////////////////////Проверка прав доступа к анкете для агенств/////////////////////////////
@@ -168,6 +171,13 @@ if($status_match == "0")
 		format: 'YYYY-MM-DD'
 	  });
     });
+	</script>
+
+	<script>
+	function someFunc(inputName,buttonId){
+		document.getElementsByName(inputName)[0].value = document.getElementsByName(inputName)[0].value + " - Некорректное заполнение поля!";
+		document.getElementById(buttonId).disabled = true; 
+	}
 	</script>
 	
 </head>
@@ -506,11 +516,23 @@ include "header.php";
 				
 								<div class="form-group">
 									<label>First name *</label>
+									<?php
+										if($status_error_btn == "1")
+										{
+											echo('<input type="button" id="first_name" class="btn btn-warning btn-xs" value="Ошибка при заполнении" onclick="someFunc(\'first_name\',\'first_name\')">');
+										}
+									?>
 									<input name="first_name" type="text" class="form-control rounded" value="<? echo $first_name; ?>">
 								</div>
 				
 								<div class="form-group">
 									<label>Last name *</label>
+									<?php
+										if($status_error_btn == "1")
+										{
+											echo('<input type="button" id="last_name" class="btn btn-warning btn-xs" value="Ошибка при заполнении" onclick="someFunc(\'last_name\',\'last_name\')">');
+										}
+									?>
 									<input name="last_name" type="text" class="form-control rounded" value="<? echo $last_name; ?>">
 								</div>
 				
@@ -522,6 +544,12 @@ include "header.php";
 				
 								<div class="form-group">
 									<label>City *</label>
+									<?php
+										if($status_error_btn == "1")
+										{
+											echo('<input type="button" id="city" class="btn btn-warning btn-xs" value="Ошибка при заполнении" onclick="someFunc(\'city\',\'city\')">');
+										}
+									?>
 									<input name="city" type="text" class="form-control rounded" value="<? echo $city; ?>">
 								</div>
 								
@@ -584,6 +612,12 @@ include "header.php";
 				
 								<div class="form-group">
 									<label>Marital status *</label>
+									<?php
+										if($status_error_btn == "1")
+										{
+											echo('<input type="button" id="question10" class="btn btn-warning btn-xs" value="Ошибка при заполнении" onclick="someFunc(\'question10\',\'question10\')">');
+										}
+									?>
 									<input name="question10" type="text" class="form-control rounded" value="<? echo $question10; ?>">
 								</div>
 				
@@ -599,46 +633,100 @@ include "header.php";
 				
 								<div class="form-group">
 									<label>Have children *</label>
+									<?php
+										if($status_error_btn == "1")
+										{
+											echo('<input type="button" id="question13" class="btn btn-warning btn-xs" value="Ошибка при заполнении" onclick="someFunc(\'question13\',\'question13\')">');
+										}
+									?>
 									<input name="question13" type="text" class="form-control rounded" value="<? echo $question13; ?>">
 								</div>
 				
 								<div class="form-group">
 									<label>My character traits *</label>
+									<?php
+										if($status_error_btn == "1")
+										{
+											echo('<input type="button" id="question14" class="btn btn-warning btn-xs" value="Ошибка при заполнении" onclick="someFunc(\'question14\',\'question14\')">');
+										}
+									?>
 									<input name="question14" type="text" class="form-control rounded" value="<? echo $question14; ?>">
 								</div>
 				
 								<div class="form-group">
 									<label>What do I expect from the search here? *</label>
+									<?php
+										if($status_error_btn == "1")
+										{
+											echo('<input type="button" id="question15" class="btn btn-warning btn-xs" value="Ошибка при заполнении" onclick="someFunc(\'question15\',\'question15\')">');
+										}
+									?>
 									<input name="question15" type="text" class="form-control rounded" value="<? echo $question15; ?>">
 								</div>
 				
 								<div class="form-group">
 									<label>Profession</label>
+									<?php
+										if($status_error_btn == "1")
+										{
+											echo('<input type="button" id="question16" class="btn btn-warning btn-xs" value="Ошибка при заполнении" onclick="someFunc(\'question16\',\'question16\')">');
+										}
+									?>
 									<input name="question16" type="text" class="form-control rounded" value="<? echo $question16; ?>">
 								</div>
 				
 								<div class="form-group">
 									<label>Occupation *</label>
+									<?php
+										if($status_error_btn == "1")
+										{
+											echo('<input type="button" id="question17" class="btn btn-warning btn-xs" value="Ошибка при заполнении" onclick="someFunc(\'question17\',\'question17\')">');
+										}
+									?>
 									<input name="question17" type="text" class="form-control rounded" value="<? echo $question17; ?>">
 								</div>
 				
 								<div class="form-group">
 									<label>Which countries did you visit?</label>
+									<?php
+										if($status_error_btn == "1")
+										{
+											echo('<input type="button" id="question18" class="btn btn-warning btn-xs" value="Ошибка при заполнении" onclick="someFunc(\'question18\',\'question18\')">');
+										}
+									?>
 									<input name="question18" type="text" class="form-control rounded" value="<? echo $question18; ?>">
 								</div>
 				
 								<div class="form-group">
 									<label>What countries would you like to visit?</label>
+									<?php
+										if($status_error_btn == "1")
+										{
+											echo('<input type="button" id="question19" class="btn btn-warning btn-xs" value="Ошибка при заполнении" onclick="someFunc(\'question19\',\'question19\')">');
+										}
+									?>
 									<input name="question19" type="text" class="form-control rounded" value="<? echo $question19; ?>">
 								</div>
 				
 								<div class="form-group">
 									<label>Write briefly about yourself, about your lifestyle, your likes and dislikes</label>
+									<?php
+										if($status_error_btn == "1")
+										{
+											echo('<input type="button" id="question20" class="btn btn-warning btn-xs" value="Ошибка при заполнении" onclick="someFunc(\'question20\',\'question20\')">');
+										}
+									?>
 									<input name="question20" type="text" class="form-control rounded" value="<? echo $question20; ?>">
 								</div>
 				
 								<div class="form-group">
 									<label>What are your hobbies and interests? *</label>
+									<?php
+										if($status_error_btn == "1")
+										{
+											echo('<input type="button" id="question21" class="btn btn-warning btn-xs" value="Ошибка при заполнении" onclick="someFunc(\'question21\',\'question21\')">');
+										}
+									?>
 									<input name="question21" type="text" class="form-control rounded" value="<? echo $question21; ?>">
 								</div>
 				
@@ -649,31 +737,67 @@ include "header.php";
 				
 								<div class="form-group">
 									<label>Describe your perfect morning (you are a night owl or an early bird?)</label>
+									<?php
+										if($status_error_btn == "1")
+										{
+											echo('<input type="button" id="question24" class="btn btn-warning btn-xs" value="Ошибка при заполнении" onclick="someFunc(\'question24\',\'question24\')">');
+										}
+									?>
 									<input name="question24" type="text" class="form-control rounded" value="<? echo $question24; ?>">
 								</div>
 				
 								<div class="form-group">
 									<label>Describe your desired future (goals, lifestyle, relationships in the family) *</label>
+									<?php
+										if($status_error_btn == "1")
+										{
+											echo('<input type="button" id="question25" class="btn btn-warning btn-xs" value="Ошибка при заполнении" onclick="someFunc(\'question25\',\'question25\')">');
+										}
+									?>
 									<input name="question25" type="text" class="form-control rounded" value="<? echo $question25; ?>">
 								</div>
 				
 								<div class="form-group">
 									<label>Attitude to pets</label>
+									<?php
+										if($status_error_btn == "1")
+										{
+											echo('<input type="button" id="question26" class="btn btn-warning btn-xs" value="Ошибка при заполнении" onclick="someFunc(\'question26\',\'question26\')">');
+										}
+									?>
 									<input name="question26" type="text" class="form-control rounded" value="<? echo $question26; ?>">
 								</div>
 				
 								<div class="form-group">
 									<label>What could you forgive and what can not?</label>
+									<?php
+										if($status_error_btn == "1")
+										{
+											echo('<input type="button" id="question27" class="btn btn-warning btn-xs" value="Ошибка при заполнении" onclick="someFunc(\'question27\',\'question27\')">');
+										}
+									?>
 									<input name="question27" type="text" class="form-control rounded" value="<? echo $question27; ?>">
 								</div>
 				
 								<div class="form-group">
 									<label>Why did you decide to choose an online dating site for your search?</label>
+									<?php
+										if($status_error_btn == "1")
+										{
+											echo('<input type="button" id="question28" class="btn btn-warning btn-xs" value="Ошибка при заполнении" onclick="someFunc(\'question28\',\'question28\')">');
+										}
+									?>
 									<input name="question28" type="text" class="form-control rounded" value="<? echo $question28; ?>">
 								</div>
 				
 								<div class="form-group">
 									<label>Why do you think that you haven’t found a suitable partner yet?</label>
+									<?php
+										if($status_error_btn == "1")
+										{
+											echo('<input type="button" id="question29" class="btn btn-warning btn-xs" value="Ошибка при заполнении" onclick="someFunc(\'question29\',\'question29\')">');
+										}
+									?>
 									<input name="question29" type="text" class="form-control rounded" value="<? echo $question29; ?>">
 								</div>
 				
@@ -726,11 +850,23 @@ include "header.php";
 				
 								<div class="form-group">
 									<label>Desired traits of character in a man *</label>
+									<?php
+										if($status_error_btn == "1")
+										{
+											echo('<input type="button" id="question39" class="btn btn-warning btn-xs" value="Ошибка при заполнении" onclick="someFunc(\'question39\',\'question39\')">');
+										}
+									?>
 									<input name="question39" type="text" class="form-control rounded" value="<? echo $question39; ?>">
 								</div>
 				
 								<div class="form-group">
 									<label>Character traits that you can not be tolerate with *</label>
+									<?php
+										if($status_error_btn == "1")
+										{
+											echo('<input type="button" id="question40" class="btn btn-warning btn-xs" value="Ошибка при заполнении" onclick="someFunc(\'question40\',\'question40\')">');
+										}
+									?>
 									<input name="question40" type="text" class="form-control rounded" value="<? echo $question40; ?>">
 								</div>
 				
@@ -741,48 +877,101 @@ include "header.php";
 				
 								<div class="form-group">
 									<label>A man should prefer an active or passive rest?</label>
+									<?php
+										if($status_error_btn == "1")
+										{
+											echo('<input type="button" id="question42" class="btn btn-warning btn-xs" value="Ошибка при заполнении" onclick="someFunc(\'question42\',\'question42\')">');
+										}
+									?>
 									<input name="question42" type="text" class="form-control rounded" value="<? echo $question42; ?>">
 								</div>
 				
 								<div class="form-group">
 									<label>Describe the man you would like to meet on our website. What is most important for you? *</label>
-									<input name="question43" type="text" class="form-control rounded" value="<? echo $question44; ?>">
+									<?php
+										if($status_error_btn == "1")
+										{
+											echo('<input type="button" id="question43" class="btn btn-warning btn-xs" value="Ошибка при заполнении" onclick="someFunc(\'question43\',\'question43\')">');
+										}
+									?>
+									<input name="question43" type="text" class="form-control rounded" value="<? echo $question43; ?>">
 								</div>
 				
 								<div class="form-group">
 									<label>Contact phone number *</label>
+									<?php
+										if($status_error_btn == "1")
+										{
+											echo('<input type="button" id="question44" class="btn btn-warning btn-xs" value="Ошибка при заполнении" onclick="someFunc(\'question44\',\'question44\')">');
+										}
+									?>
 									<input name="question44" type="text" class="form-control rounded" value="<? echo $question44; ?>">
 								</div>
 				
 								<div class="form-group">
 									<label>Email address *</label>
+									<?php
+										if($status_error_btn == "1")
+										{
+											echo('<input type="button" id="question45" class="btn btn-warning btn-xs" value="Ошибка при заполнении" onclick="someFunc(\'question45\',\'question45\')">');
+										}
+									?>
 									<input name="question45" type="email" class="form-control rounded" value="<? echo $question45; ?>">
 								</div>
 				
 								<div class="form-group">
 									<label>Viber/Skype/WhatsApp *</label>
+									<?php
+										if($status_error_btn == "1")
+										{
+											echo('<input type="button" id="question46" class="btn btn-warning btn-xs" value="Ошибка при заполнении" onclick="someFunc(\'question46\',\'question46\')">');
+										}
+									?>
 									<input name="question46" type="text" class="form-control rounded" value="<? echo $question46; ?>">
 								</div>
 				
 								<div class="form-group">
 									<label>Do you have social nets? (If yes, please insert the link one of your social nets. Facebook Twitter Google+) *</label>
+									<?php
+										if($status_error_btn == "1")
+										{
+											echo('<input type="button" id="question47" class="btn btn-warning btn-xs" value="Ошибка при заполнении" onclick="someFunc(\'question47\',\'question47\')">');
+										}
+									?>
 									<input name="question47" type="text" class="form-control rounded" value="<? echo $question47; ?>">
 								</div>
 				
 								<div class="form-group">
 									<label>Preferred days and time of communication with you</label>
+									<?php
+										if($status_error_btn == "1")
+										{
+											echo('<input type="button" id="question48" class="btn btn-warning btn-xs" value="Ошибка при заполнении" onclick="someFunc(\'question48\',\'question48\')">');
+										}
+									?>
 									<input name="question48" type="text" class="form-control rounded" value="<? echo $question48; ?>">
 								</div>
 
 								<div class="form-group">
 									<label>Information for men who order Skype conference with this lady *</label>
+									<?php
+										if($status_error_btn == "1")
+										{
+											echo('<input type="button" id="question49" class="btn btn-warning btn-xs" value="Ошибка при заполнении" onclick="someFunc(\'question49\',\'question49\')">');
+										}
+									?>
 									<input name="question49" type="text" class="form-control rounded" value="<? echo $question49; ?>">
 								</div>
-				
-								<div class="form-group">
-									<label>URL Video</label>
-									<input name="video" type="text" class="form-control rounded" value="<? echo $video; ?>">
-								</div>
+								<?php
+								if($status_match == "1") {
+									echo('
+									<div class="form-group">
+										<label>URL Video</label>
+										<input name="video" type="text" class="form-control rounded" value="'.$video.'">
+									</div>
+									');
+								}
+								?>
 
 								<div class="form-group">
 									<button type="submit" class="btn btn-success" >Редактировать</button>

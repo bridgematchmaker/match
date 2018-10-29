@@ -1221,11 +1221,16 @@ include "header.php";
 					<label>Information for men who order Skype conference with this lady *</label>
 					<input name="question49" type="text" class="form-control rounded" required="required">
 				</div>
-				
-				<div class="form-group">
-					<label>URL Video</label>
-					<input name="video" type="text" class="form-control rounded">
-				</div>
+				<?php
+				if($status_match == "1") {
+					echo('
+						<div class="form-group">
+							<label>URL Video</label>
+							<input name="video" type="text" class="form-control rounded">
+						</div>
+					');
+				}
+				?>
 
 				<div class="form-group">
 					<button type="submit" class="btn btn-success" >Создать анкету</button>
