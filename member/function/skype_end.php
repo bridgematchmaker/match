@@ -11,7 +11,6 @@ $date_add = date("Y-m-d");
 $date_skype = $_POST['date_skype'];
 $time_skype = $_POST['time_skype'];
 $user_email = $_SESSION['email_client'];
-$user_skype = $_POST['user_skype'];
 $girl_id = $_POST['girl_id'];
 $tarif_day = $_POST['tarif_day'];
 $matchmaker_login = $_POST['matchmaker_login'];
@@ -37,9 +36,6 @@ $date_skype = mysql_escape_string($date_skype);
 
 $time_skype = htmlspecialchars($time_skype);
 $time_skype = mysql_escape_string($time_skype);
-
-$user_skype = htmlspecialchars($user_skype);
-$user_skype = mysql_escape_string($user_skype);
 
 $skype_time = $date_skype . ' ' . $time_skype;
 
@@ -138,7 +134,7 @@ $skypes--; // Уменшаем кредиты
 
 
 /////////////SQL запрос//////////////////////
-$sql_order = "INSERT INTO orders (user_id, user_email, user_skype, skype_time, girl_id, type, description1, description2, date_add, status) VALUES ('$user_id', '$user_email', '$user_skype', '$skype_time', '$girl_id', '1', '$description1', '$description2', '$date_add', '1')";
+$sql_order = "INSERT INTO orders (user_id, user_email, skype_time, girl_id, type, description1, description2, date_add, status) VALUES ('$user_id', '$user_email', '$skype_time', '$girl_id', '1', '$description1', '$description2', '$date_add', '0')";
 $result_order = mysql_query($sql_order) or die("Ошибка при записи в таблицу order");
 $sql_balance = "UPDATE clients_services SET skypes='".$skypes."' WHERE client_id='".$user_id."'";
 $result_balance = mysql_query($sql_balance) or die("Ошибка при записи в таблицу balance");

@@ -1,67 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Something There">
-        <meta name="author" content="">
-        <title>BridgeMatchmaker</title>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta name="description" content="Something There">
+	<meta name="author" content="">
+	<title>BridgeMatchmaker</title>
 
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+	<!-- Main Style -->
 
-        <!-- Main Style -->
-        <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-        <!-- Select2 -->
-        <link href="assets/css/select2.min.css" rel="stylesheet" type="text/css">
-        <!--Style Content Page-->
-        <link href="assets/css/registration.css" rel="stylesheet" type="text/css">
-        <!-- Bootstrap -->
-        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-        <!-- Font Awesome -->
-        <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <!-- Datepicker -->
-        <link href="assets/css/jquery-ui.theme.min.css" rel="stylesheet" type="text/css">
-        <link href="assets/css/jquery-ui.structure.min.css" rel="stylesheet" type="text/css">
-		<script src='https://www.google.com/recaptcha/api.js'></script>
+	<!--Style Content Page-->
 
-    </head>
+	<!-- Bootstrap -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<!-- Font Awesome -->
+	<link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<!-- Owl Carousel -->
+	<link href="assets/css/owl.carousel.min.css" rel="stylesheet" type="text/css">
 
-<body>
-<!-- Header (start)-->
-    <header class="site-header">
-        <div class="container">
-            <div class="row">
+    <link href="assets/css/select2.min.css" rel="stylesheet" type="text/css">
+    <!--Style Content Page-->
+    <link href="assets/css/registration.css" rel="stylesheet" type="text/css">
+    <!-- Datepicker -->
+    <link href="assets/css/jquery-ui.theme.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/jquery-ui.structure.min.css" rel="stylesheet" type="text/css">
 
-                <div class="col-md-6"><a href="./index.php"><img src="assets/images/logo.jpg" alt="Site Logo"></a></div>
+	<link href="assets/css/style-main.css" rel="stylesheet" type="text/css">
+	<!-- Favicon -->
+	<link rel="icon" href="" type="image/png"/>
 
-                <div class="col-md-6">
-                    <ul class="nav justify-content-end">
-                        <li>
-                            <div class="lang-wrapper text-center">
-                                <img src="assets/images/eng.jpg" alt="lang">
-                                <p>ENG</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+</head>
 
-            </div>
-        </div>
-    </header>
-<!-- Header (end)-->
+<body class="page">
+<?
+require "./header.php";
+?>
 
-<div class="site-wrapper">
-    <div class="container">
-        <div class="row">
-
-<!-- Main Page Content (start)-->
-
-            <div class="main-content col-md-12">
-                <div class="row">
-
-                    <div class="col-md-8 offset-md-2">
+<section class="section-main-content text-spacing-25">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-9 col-xl-7">
+<!-- CONTENT (start)-->
                         <div class="member-registration-page">
 
                             <h2 class="page-title">Fill in your profile</h2>
@@ -981,36 +963,23 @@
                             </form>
 
                         </div>
-                    </div>
+<!-- CONTENT (end)-->
+			</div>
+		</div>
+	</div>
+</section>
 
-            </div>
-<!-- Main Page Content (end)-->
-
-        </div>
-    </div>
-</div>
-
-<!-- Footer (start)-->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="site-copyright">
-                        (Р’В©2015 BEYER & COMPANY. ALL RIGHTS RESERVED. SITE BY BRANDED LEGION.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-<!-- Footer (end)-->
+<? require "footer.php";?>
 
 <!-- Site Scripts (start)-->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/registration.js"></script>
-    <script src="assets/js/select2.min.js"></script>
-    <script src="assets/js/jquery-ui.min.js"></script>
+<script src="assets/js/core.min.js"></script>
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/jquery.min.js"></script>
 
+<script src="assets/js/registration.js"></script>
+<script src="assets/js/select2.min.js"></script>
+<script src="assets/js/jquery-ui.min.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <!-- Site Scripts (end)-->
 
 </body>

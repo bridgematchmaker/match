@@ -80,7 +80,7 @@ require "./header.php";
 
                             <?
                                 ////////////////////Выволдим таблицу скайп закозов которые ожидают выполнения////////////////////////////////////
-                                $result_conference = mysql_query("SELECT * FROM orders WHERE user_id='$user_id' AND type='1' AND status='1';");
+                                $result_conference = mysql_query("SELECT * FROM orders WHERE user_id='$user_id' AND type='1' AND (status='0' OR status='1');");
                                 $count_conference = mysql_num_rows($result_conference);
                                 if($count_conference > 0) 
                                     {
@@ -103,15 +103,21 @@ require "./header.php";
                                         while($row_conference = mysql_fetch_array($result_conference)) 
                                         {
                                             $skype_time = $row_conference['skype_time'];
+                                            $skype_link = $row_conference['skype_link'];
                                             $girl_id = $row_conference['girl_id'];
                                             $girl_name = $row_conference['girl_name'];
                                             $arr_skype_time = explode(' ', $skype_time);
+                                            if ($skype_link !== "") {
+                                                $skype_status = "<a href='$skype_link'>View conference</a>";
+                                            } else {
+                                                $skype_status = "Pending";
+                                            }
                                             echo("
                                                 <tr>
                                                     <td>$arr_skype_time[0]</td>
                                                     <td>$arr_skype_time[1]</td>
                                                     <td>$girl_name ID $girl_id</td>
-                                                    <td>Pending</td>
+                                                    <td>$skype_status</td>
                                                     <td>
                                                         <a href='./contact_us.php' class='table-btn'>
                                                             Cancel

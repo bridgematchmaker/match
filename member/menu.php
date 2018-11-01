@@ -69,7 +69,7 @@
                                 }
                             ?>
                             <li class="menu-item  <? if($page_menu_name == "Send E-mail to lady") echo("active-menu"); ?>"><a href="./send_email.php">Send E-mail to lady</a></li>
-                            <li class="menu-item" <? if($page_menu_name == "Skype") echo("active-menu"); ?>"><a href="./conference_1.php">Skype-Conference</a></li>
+                            <li class="menu-item" <? if($page_menu_name == "Skype") echo("active-menu"); ?>"><a href="./conference_1.php">Video-Conference</a></li>
                             <li class="menu-item"><a href="./temp_msg.php">Send a Gift</a></li>
                             <li class="menu-item"><a href="./temp_msg.php">Individual Tour</a></li>
                             <li class="menu-item"><a href="./temp_msg.php">Group Tour</a></li>

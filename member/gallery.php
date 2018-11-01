@@ -299,7 +299,7 @@ require "./header.php";
 																				<li>
 																					<a href="./conference_1.php?girl_id='.$girl_id.'">
 																						<span class="icon"><i class="fa fa-skype" aria-hidden="true"></i></span>
-																						<p>Skype conference</p>
+																						<p>Video conference</p>
 																					</a>
 																				</li>
 																			</ul>
@@ -418,7 +418,7 @@ require "./header.php";
 																		<li>
 																			<a href="./conference_1.php?girl_id='.$girl_id.'">
 																				<span class="icon"><i class="fa fa-skype" aria-hidden="true"></i></span>
-																				<p>Skype conference</p>
+																				<p>Video conference</p>
 																			</a>
 																		</li>
 																	</ul>

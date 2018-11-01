@@ -26,7 +26,7 @@ while($row1 = mysql_fetch_array($requirest1))
 		$user_id = $row1['user_id'];
 		$girl_id = $row1['girl_id'];
 		$user_email = $row1['user_email'];
-		$user_skype = $row1['user_skype'];
+		$skype_link = $row1['skype_link'];
 		$skype_time = $row1['skype_time'];
 		$match_login_processed = $row1['match_login_processed'];
 		$type = $row1['type'];
@@ -186,7 +186,6 @@ include "header.php";
 									<tr><td class="active">Имя клиента:</td><td><? echo $first_name; ?></td></tr>
 									<tr><td class="active">Фамилия клиента:</td><td><? echo $last_name; ?></td></tr>
 									<tr><td class="active">Email клиента:</td><td><? echo $user_email; ?></td></tr>
-									<? if($type == "1") { echo("<tr><td class='active'>Skype клиента:</td><td>$user_skype</td></tr>"); } ?>
 									<? if($type == "1") { echo("<tr><td class='active'>Дата / Время Skype конференции:</td><td>$skype_time</td></tr>"); } ?>
 									<? if($type == "1") { echo("<tr><td class='active'>Коментирий клиента к заказу:</td><td>$description2</td></tr>"); } ?>
 									<tr><td class="active">ID девушки:</td><td><? echo $girl_id; ?></td></tr>
@@ -194,6 +193,19 @@ include "header.php";
 									<tr><td class="active">Мачмекер выполнивший заказ:</td><td><? echo $match_login_processed; ?></td></tr>
 									<tr><td class="active">Дата выполнения заказа:</td><td><? echo $date_end; ?></td></tr>
 							</table>
+							<? if (($type == "1") AND (($status == '0') OR ($status == '1'))) { 
+								echo('
+									<form action="./function/order_skype_link.php" method="POST">
+										<input name="order_id" type="hidden" value="'.$order_id.'">
+										<div class="form-group">
+											<label>Ссылка на видео конференцию:</label>
+											<input name="skype_link" type="text" value="'.$skype_link.'" required>
+										</div>
+										<input type="submit" class="btn btn-success" value="Установить ссылку">
+									</form>
+								'); 
+								} 
+							?>
 							<hr>
 							<a href="./client_profile.php?user_id=<? echo $user_id; ?>"><button type="button" class="btn btn-success">Открыть профиль клиента</button></a>
 						</div>

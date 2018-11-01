@@ -153,16 +153,7 @@ if($girl_id <> '') {
                                                         </label>
                                                         <input type="text" name="girl_id" id="numbId" placeholder="Enter girl ID" class="form-input form-input-sm" value="<? echo $girl_id; ?>" required>
                                                     </li>
-                                                    <li>
-                                                        <label for="nameSkype">
-                                                            Your Skype Name <span>*</span>
-                                                        </label>
-                                                        <div class="block-input">
-                                                            <input type="text" name="user_skype" id="nameSkype" placeholder="skype_name" class="form-input" required>
-                                                            <a href="#"> What's my Skype Name?</a>
-                                                        </div>
-
-                                                    </li>
+                                                    
                                                 </ul>
                                             </div>
                                         </div>

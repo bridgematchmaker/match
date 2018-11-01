@@ -1,4 +1,4 @@
-﻿<?
+<?
 session_start();
 if (isset($_SESSION['email_client'])) 
 	{
@@ -10,40 +10,38 @@ if (isset($_SESSION['email_client']))
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Something There">
-        <meta name="author" content="">
-        <title>BridgeMatchmaker</title>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta name="description" content="Something There">
+	<meta name="author" content="">
+	<title>BridgeMatchmaker</title>
 
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+	<!-- Main Style -->
 
-        <!-- Main Style -->
-        <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-        <!-- Main Style -->
-        <link href="assets/css/blanking.css" rel="stylesheet" type="text/css">
-        <!-- Bootstrap -->
-        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-        <!-- Font Awesome -->
-        <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    </head>
+	<!--Style Content Page-->
 
-<body>
-<!-- Header (start)-->
-    <header class="site-header text-center">
-        <div class="container">
-            <div class="row">
+    <!-- Main Style -->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <!-- Main Style -->
+    <link href="assets/css/blanking.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- Font Awesome -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-                <div class="col-md-12">
-                    <img src="assets/images/logo.jpg" alt="Site Logo">
-                </div>
+	<link href="assets/css/style-main.css" rel="stylesheet" type="text/css">
+	<!-- Favicon -->
+	<link rel="icon" href="" type="image/png"/>
 
-            </div>
-        </div>
-    </header>
-<!-- Header (end)-->
+</head>
+
+<body class="page">
+<?
+require "./header.php";
+?>
 
 <div class="site-wrapper blanking-background">
     <div class="container">
@@ -79,23 +77,14 @@ if (isset($_SESSION['email_client']))
         </div>
     </div>
 </div>
-<!-- Footer (start)-->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="site-copyright">
-                   ALL RIGHTS RESERVED. SITE BY BRANDED LEGION.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-<!-- Footer (end)-->
+
+<? require "footer.php";?>
 
 <!-- Site Scripts (start)-->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/core.min.js"></script>
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
 
 <!-- Site Scripts (end)-->
 
