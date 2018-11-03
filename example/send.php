@@ -12,7 +12,7 @@
 	$mail->Port = "587"; // порт SMTP
 
 	$mail->Username = "apikey";
-	$mail->Password = "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";
+	$mail->Password = "";
 
 	$mail->setFrom("newsletter@bridgematchmaker.com", "BridgeMatchMaker"); // от кого
 	$mail->addReplyTo("newsletter@bridgematchmaker.com", "BridgeMatchMaker"); // кому ответить

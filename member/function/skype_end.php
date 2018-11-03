@@ -142,6 +142,6 @@ $result_balance = mysql_query($sql_balance) or die("Ошибка при запи
 
 /////////////////Перенаправление в анкету///////////////
 echo	("
-			<script>javascript:window.location='../msg.php?type=0&msg_id=9&redirect=0'</script>
+			<script>javascript:window.location='../msg.php?type=0&msg_id=9&redirect=2'</script>
 		");
 ///////////////////////////////////////////////////////

@@ -34,6 +34,10 @@ switch ($redirect)
 		case 1:
 			$url = "./index.php";
 		break;
+
+		case 2:
+			$url = "./conference_1.php";
+		break;
 	}
 
 switch ($type) 

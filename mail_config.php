@@ -3,7 +3,7 @@
 	$mail_host = "smtp.sendgrid.net";
 	$mail_port = "587";
 	$mail_username = "apikey";
-	$mail_password = "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";
+	$mail_password = "";
 	$mail_from_email = "newsletter@bridgematchmaker.com";
 	$mail_from_name = "BridgeMatchMaker";
 	$mail_replyto_email = "newsletter@bridgematchmaker.com";
@@ -22,7 +22,7 @@
 	$mail->Port = "587"; // порт SMTP
 
 	$mail->Username = "apikey";
-	$mail->Password = "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";
+	$mail->Password = "";
 
 	$mail->setFrom("newsletter@bridgematchmaker.com", "BridgeMatchMaker"); // от кого
 	$mail->addReplyTo("newsletter@bridgematchmaker.com", "BridgeMatchMaker"); // кому ответить
