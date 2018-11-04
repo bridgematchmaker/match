@@ -3,7 +3,7 @@ session_start();
 if (isset($_SESSION['email_client'])) 
 	{
 		echo("
-				<script>javascript:window.location='./member/index.php'</script>
+				<script>javascript:window.location='./member/index.php#login'</script>
 			");
 	}
 ?>

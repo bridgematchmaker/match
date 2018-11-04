@@ -43,7 +43,7 @@ require "./header.php";
 					<br><br>
 				<form action="" method="POST">
 					<div class="form-group">
-						
+						<input type="hidden" name="ref" value="<? echo $_SERVER['HTTP_REFERER']; ?>">
 						<input type="email" name="login" class="form-control" id="email" placeholder="Your email">
 					</div>
 					<div class="form-group">
@@ -126,8 +126,11 @@ if (!isset($_SESSION['email_client'])) {
 
 isset($_SESSION['email_client']) or die(); // здесь если функция вернула false то выполняется die()
 
-echo	("
-			<script>javascript:window.location='./member/index.php#login'</script>
-		");
+if (substr_count($_POST['ref'], 'bridgematchmaker.com/member') > 0) {
+	$ref = $_POST['ref'];
+	echo("<script>javascript:window.location='$ref'</script>");
+} else {
+	echo("<script>javascript:window.location='./member/index.php#login'</script>");
+}
 
 ?>
