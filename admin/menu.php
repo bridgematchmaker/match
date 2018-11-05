@@ -25,7 +25,8 @@
 		
 		<li class="dropdown <? if($page_name == "tarif") { echo("active"); } ?>"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Тарифы и услуги<span class="caret"></span></a>
 			<ul class="dropdown-menu">
-            <li><a href="./tarif.php">Тарифные планы и сервисы</a></li>  
+						<li><a href="./tarif.php">Тарифные планы и сервисы</a></li> 
+						<li><a href="./request_tour_price.php">Тарифы на тур по Украине</a></li>
 			<li><a href="./gifts.php">Подарки</a></li>			
           </ul>
 		</li>

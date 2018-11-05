@@ -85,7 +85,8 @@
 		echo('
         <li class="dropdown '); if($page_name == "additionally") { echo('active'); } echo('"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Дополнительно<span class="caret"></span></a>
 			<ul class="dropdown-menu">
-            <li><a href="./translators.php">Переводчики</a></li>
+			<li><a href="./translators.php">Переводчики</a></li>
+			<li><a href="./requests_tour.php">Заявки на тур</a></li>
           </ul>
 		</li>
 		');
