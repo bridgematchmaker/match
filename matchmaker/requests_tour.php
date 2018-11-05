@@ -22,7 +22,6 @@ while($row_tarif = mysql_fetch_array($requirest_tarif))
             $question5_price = $row_tarif['question5_price'];
             $question6_price = $row_tarif['question6_price'];
             $question7_price = $row_tarif['question7_price'];
-            $question8_price = $row_tarif['question8_price'];
             $question9_price = $row_tarif['question9_price'];
             $question10_price = $row_tarif['question10_price'];
             $question11_price = $row_tarif['question11_price'];
@@ -90,13 +89,11 @@ include "header.php";
                     $question5 = $row['question5'];
                     $question6 = $row['question6'];
                     $question7 = $row['question7'];
-                    $question8 = $row['question8'];
                     $question9 = $row['question9'];
                     $question10 = $row['question10'];
                     $question11 = $row['question11'];
                     $question12 = $row['question12'];
                     $question13 = $row['question13'];
-                    $question14 = $row['question14'];
 					////////////////////////////////////////////////////////////////////////////////////////
     
 					////////////////////////////Вывод таблицы на экран///////////////////////////////    
@@ -120,12 +117,11 @@ include "header.php";
                                     <tr><td>Accommodation at 3 star or 4 star Hotels ($question5_price Cr.):</td><td>$question5</td></tr>
                                     <tr><td>Booking railway tickets ($question6_price Cr.):</td><td>$question6</td></tr>
                                     <tr><td>Excursion and sightseeing ($question7_price Cr.):</td><td>$question7</td></tr>
-                                    <tr><td>Entertainment ( cafe, nightclub, concerts, etc) ($question8_price Cr.):</td><td>$question8</td></tr>
                                     <tr><td>Translator ($question9_price Cr.):</td><td>$question9</td></tr>
                                     <tr><td>Matchmaker Advice ($question10_price Cr.):</td><td>$question10</td></tr>
                                     <tr><td>Help in choosing a gift for a lady ($question11_price Cr.):</td><td>$question11</td></tr>
                                     <tr><td>Unexpected Date ($question12_price Cr.):</td><td>$question12</td></tr>
-                                    <tr><td>Entertainment during the date with a lady ($question13_price Cr.):</td><td>$question13</td></tr>
+                                    <tr><td>Transfer for a lady from another city ($question13_price Cr.):</td><td>$question13</td></tr>
                                 </table>
                             </div> 
                         </td>

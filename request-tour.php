@@ -98,7 +98,7 @@ require "./header.php";
 							<div class="block-checkbox">
 								<div class="block-checkbox-item">
 									<h6>
-										Accompanying person
+										Accompanying person (per day)
 									</h6>
 									<div class="block-right">
 										<h6 class="text-accent">
@@ -112,7 +112,7 @@ require "./header.php";
 								</div>
 								<div class="block-checkbox-item">
 									<h6>
-										Insurance
+										Insurance (from...)
 									</h6>
 									<div class="block-right">
 										<h6 class="text-accent">
@@ -126,7 +126,7 @@ require "./header.php";
 								</div>
 								<div class="block-checkbox-item">
 									<h6>
-										Rent a car during your stay in the country
+										Rent a car during your stay in the country (per day)
 									</h6>
 									<div class="block-right">
 										<h6 class="text-accent">
@@ -147,7 +147,7 @@ require "./header.php";
 							<div class="block-checkbox">
 								<div class="block-checkbox-item">
 									<h6>
-										Transfer from the airport to the hotel
+										Transfer from the airport to the hotel (one way)
 									</h6>
 									<div class="block-right">
 										<h6 class="text-accent">
@@ -161,7 +161,7 @@ require "./header.php";
 								</div>
 								<div class="block-checkbox-item">
 									<h6>
-										Accommodation at 3 star or 4 star Hotels
+										Accommodation at 3 star or 4 star Hotels  (for a night)
 									</h6>
 									<div class="block-right">
 										<h6 class="text-accent">
@@ -175,7 +175,7 @@ require "./header.php";
 								</div>
 								<div class="block-checkbox-item">
 									<h6>
-										Booking railway tickets
+										Booking railway tickets (one booking)
 									</h6>
 									<div class="block-right">
 										<h6 class="text-accent">
@@ -201,20 +201,6 @@ require "./header.php";
 
 									</div>
 								</div>
-								<div class="block-checkbox-item">
-									<h6>
-										Entertainment ( cafe, nightclub, concerts, etc)
-									</h6>
-									<div class="block-right">
-										<h6 class="text-accent">
-                                        <? echo $question8_price; ?> Cr.
-										</h6>
-										<input type="checkbox" name="question8" value="Yes" id="check8">
-										<label for="check8">
-										</label>
-
-									</div>
-								</div>
 							</div>
 						</div>
 						<div class="col-12 mt-5">
@@ -224,7 +210,7 @@ require "./header.php";
 							<div class="block-checkbox">
 								<div class="block-checkbox-item">
 									<h6>
-										Translator
+										Translator (per hour)
 									</h6>
 									<div class="block-right">
 										<h6 class="text-accent">
@@ -238,7 +224,7 @@ require "./header.php";
 								</div>
 								<div class="block-checkbox-item">
 									<h6>
-										Matchmaker Advice
+										Matchmaker Advice (per day)
 									</h6>
 									<div class="block-right">
 										<h6 class="text-accent">
@@ -280,7 +266,7 @@ require "./header.php";
 								</div>
 								<div class="block-checkbox-item">
 									<h6>
-										Entertainment during the date with a lady
+										Transfer for a lady from another city
 									</h6>
 									<div class="block-right">
 										<h6 class="text-accent">

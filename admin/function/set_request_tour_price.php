@@ -34,7 +34,7 @@ $question11_price = mysql_escape_string($question11_price);
 $question12_price = mysql_escape_string($question12_price);
 $question13_price = mysql_escape_string($question13_price);
 
-$sql = "UPDATE request_tour_price SET question1_price='$question1_price', question2_price='$question2_price', question3_price='$question3_price', question4_price='$question4_price', question5_price='$question5_price', question6_price='$question6_price', question7_price='$question7_price', question8_price='$question8_price', question9_price='$question9_price', question10_price='$question10_price', question11_price='$question11_price', question12_price='$question12_price', question13_price='$question13_price' WHERE id=1";
+$sql = "UPDATE request_tour_price SET question1_price='$question1_price', question2_price='$question2_price', question3_price='$question3_price', question4_price='$question4_price', question5_price='$question5_price', question6_price='$question6_price', question7_price='$question7_price', question9_price='$question9_price', question10_price='$question10_price', question11_price='$question11_price', question12_price='$question12_price', question13_price='$question13_price' WHERE id=1";
 $result = mysql_query($sql) or die("<script>alert('Ошибка при записи');</script><script>javascript:window.location='../request_tour_price.php'</script>");
 
 /////////////////ѕеренаправление в стату///////////////

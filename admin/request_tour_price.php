@@ -85,11 +85,6 @@ include "menu.php";
                 </tr>
 
                 <tr>
-                    <td>Entertainment ( cafe, nightclub, concerts, etc)</td>
-                    <td><input type="text" name="question8_price" value="<? echo $question8_price; ?>"></td>
-                </tr>
-
-                <tr>
                     <td>Translator</td>
                     <td><input type="text" name="question9_price" value="<? echo $question9_price; ?>"></td>
                 </tr>
@@ -110,7 +105,7 @@ include "menu.php";
                 </tr>
 
                 <tr>
-                    <td>Entertainment during the date with a lady</td>
+                    <td>Transfer for a lady from another city</td>
                     <td><input type="text" name="question13_price" value="<? echo $question13_price; ?>"></td>
                 </tr>
                 
