@@ -473,7 +473,7 @@ header ul.nav .account-wrapper .account-details li a.upgrade:hover{
 }
 
 .info_list {
-    margin-left: 5px;
+    margin-top: 3px;
     height: 24px;
     width: 36px;
     background-color: #e95000;
@@ -482,6 +482,7 @@ header ul.nav .account-wrapper .account-details li a.upgrade:hover{
     color: #fff;
     display: inline-block;
     text-align: center;
+    float: right;
 }
 
 .active-menu a{
