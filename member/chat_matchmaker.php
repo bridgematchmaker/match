@@ -14,8 +14,6 @@ isset($_SESSION['email_client']) or die("<script>javascript:window.location='../
         <title>BridgeMatchmaker</title>
 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
-        <!-- Custom Style -->
-        <link href="assets/css/style.css" rel="stylesheet" type="text/css">
         <!-- Bootstrap -->
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <!-- Font Awesome -->
@@ -26,6 +24,8 @@ isset($_SESSION['email_client']) or die("<script>javascript:window.location='../
         <link href="assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet" type="text/css">
         <link href="assets/css/select2.css" rel="stylesheet" type="text/css">
         <!--Style Content Page-->
+        <!-- Custom Style -->
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css">
         <link href="assets/css/style.content.css" rel="stylesheet" type="text/css">
         <link href="assets/css/style.chat.css" rel="stylesheet" type="text/css">
         

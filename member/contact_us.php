@@ -15,18 +15,18 @@ $page_menu_name = "Contact us";
         <title>BridgeMatchmaker</title>
 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
-        <!-- Custom Style -->
-        <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-		<!--Style Content Page-->
-        <link href="assets/css/style.content.css" rel="stylesheet" type="text/css">
-
-        <link href="assets/css/style.contact.css" rel="stylesheet" type="text/css">
         <!-- Bootstrap -->
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <!-- Font Awesome -->
         <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <!-- Owl Carousel -->
         <link href="assets/css/owl.carousel.min.css" rel="stylesheet" type="text/css">
+        <!-- Custom Style -->
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+		<!--Style Content Page-->
+        <link href="assets/css/style.content.css" rel="stylesheet" type="text/css">
+
+        <link href="assets/css/style.contact.css" rel="stylesheet" type="text/css">
         <!-- Favicon -->
         <link rel="icon" href="" type="image/png" />
 

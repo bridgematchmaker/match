@@ -14,19 +14,18 @@ isset($_SESSION['email_client']) or die("<script>javascript:window.location='../
     <title>BridgeMatchmaker</title>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
-
-    <!-- Main Style -->
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-    <!-- Select2 -->
-    <link href="assets/css/select2.min.css" rel="stylesheet" type="text/css">
-    <!--Style Content Page-->
-    <link href="assets/css/girl-profile.css" rel="stylesheet" type="text/css">
     <!-- Bootstrap -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <!-- Font Awesome -->
     <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!-- Owl Carousel -->
     <link href="assets/css/owl.carousel.min.css" rel="stylesheet" type="text/css">
+	<!-- Main Style -->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <!-- Select2 -->
+    <link href="assets/css/select2.min.css" rel="stylesheet" type="text/css">
+    <!--Style Content Page-->
+    <link href="assets/css/girl-profile.css" rel="stylesheet" type="text/css">
 
 </head>
 

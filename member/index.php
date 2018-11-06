@@ -15,17 +15,17 @@ $page_menu_name = "Home";
         <title>BridgeMatchmaker</title>
 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
-        <!-- Main Style -->
-        <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-        <!--Style Content Page-->
-        <link href="assets/css/style.content.css" rel="stylesheet" type="text/css">
-        <link href="assets/css/style.bridge_of_love.css" rel="stylesheet" type="text/css">
         <!-- Bootstrap -->
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <!-- Font Awesome -->
         <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <!-- Owl Carousel -->
         <link href="assets/css/owl.carousel.min.css" rel="stylesheet" type="text/css">
+        <!-- Main Style -->
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+        <!--Style Content Page-->
+        <link href="assets/css/style.content.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/style.bridge_of_love.css" rel="stylesheet" type="text/css">
         <!-- Favicon -->
         <link rel="icon" href="" type="image/png" />
     </head>

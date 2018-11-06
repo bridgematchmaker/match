@@ -13,20 +13,19 @@ isset($_SESSION['email_client']) or die("<script>javascript:window.location='../
         <meta name="author" content="">
         <title>BridgeMatchmaker</title>
 
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
-        <!-- Custom Style -->
-        <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-		<!--Style Content Page-->
-        <link href="assets/css/style.content.css" rel="stylesheet" type="text/css">
-		
-		<link href="assets/css/style_sent.css" rel="stylesheet" type="text/css">
-		 
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">	 
         <!-- Bootstrap -->
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <!-- Font Awesome -->
         <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <!-- Owl Carousel -->
         <link href="assets/css/owl.carousel.min.css" rel="stylesheet" type="text/css">
+         <!-- Custom Style -->
+         <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+		<!--Style Content Page-->
+        <link href="assets/css/style.content.css" rel="stylesheet" type="text/css">
+		
+		<link href="assets/css/style_sent.css" rel="stylesheet" type="text/css">
         <!-- Favicon -->
         <link rel="icon" href="" type="image/png" />
 

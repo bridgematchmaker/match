@@ -15,15 +15,6 @@ $page_menu_name = "My Profile";
         <title>BridgeMatchmaker</title>
 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
-         <!-- Main Style -->
-        <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-		<!-- Select2 -->
-        <link href="assets/css/select2.min.css" rel="stylesheet" type="text/css">
-        <!--Style Content Page-->
-        <link href="assets/css/style.content.css" rel="stylesheet" type="text/css">
-		<!--Style Content Page-->
-        <link href="assets/css/registration.css" rel="stylesheet" type="text/css">
-        <!-- Bootstrap -->
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <!-- Font Awesome -->
         <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -32,6 +23,15 @@ $page_menu_name = "My Profile";
         <!-- Favicon -->
 		<link href="assets/css/jquery-ui.theme.min.css" rel="stylesheet" type="text/css">
         <link href="assets/css/jquery-ui.structure.min.css" rel="stylesheet" type="text/css">
+		 <!-- Main Style -->
+		 <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+		<!-- Select2 -->
+        <link href="assets/css/select2.min.css" rel="stylesheet" type="text/css">
+        <!--Style Content Page-->
+        <link href="assets/css/style.content.css" rel="stylesheet" type="text/css">
+		<!--Style Content Page-->
+        <link href="assets/css/registration.css" rel="stylesheet" type="text/css">
+        <!-- Bootstrap -->
         <link rel="icon" href="" type="image/png" />
 
     </head>

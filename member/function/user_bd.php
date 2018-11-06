@@ -285,4 +285,42 @@ if($matchmaker_login !== "None")
 			}
 		$match_fio = explode(' ', $name_match);
 	}
+
+//////////////////////////////////Загружаем количество девушек у клиента/////////////////////////////
+
+///////////Количество девушек в рекомендации/////////////////
+$result_count_recomendation = mysql_query("SELECT * FROM clients_girl WHERE user_id='$user_id' AND girl_status='0';");
+$count_recomendation = mysql_num_rows($result_count_recomendation);
+/////////////////////////////////////////////////////////////
+
+///////////Количество девушек в рекомендации/////////////////
+$result_count_blacklist = mysql_query("SELECT * FROM clients_girl WHERE user_id='$user_id' AND girl_status='2';");
+$count_blacklist = mysql_num_rows($result_count_blacklist);
+/////////////////////////////////////////////////////////////
+
+////Загружаем массив девушек добавленных в блек лист и рекомендации//////////
+$data_girl_id_userbd = Array(); // Масив с id девушек
+$count_userbd = 0;
+$sql_client_girl_userbd = "SELECT * FROM clients_girl WHERE user_id='".$user_id."' AND (girl_status='0' OR girl_status='2')";
+$result_client_girl_userbd  = mysql_query($sql_client_girl_userbd);
+while($row_client_girl_userbd = mysql_fetch_array($result_client_girl_userbd)) 
+	{ 
+		$data_girl_id_userbd[$count_userbd] = $row_client_girl_userbd['girl_id'];
+		$count_userbd++;
+	}
+//////////////////////////////////////////////////////////////////////////////
+
+///////////Количество девушек в галерее/////////////////
+$result_count_gellery = mysql_query("SELECT * FROM girls WHERE gallery_status='1' AND activation_status='1';");
+while($row_count_gellery = mysql_fetch_array($result_count_gellery)) 
+	{ 
+		if (!in_array($row_count_gellery['girl_id'], $data_girl_id_userbd)) 
+		{
+			$count_gellery++;
+		}
+	}
+/////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
 ?>

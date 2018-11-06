@@ -472,6 +472,18 @@ header ul.nav .account-wrapper .account-details li a.upgrade:hover{
     color: #ffffff;
 }
 
+.info_list {
+    margin-left: 5px;
+    height: 24px;
+    width: 36px;
+    background-color: #e95000;
+    border-radius: 5px;
+	font-size: 12px;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+}
+
 .active-menu a{
     background: #F4ECD5;
     color: #ffffff;
