@@ -67,7 +67,7 @@ require "./header.php";
 				<h6>
 					Dear client!
 					<br>
-						Please choose on this page services which you are interested in  while making your visit to Ukraine.Pay attention, you will be billed for the services only after you put all the necessary checkboxes and press the button  “I confirm the order”. During a day on your email address
+					Please choose on this page services which you are interested in while planning your visit to Ukraine. Pay attention, you will be billed for the services only after you put all the necessary checkboxes and press the button  “I confirm the order”. During a day on your email address
 					you will receive the bill for purchase.
 				</h6>
 
@@ -319,7 +319,7 @@ require "./header.php";
 							</div>
 						</div>
 						<div class="col-12 mt-4 text-center">
-							<button class="btn btn-gradient disabled" type="submit"> Confirm the choice</button>
+							<button class="btn btn-gradient disabled" type="submit">Confirm The Order</button>
 						</div>
 					</div>
 				</form>

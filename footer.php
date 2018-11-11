@@ -63,6 +63,12 @@
 									Join our team
 								</a>
 							</li>
+
+							<li>
+								<a href="./tour_services.php">
+									Tour services
+								</a>
+							</li>
 						</ul>
 					</div>
 					<div class="col-md-4 mt-3 mt-md-0 ">
