@@ -186,6 +186,28 @@ if($status_match == "0")
 		document.getElementById(buttonId).disabled = true; 
 	}
 	</script>
+
+	<script>
+    // После загрузки DOM-дерева (страницы)
+    $(function() {
+        //при нажатии на ссылку, содержащую Thumbnail
+        $('a.thumbnail').click(function(e) {
+            //отменить стандартное действие браузера
+            e.preventDefault();
+            //присвоить атрибуту scr элемента img модального окна
+            //значение атрибута scr изображения, которое обёрнуто
+            //вокруг элемента a, на который нажал пользователь
+            $('#image-modal .modal-body img').attr('src', $(this).find('img').attr('src'));
+            //открыть модальное окно
+            $("#image-modal").modal('show');
+        });
+        //при нажатию на изображение внутри модального окна
+        //закрыть его
+        $('#image-modal .modal-body img').on('click', function() {
+            $("#image-modal").modal('hide')
+        });
+    });
+	</script>
 	
 </head>
 
@@ -995,7 +1017,7 @@ include "header.php";
 	<div class="col-lg-12 col-md-12 col-xs-12">
 		<hr>
 		<h4>Загруженные фото:</h4>
-		<table class="table table-striped">
+		<div class="row">
 			<?  
 			
 				$zapros_foto = "SELECT * FROM girls_foto WHERE girl_id='".$girl_id."'";
@@ -1019,23 +1041,33 @@ include "header.php";
 						if($status_match == "1") {
 							if($status_foto == 0)
 							echo ("
-									<tr>
-										<td>
-											<img src='../$foto' width='150'><a href='./function/girl_del_foto.php?foto_id=$foto_id&girl_id=$girl_id'><span style='font-size:22px; margin-left:10px;' class='glyphicon glyphicon-remove'></span></a> <a href='./function/girl_foto_status.php?foto_id=$foto_id&girl_id=$girl_id&status_foto_set=1'><span style='font-size:22px; margin-left:10px;' class='glyphicon glyphicon-eye-close'></span></a>
-											<br>
-											<b> $status_foto_print</b>
-										</td>
-									</tr>
+									<div class='col-6 col-sm-6 col-lg-3'> 
+										<table class='table table-striped'>
+											<tr>
+												<td>
+													<a href='#' class='thumbnail'><img src='../$foto' width='150'></a>
+													<a href='./function/girl_del_foto.php?foto_id=$foto_id&girl_id=$girl_id'><span style='font-size:22px; margin-left:10px;' class='glyphicon glyphicon-remove'></span></a> <a href='./function/girl_foto_status.php?foto_id=$foto_id&girl_id=$girl_id&status_foto_set=1'><span style='font-size:22px; margin-left:10px;' class='glyphicon glyphicon-eye-close'></span></a>
+													<hr>
+													<b>$status_foto_print</b> 
+												</td>
+											</tr>
+										</table>
+									</div>
 								");
 							if($status_foto == 1)
 							echo ("
-									<tr>
-										<td>
-											<img src='../$foto' width='150'><a href='./function/girl_del_foto.php?foto_id=$foto_id&girl_id=$girl_id'><span style='font-size:22px; margin-left:10px;' class='glyphicon glyphicon-remove'></span></a> <a href='./function/girl_foto_status.php?foto_id=$foto_id&girl_id=$girl_id&status_foto_set=0'><span style='font-size:22px; margin-left:10px;' class='glyphicon glyphicon-eye-open'></span></a>
-											<hr>
-											<b>Статус фото: $status_foto_print</b> 
-										</td>
-									</tr>
+									<div class='col-6 col-sm-6 col-lg-3'> 
+										<table class='table table-striped'>
+											<tr>
+												<td>
+												<a href='#' class='thumbnail'><img src='../$foto' width='150'></a>
+												<a href='./function/girl_del_foto.php?foto_id=$foto_id&girl_id=$girl_id'><span style='font-size:22px; margin-left:10px;' class='glyphicon glyphicon-remove'></span></a> <a href='./function/girl_foto_status.php?foto_id=$foto_id&girl_id=$girl_id&status_foto_set=0'><span style='font-size:22px; margin-left:10px;' class='glyphicon glyphicon-eye-open'></span></a>
+													<hr>
+													<b>$status_foto_print</b> 
+												</td>
+											</tr>
+										</table>
+									</div>
 								");
 						}
 						/////////////////////////////////////////////////////////////////////////////////////////////
@@ -1043,20 +1075,24 @@ include "header.php";
 						////////////////////////////Вывод таблицы на экран для агенства/////////////////////////////// 
 						if($status_match == "0") {	
 							echo ("
-									<tr>
-										<td>
-											<img src='../$foto' width='150' />
-											<br>
-											<b> $status_foto_print</b>
-										</td>
-									</tr>
+									<div class='col-6 col-sm-6 col-lg-3'> 
+										<table class='table table-striped'>
+											<tr>
+												<td>
+													<a href='#' class='thumbnail'><img src='../$foto' width='150' /></a>
+													<br>
+													<b> $status_foto_print</b>
+												</td>
+											</tr>
+										</table>
+									</div>
 								");
 						
 						}
 						/////////////////////////////////////////////////////////////////////////////////////////////
 					}
 			?>
-		</table>
+		</div>
 		<hr>
 		<h4>Добавить фотографию в галерею:</h4>
 		<form name='form' enctype='multipart/form-data' method='post' action='./function/girl_add_foto2.php'>
@@ -1072,5 +1108,23 @@ include "header.php";
 </div>
 
 
+<div class="modal fade" id="image-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <div class="modal-title">Просмотр изображения</div>
+            </div>
+            <div class="modal-body">
+                <img class="img-responsive center-block" src="" alt="">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
+
 </html>

@@ -105,6 +105,7 @@ include "header.php";
 		<thead>
 			<tr>
 				<th></th>
+				<th></th>
 				<th>ID:</th>
 				<th>Имя:</th>
 				<th>Фамилия:</th>
@@ -126,6 +127,7 @@ include "header.php";
 
 						//////////////////////Загружаем данные пользователей/////////////////////////   
 						$girl_id = $row['girl_id'];
+						$foto = $row['foto'];
 						$first_name = $row['first_name'];
 						$last_name = $row['last_name'];
 						$city = $row['city'];
@@ -134,6 +136,15 @@ include "header.php";
 						$email = $row['question45'];
 						$login_match = $row['login_match'];
 						$activation_status = $row['activation_status'];
+						if($foto == "")
+							{
+								$foto_print = "../uploads/girls/avatar.jpg";
+							}
+						else
+							{
+								$foto_print = "../".$foto;
+							}
+
 						
 						if($activation_status == "0") { $activation_print = "<span style='font-size:22px; margin-left:10px; color:red;' class='glyphicon glyphicon-remove'></span>"; }
 						if($activation_status == "1") { $activation_print = "<span style='font-size:22px; margin-left:10px; color:green;' class='glyphicon glyphicon-ok'></span>"; }
@@ -144,6 +155,9 @@ include "header.php";
 								<tr>
 									<td>
 									  <a href='./girl_profile.php?girl_id=$girl_id'><span style='font-size:22px; margin-left:10px;' class='glyphicon glyphicon-user'></span></a> $activation_print
+									</td>
+									<td>
+										<img width='50' height='50' src='../$foto_print'>
 									</td>
 									<td>
 										$girl_id
