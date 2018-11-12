@@ -117,8 +117,6 @@ switch ($view)
 	<script src="./js/bootstrap-select.js"></script>
 </head>
 
-
-
 <?
 $page_name = "clients";
 include "header.php";
@@ -147,6 +145,7 @@ include "header.php";
 	<table class="table table-striped table-bordered" id="myTable">
 		<thead>
 			<tr>
+				<th></th>
 				<th></th>
 				<th>Дата регистрации:</th>
 				<th>UserID:</th>
@@ -245,7 +244,10 @@ include "header.php";
 						echo ("
 								<tr>
 									<td>
-									   <a href='./client_profile.php?user_id=$UserID'><span style='font-size:22px; margin-left:10px;' class='glyphicon glyphicon-user'></span></a> $anketa2_print $bridge_print
+									<a href='./client_profile.php?user_id=$UserID'><span style='font-size:22px; margin-left:10px;' class='glyphicon glyphicon-user'></span></a> $anketa2_print $bridge_print
+									</td>
+									<td>
+										<a href='#' data-toggle='modal' data-target='#EmailModal' data-whatever='$UserID'><span style='font-size:22px; margin-left:10px;' class='glyphicon glyphicon-envelope'></span></a>
 									</td>
 									<td>
 										$date_reg
@@ -335,5 +337,57 @@ include "header.php";
 		</tbody>
 	</table>
 	</div>
+
+<!-- Модальное окно -->  
+<div class="modal fade" id="EmailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Отправка письма клиенту</h4>
+      </div>
+      <div class="modal-body">
+	  	<form action="./function/client_send_email.php" method="POST">
+		  	<input class="modal-user-id" type="hidden" class="form-control" id="user_id" name="user_id">
+            <div class="form-group">
+              <label for="template" class="form-control-label">Выбирете шаблон для отправки:</label>
+			  <select size="1" id="template" name="template">
+				<option disabled></option>
+				<?
+					$zapros_tamplate = "SELECT * FROM email_templates WHERE type='1'";
+					$result_tamplate = mysql_query($zapros_tamplate);
+					while ($row_tamplate = mysql_fetch_assoc($result_tamplate)) 
+						{
+							$template_name = $row_tamplate['name'];
+							$template_subject = $row_tamplate['subject'];
+							echo("<option value='$template_name'>$template_subject</option>");
+						}
+				?>
+   			  </select>
+            </div>
+			<div class="form-group">
+				<input class="btn btn-success" type="submit" value="Отправить письмо" >	
+			</div>
+
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+		$('#EmailModal').on('show.bs.modal', function (event) {
+		var button = $(event.relatedTarget) 
+		var user_id = button.data('whatever') 
+		var modal = $(this)
+		modal.find('.modal-user-id').val(user_id)
+		})
+</script>
+
 </body>
 </html>

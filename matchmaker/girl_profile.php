@@ -136,7 +136,7 @@ else
 switch ($activation_status) 
 	{
 		case 0:
-			$activation_status_print = "Не активный";
+			$activation_status_print = "<font color='red'>Не активный</font>";
 		break;
 			
 		case 1:
