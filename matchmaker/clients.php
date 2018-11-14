@@ -375,7 +375,7 @@ include "header.php";
 	</div>
 
 <!-- Модальное окно -->  
-<div class="modal fade" id="EmailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="EmailModal"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -390,7 +390,7 @@ include "header.php";
             <div class="form-group">
               <label for="template" class="form-control-label">Выбирете шаблон для отправки:</label>
 			  <select size="1" id="template" name="template">
-				<option disabled></option>
+				<option value=""></option>
 				<?
 					$zapros_tamplate = "SELECT * FROM email_templates WHERE type='1'";
 					$result_tamplate = mysql_query($zapros_tamplate);
@@ -408,6 +408,10 @@ include "header.php";
 			</div>
 
           </form>
+
+		  <div style="overflow: auto; max-height: 300px" id="template_html">
+
+		  </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -416,14 +420,7 @@ include "header.php";
   </div>
 </div>
 
-<script>
-		$('#EmailModal').on('show.bs.modal', function (event) {
-		var button = $(event.relatedTarget) 
-		var user_id = button.data('whatever') 
-		var modal = $(this)
-		modal.find('.modal-user-id').val(user_id)
-		})
-</script>
+<script src="./js/clients.js"></script>
 
 </body>
 </html>
