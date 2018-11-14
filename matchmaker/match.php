@@ -54,6 +54,9 @@ $num_new_clients = mysql_num_rows($result_new_clients);
 $result_active_clients = mysql_query("SELECT * FROM clients WHERE status_system='1';");
 $num_active_clients = mysql_num_rows($result_active_clients);
 
+$result_active_tickets = mysql_query("SELECT * FROM tickets  WHERE matchmaker_login='".$_SESSION['login_match']."' AND status='0';");
+$num_active_tickets = mysql_num_rows($result_active_tickets);
+
 ?>
 <html>
 <head>
@@ -103,6 +106,14 @@ include "header.php";
 											<tr><td class="active">В статусе "Активный"</td><td>'.$num_active_clients.'</td></tr>	
 										</table>
 									');
+
+									if($num_active_tickets > 0) {
+										echo('
+												<table class="table table-striped table-bordered">
+													<tr><td class="active">Неотвеченых тикетов:</td><td>'.$num_active_tickets.'</td></tr>
+												</table>
+											');
+									}
 								}
 							?>
 						</div>

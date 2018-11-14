@@ -318,7 +318,7 @@ include "header.php";
 					<div class="panel-heading">
 						<header class="panel-title">
 							<div class="text-center">
-								<strong>Логин: <? echo $email_client; ?></strong>
+								<strong>User ID: <? echo $user_id; ?></strong>
 							</div>
 						</header>
 					</div>

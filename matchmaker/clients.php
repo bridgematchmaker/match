@@ -39,10 +39,28 @@ switch ($view)
 			$result2 = mysql_query("SELECT * FROM clients WHERE status_system<>'4';");
 			$num = mysql_num_rows($result2);
 		break;
+
+		case new_user:
+			// Узнаем количество всех доступных записей 
+			$result2 = mysql_query("SELECT * FROM clients WHERE status_system='0';");
+			$num = mysql_num_rows($result2);
+		break;
 		
 		case active:
 			// Узнаем количество всех доступных записей 
 			$result2 = mysql_query("SELECT * FROM clients WHERE status_system='1';");
+			$num = mysql_num_rows($result2);
+		break;
+
+		case verified:
+			// Узнаем количество всех доступных записей 
+			$result2 = mysql_query("SELECT * FROM clients WHERE status_system='2';");
+			$num = mysql_num_rows($result2);
+		break;
+
+		case verified_complete:
+			// Узнаем количество всех доступных записей 
+			$result2 = mysql_query("SELECT * FROM clients WHERE status_system='3';");
 			$num = mysql_num_rows($result2);
 		break;
 		
@@ -92,8 +110,20 @@ switch ($view)
 			$zapros = "SELECT clients.*,matchmakers.name FROM clients LEFT JOIN matchmakers ON clients.matchmaker_login = matchmakers.login WHERE status_system<>'4' ORDER BY user_id DESC LIMIT $quantity OFFSET $list;";
 		break;
 		
+		case new_user:
+			$zapros = "SELECT clients.*,matchmakers.name FROM clients LEFT JOIN matchmakers ON clients.matchmaker_login = matchmakers.login WHERE status_system='0' ORDER BY user_id DESC LIMIT $quantity OFFSET $list;";
+		break;
+		
 		case active:
 			$zapros = "SELECT clients.*,matchmakers.name FROM clients LEFT JOIN matchmakers ON clients.matchmaker_login = matchmakers.login WHERE status_system='1' ORDER BY user_id DESC LIMIT $quantity OFFSET $list;";
+		break;
+
+		case verified:
+			$zapros = "SELECT clients.*,matchmakers.name FROM clients LEFT JOIN matchmakers ON clients.matchmaker_login = matchmakers.login WHERE status_system='2' ORDER BY user_id DESC LIMIT $quantity OFFSET $list;";
+		break;
+
+		case verified_complete:
+			$zapros = "SELECT clients.*,matchmakers.name FROM clients LEFT JOIN matchmakers ON clients.matchmaker_login = matchmakers.login WHERE status_system='3' ORDER BY user_id DESC LIMIT $quantity OFFSET $list;";
 		break;
 		
 		case my:
@@ -184,7 +214,13 @@ include "header.php";
 						$service = $row['service'];
 						$status_verification = $row['status_verification'];
 						
-						if(($status_anketa2 == "1") AND ($status_verification == "0")) { $anketa2_print = "<span style='font-size:22px; margin-left:10px; color:red;' class='glyphicon glyphicon-list-alt'></span>"; } else { $anketa2_print = ""; }
+						if(($status_anketa2 == "1") AND ($status_verification == "0")) { 
+							$anketa2_print = "<span style='font-size:22px; margin-left:10px; color:red;' class='glyphicon glyphicon-list-alt'></span>"; 
+						} elseif(($status_anketa2 == "1") AND ($status_verification == "1")) {
+							$anketa2_print = "<span style='font-size:22px; margin-left:10px; color:green;' class='glyphicon glyphicon-list-alt'></span>"; 
+						} else { 
+							$anketa2_print = ""; 
+						}
 						if($service == "2") { $bridge_print = "<span style='font-size:22px; margin-left:10px; color:green;' class='glyphicon glyphicon-heart-empty'></span>"; } else { $bridge_print = ""; }
 						
 						

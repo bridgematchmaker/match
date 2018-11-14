@@ -20,8 +20,12 @@
 		echo('
 		<li class="dropdown '); if($page_name == "clients") { echo('active'); } echo('"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Анкеты клиентов<span class="caret"></span></a>
 			<ul class="dropdown-menu">
-            <li><a href="./clients.php?view=all">Все пользователи сайта</a></li>
-            <li><a href="./clients.php?view=active">Активные пользователи</a></li>
+			<li><a href="./clients.php?view=all">Все пользователи сайта</a></li>
+			<li role="separator" class="divider"></li>
+			<li><a href="./clients.php?view=new_user">Новые пользователи</a></li>
+			<li><a href="./clients.php?view=active">Активные пользователи</a></li>
+			<li><a href="./clients.php?view=verified">Верефицированые пользователи</a></li>
+			<li><a href="./clients.php?view=verified_complete">Верефицированые (полный) пользователи</a></li>
 			<li><a href="./clients.php?view=del">Удаленные пользователи</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="clients.php?view=my">Мои клиенты</a></li>
