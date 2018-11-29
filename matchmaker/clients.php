@@ -156,17 +156,27 @@ include "header.php";
 <body>
 	
 	<div style="padding:20px;">
-		
-		<form class="form-inline" action="./function/client_search.php" method="POST">
-			<label>Поиск клиента:</label><br>
-			<select class="selectpicker" size="1" name="search_type" style="width:200px;">
-				<option value="id">Поиск по ID</option>
-				<option value="email">Поиск по E-Mail</option>
-				<option value="phone">Поиск по телефону</option>
-			</select>
-			<input class="form-control" size="20" type="text" name="search">
-			<button type="submit" class="btn btn-success" data-original-title="" title="">Поиск клиента</button>
-		</form>
+		<div class="row">
+			<div class="col-md-4">
+				<form class="form-inline" action="./function/client_search.php" method="POST">
+				<label>Поиск клиента:</label><br>
+				<select class="selectpicker" size="1" name="search_type" style="width:200px;">
+					<option value="id">Поиск по ID</option>
+					<option value="email">Поиск по E-Mail</option>
+					<option value="phone">Поиск по телефону</option>
+				</select>
+				<input class="form-control" size="20" type="text" name="search">
+				<button type="submit" class="btn btn-success" data-original-title="" title="">Поиск клиента</button>
+				</form>
+			</div>
+
+			<div div class="col-md-4 col-md-offset-4">
+				<b>Новый</b> =   не верифицировал e-mail<br>
+				<b>Активный</b> = верифицировал e-mail,  (ожидание действия мачмейкера)<br>
+				<b>Верефицированый</b> = назначен мечмейкер<br>
+				<b>Верефицированый полный</b> = заполнен полный профиль<br>
+			</div>
+		</div>
 	<hr>
 	<?
 		$nomer = $page+1;

@@ -356,6 +356,7 @@ include "header.php";
 					<li class=""><a href="#anketa1" data-toggle="tab">Анкета 1</a></li>
 					<? if(($status_anketa2 == "1") AND ($status_verification == "0")) { echo('<li class="bg-danger"><a href="#anketa2" data-toggle="tab">Анкета 2</a></li>'); } ?>
 					<? if(($status_anketa2 == "1") AND ($status_verification == "1")) { echo('<li class=""><a href="#anketa2" data-toggle="tab">Анкета 2</a></li>'); } ?>
+					<li class=""><a href="#email_log" data-toggle="tab">Лог писем</a></li>
 					<li class=""><a href="#redakt" data-toggle="tab">Редактирование</a></li>
 				</ul>
 				<div class="panel-body">
@@ -483,6 +484,48 @@ include "header.php";
 							</table>	
 							<hr>
 							<? if($status_verification == "0") { echo('<a href="./function/client_verification.php?user_id='.$user_id.'&status_system='.$status_system.'"><button type="button" class="btn btn-success">Подтвердить проверку</button></a> '); } ?>
+						</div>
+
+						<div class="tab-pane fade" id="email_log">
+							<div class="table-wrapper-scroll-y">
+								<table class="table table-striped table-bordered">
+									<thead>
+										<tr>
+											<th>Дата отправки:</th>
+											<th>Статус:</th>
+											<th>Тема:</th>
+										</tr>
+									</thead>
+										
+									<tbody>
+									<?
+										$zapros_email = "SELECT * FROM email_log WHERE email='$email_client' ORDER BY id DESC";
+										$result_email = mysql_query($zapros_email);
+										while ($row_email = mysql_fetch_assoc($result_email)) 
+											{ ////////////////////Начало цикла таблицы//////////////////////////////
+											
+												//////////////////////Загружаем данные пользователей/////////////////////////					
+												$date_add_email = $row_email['date_add'];
+												$subject_email = $row_email['subject'];
+												$status_email = $row_email['status'];
+												////////////////////////////////////////////////////////////////////////////////////////
+								
+												////////////////////////////Вывод таблицы на экран///////////////////////////////    
+												echo ("
+													<tr>
+														<td>$date_add_email</td>
+														<td>$status_email</td>
+														<td>$subject_email</td>
+													</tr>
+													");
+												//echo ("Дата/Время: $date_add_email | Тема: $subject_email | Статус: $status_email" . PHP_EOL);
+												////////////////////////////////////////////////////////////////////////////////////////
+											}
+									
+									?>
+									</tbody>
+								</table>
+							</div>
 						</div>
 						
 						<div class="tab-pane fade" id="redakt">
