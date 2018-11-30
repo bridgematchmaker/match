@@ -486,7 +486,7 @@ include "header.php";
 							<? if($status_verification == "0") { echo('<a href="./function/client_verification.php?user_id='.$user_id.'&status_system='.$status_system.'"><button type="button" class="btn btn-success">Подтвердить проверку</button></a> '); } ?>
 						</div>
 
-						<div class="tab-pane fade" id="email_log">
+						<div class="tab-pane fade" id="email_log" style="height: 500px !important; overflow-y: scroll;">
 							<div class="table-wrapper-scroll-y">
 								<table class="table table-striped table-bordered">
 									<thead>

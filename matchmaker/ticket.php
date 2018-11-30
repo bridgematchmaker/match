@@ -150,6 +150,7 @@ include "header.php";
 							<!-- --------------------- -->
                             <hr>
 							<form id="send_answer" action="./function/ticket_send_answer.php" method="POST" role="form">
+								<input name="user_id" type="hidden" value="<? echo $user_id; ?>">
 								<input name="ticket_id" type="hidden" value="<? echo $ticket_id; ?>">
 								<div class="form-group">
 									<label>Ответ для клиента:</label>
