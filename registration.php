@@ -29,6 +29,7 @@
     <link href="assets/css/jquery-ui.structure.min.css" rel="stylesheet" type="text/css">
 
 	<link href="assets/css/style-main.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/intlTelInput.css" rel="stylesheet" type="text/css">
 	<!-- Favicon -->
 	<link rel="icon" href="" type="image/png"/>
 
@@ -979,7 +980,12 @@ require "./header.php";
 <script src="assets/js/registration.js"></script>
 <script src="assets/js/select2.min.js"></script>
 <script src="assets/js/jquery-ui.min.js"></script>
+<script src="assets/js/intlTelInput.js"></script>
 <script src='https://www.google.com/recaptcha/api.js'></script>
+
+<script>
+		$("#phone").intlTelInput();
+</script>
 <!-- Site Scripts (end)-->
 
 </body>
