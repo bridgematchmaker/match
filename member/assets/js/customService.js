@@ -16,23 +16,6 @@ for(let i = 0; i < form.input.length; i++) {
 }
 
 
-// let payBlockList = form.querySelector('.pay-block-list');
-// // payBlock.item = form.querySelector('.pay-block');
-// console.dir(payBlockList);
-// // console.dir(payBlock.item);
-// for(let i = 0; i < payBlockList.children.length; i++) {
-//
-// 	let item = payBlockList.children[i];
-// 	console.dir(item);
-// 	payBlockList.addEventListener('change', function () {
-// 		if(item.classList.contains('block-focus')) {
-// 			item.classList.remove('block-focus');
-// 		} else {
-// 			item.classList.add('block-focus');
-// 		}
-//
-// 	})
-// }
 var
 
 	handler = function() {
