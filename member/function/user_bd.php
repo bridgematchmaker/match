@@ -8,6 +8,7 @@ while($row_tarif = mysql_fetch_array($requirest_tarif))
 		{
 			$free_day = $row_tarif['tarif_day'];
 			$free_price = $row_tarif['tarif_price'];
+			$free_description = $row_tarif['description'];
 			$free_letters = $row_tarif['tarif_letters'];
 			$free_skypes = $row_tarif['tarif_skypes'];
 			$free_gifts = $row_tarif['tarif_gifts'];
@@ -19,6 +20,7 @@ while($row_tarif = mysql_fetch_array($requirest_tarif))
 		{
 			$silver_day = $row_tarif['tarif_day'];
 			$silver_price = $row_tarif['tarif_price'];
+			$silver_description = $row_tarif['description'];
 			$silver_letters = $row_tarif['tarif_letters'];
 			$silver_skypes = $row_tarif['tarif_skypes'];
 			$silver_gifts = $row_tarif['tarif_gifts'];
@@ -30,6 +32,7 @@ while($row_tarif = mysql_fetch_array($requirest_tarif))
 		{
 			$gold_day = $row_tarif['tarif_day'];
 			$gold_price = $row_tarif['tarif_price'];
+			$gold_description = $row_tarif['description'];
 			$gold_letters = $row_tarif['tarif_letters'];
 			$gold_skypes = $row_tarif['tarif_skypes'];
 			$gold_gifts = $row_tarif['tarif_gifts'];
@@ -41,6 +44,7 @@ while($row_tarif = mysql_fetch_array($requirest_tarif))
 		{
 			$premium_day = $row_tarif['tarif_day'];
 			$premium_price = $row_tarif['tarif_price'];
+			$premium_description = $row_tarif['description'];
 			$premium_letters = $row_tarif['tarif_letters'];
 			$premium_skypes = $row_tarif['tarif_skypes'];
 			$premium_gifts = $row_tarif['tarif_gifts'];
@@ -204,7 +208,7 @@ $data_print = floor($datediff / (60 * 60 * 24)); // Количество дне�
 switch ($status_tarif) 
 	{
 		case 0:
-			$status_tarif_print = "Free";
+			$status_tarif_print = "FREE";
 			if( $data_print < $free_day)
 				{
 					$data_print = $free_day - $data_print;
@@ -216,7 +220,7 @@ switch ($status_tarif)
 		break;
 			
 		case 1:
-			$status_tarif_print = "Silver";
+			$status_tarif_print = "SILVER";
 			if( $data_print < $silver_day)
 				{
 					$data_print = $silver_day - $data_print;
@@ -228,7 +232,7 @@ switch ($status_tarif)
 		break;
 		
 		case 2:
-			$status_tarif_print = "Gold";
+			$status_tarif_print = "GOLD";
 			if( $data_print < $gold_day)
 				{
 					$data_print = $gold_day - $data_print;
@@ -240,7 +244,7 @@ switch ($status_tarif)
 		break;
 		
 		case 3:
-			$status_tarif_print = "Premium";
+			$status_tarif_print = "PREMIUM";
 			if( $data_print < $premium_day)
 				{
 					$data_print = $premium_day - $data_print;
