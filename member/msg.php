@@ -92,6 +92,10 @@ switch ($msg_id)
 		case 9:
 			$msg = "Conference successfully scheduled."; // Введите сообщение
 		break;
+
+		case 10:
+			$msg = "Payment was successful"; // Введите сообщение
+		break;
 	}
 
 ?>

@@ -78,7 +78,7 @@ require "./header.php";
                                                     </label>
                                                     <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#form1" aria-expanded="true" aria-controls="form1">
                                                         <span class="big">SILVER</span> package (for <? echo $silver_day; ?> days)
-                                                        <span class="price"><? echo $silver_price; ?>$</span>
+                                                        <span class="price"><? echo $silver_price; ?>€</span>
                                                     </button>
                                                 </h5>
                                             </div>
@@ -98,7 +98,7 @@ require "./header.php";
                                                     </label>
                                                     <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#form2" aria-expanded="false" aria-controls="form3">
                                                         <span class="big">GOLD</span> package (for <? echo $gold_day; ?> days)
-                                                        <span class="price"><? echo $gold_price; ?>$</span>
+                                                        <span class="price"><? echo $gold_price; ?>€</span>
                                                     </button>
                                                 </h5>
                                             </div>
@@ -119,7 +119,7 @@ require "./header.php";
                                                         <span class="big">PREMIUM</span>
                                                         package
                                                         (for <? echo $premium_day; ?> days)
-                                                        <span class="price"><? echo $premium_price; ?>$</span>
+                                                        <span class="price"><? echo $premium_price; ?>€</span>
                                                     </button>
                                                 </h5>
                                             </div>
