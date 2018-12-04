@@ -157,16 +157,16 @@ require "./header.php";
                                                             <td class="text-center"><? echo $gifts; ?></td>
                                                             <td><a href="./temp_msg.php" class="read-more">More about the service</a></td>
                                                         </tr>
-                                                        <tr>
+                                                        <!-- <tr>
                                                             <td>Detailed advice from matchmakers</td>
-                                                            <td class="text-center"><? echo $advice_match; ?></td>
+                                                            <td class="text-center"></td>
                                                             <td><a href="./temp_msg.php" class="read-more">More about the service</a></td>
                                                         </tr>
                                                         <tr>
                                                             <td>Express assessment of the matchmaker</td>
-                                                            <td class="text-center"><? echo $assessment_match; ?></td>
+                                                            <td class="text-center"></td>
                                                             <td><a href="./temp_msg.php" class="read-more">More about the service</a></td>
-                                                        </tr>
+                                                        </tr> -->
                                                         </tbody>
                                                     </table>
                                                 </div>

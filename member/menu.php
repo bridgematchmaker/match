@@ -35,7 +35,7 @@
                             <ul>
                                 <li class="menu-item  <? if($page_menu_name == "Matchmaker's recomendation") echo("active-menu"); ?>"><a href="./gallery.php?view=recomendation">Matchmaker's recomendation<? if($count_recomendation > 0) { echo "<span class='info_list'>$count_recomendation</span>"; } ?></a></li>
                                 <li class="menu-item  <? if($page_menu_name == "Women profiles") echo("active-menu"); ?>"><a href="./gallery.php?view=gallery">Women profiles<? if($count_gellery > 0) { echo "<span class='info_list'>$count_gellery</span>"; } ?></a></li>
-                                <li class="menu-item"><a href="./temp_msg.php">Choose a lady by hobby</a></li>
+                                <!-- <li class="menu-item"><a href="./temp_msg.php">Choose a lady by hobby</a></li> -->
                                 <li class="menu-item  <? if($page_menu_name == "Black List") echo("active-menu"); ?>"><a href="./gallery.php?view=blacklist">Black List<? if($count_blacklist > 0) { echo "<span class='info_list'>$count_blacklist</span>"; } ?></a></li>
                                 <li class="menu-item"><a href="./temp_msg.php">Profiles Activity</a></li>
                             </ul>
@@ -72,7 +72,7 @@
                             <li class="menu-item" <? if($page_menu_name == "Skype") echo("active-menu"); ?>"><a href="./conference_1.php">Video-Conference<? if($skypes > 0) { echo "<span class='info_list'>$skypes</span>"; } ?></a></li>
                             <li class="menu-item"><a href="./temp_msg.php">Send a Gift<? if($gifts > 0) { echo "<span class='info_list'>$gifts</span>"; } ?></a></li>
                             <li class="menu-item"><a href="./temp_msg.php">Individual Tour</a></li>
-                            <li class="menu-item"><a href="./temp_msg.php">Group Tour</a></li>
+                            <!-- <li class="menu-item"><a href="./temp_msg.php">Group Tour</a></li> -->
                         </ul>
                     </div>
                 </div>

@@ -172,8 +172,9 @@ try {
         $sql_balance = "UPDATE clients_services SET letters='".$letters."', skypes='".$skypes."', gifts='".$gifts."', assessment_match='".$assessment_match."', advice_match='".$advice_match."' WHERE client_id='".$user_id."'";
         $result_balance = mysql_query($sql_balance);
         ///////////////////////////////////////////////////////
-
-        $sql_payment = "UPDATE payments SET status = '1' WHERE payment_id = '$payment_id';";
+        
+        $date_payment = date("Y-m-d G:i:s");
+        $sql_payment = "UPDATE payments SET status = '1', date_payment = '$date_payment' WHERE payment_id = '$payment_id';";
         $result = mysql_query($sql_payment);
 
         echo("

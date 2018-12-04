@@ -183,6 +183,9 @@ switch ($rating_match)
                             <a href="./contact_us.php" class="btn btn-gradient">
                                 Change matchmaker
                             </a>
+                            <a href="./chat_matchmaker.php" class="btn btn-gradient">
+                                Write questions
+                            </a>
                         </div>
                         <p>
                             If status of your subscription is GOLD or higher, then you can replace your assistant Matchmaker, on any other among provided in this gallery. Click on "Change Matchmaker" button and notice us about it.
