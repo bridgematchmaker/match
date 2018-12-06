@@ -40,6 +40,7 @@ while($row = mysql_fetch_array($requirest))
 		$login_match = $row['login_match'];
 		$dreams = $row['dreams'];
 		$meeting = $row['meeting'];
+		$date_add = $row['date_add'];
 		
 		$question1 = $row['question1'];
 		$question2 = $row['question2'];
@@ -302,7 +303,7 @@ include "header.php";
 									<tr><td class="active">Добавил в базу:</td><td><? echo $login_match; ?></td></tr>
 									<tr><td class="active">Video URL:</td><td><? echo $video; ?></td></tr>
 									<? if($video <> "") { echo('<tr><td class="active"></td><td><iframe width="270" height="180" src="'.$video.'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></td></tr>'); } ?>
-									
+									<tr><td class="active">Дата добавдения анкеты:</td><td><? echo $date_add; ?></td></tr>
 									 
 							</table>
 							<?

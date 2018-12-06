@@ -23,6 +23,8 @@ $city = $_POST['city'];
 $birthday = $_POST['birthday'];
 $video = $_POST['video'];
 
+$date_add = date("Y-m-d");
+
 $question1 = $_POST['question1'];
 $question2 = $_POST['question2'];
 $question3 = $_POST['question3'];
@@ -262,7 +264,7 @@ if($num > 0)
 
 
 /////////////SQL запрос//////////////////////
-$sql = "INSERT INTO girls (first_name, last_name, country, city, birthday, video, login_match, question1, question2, question3, question4, question5, question6, question7, question8, question9, question10, question11, question12, question13, question14, question15, question16, question17, question18, question19, question20, question21, question22, question23, question24, question25, question26, question27, question28, question29, question30, question31, question32, question33, question34, question35, question36, question37, question38, question39, question40, question41, question42, question43, question44, question45, question46, question47, question48, question49) VALUES ('$first_name', '$last_name', '$country', '$city', '$birthday', '$video', '$login_match', '$question1', '$question2', '$question3', '$question4', '$question5', '$question6', '$question7', '$question8', '$question9', '$question10', '$question11', '$question12', '$question13', '$question14', '$question15', '$question16', '$question17', '$question18', '$question19', '$question20', '$question21', '$question22', '$question23', '$question24', '$question25', '$question26', '$question27', '$question28', '$question29', '$question30', '$question31', '$question32', '$question33', '$question34', '$question35', '$question36', '$question37', '$question38', '$question39', '$question40', '$question41', '$question42', '$question43', '$question44', '$question45', '$question46', '$question47', '$question48', '$question49')";
+$sql = "INSERT INTO girls (first_name, last_name, country, city, birthday, video, login_match, question1, question2, question3, question4, question5, question6, question7, question8, question9, question10, question11, question12, question13, question14, question15, question16, question17, question18, question19, question20, question21, question22, question23, question24, question25, question26, question27, question28, question29, question30, question31, question32, question33, question34, question35, question36, question37, question38, question39, question40, question41, question42, question43, question44, question45, question46, question47, question48, question49, date_add) VALUES ('$first_name', '$last_name', '$country', '$city', '$birthday', '$video', '$login_match', '$question1', '$question2', '$question3', '$question4', '$question5', '$question6', '$question7', '$question8', '$question9', '$question10', '$question11', '$question12', '$question13', '$question14', '$question15', '$question16', '$question17', '$question18', '$question19', '$question20', '$question21', '$question22', '$question23', '$question24', '$question25', '$question26', '$question27', '$question28', '$question29', '$question30', '$question31', '$question32', '$question33', '$question34', '$question35', '$question36', '$question37', '$question38', '$question39', '$question40', '$question41', '$question42', '$question43', '$question44', '$question45', '$question46', '$question47', '$question48', '$question49', '$date_add')";
 /////////////////////////////////////////////
 $result = mysql_query($sql) or die("Ошибка при записи в базу");
 ///////////загружем id новой девушки//////////

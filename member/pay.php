@@ -60,9 +60,20 @@ $requirest_payment = mysql_query($zapros_payment);
 while($row_payment = mysql_fetch_array($requirest_payment)) 
 	{
        $payment_price = $row_payment['price'];
+       $payment_type = $row_payment['type'];
        $payment_system = $row_payment['payment_system'];
 	}
 ///////////////////////////////////////////////////////////////////////////////////////
+
+////////////Если оплата подарка, то проверяем кредиты подарков/////////////////////////
+if ($payment_type == "1") {
+    if ($gifts == "0") {
+        echo("<script>javascript:window.location='./index.php'</script>");
+        die();
+    }
+}
+///////////////////////////////////////////////////////////////////////////////////////
+
 if ($payment_system == "pastabank") {
     $payment_redirect = "./function/payment/payment_pastabank.php";
 } else {
