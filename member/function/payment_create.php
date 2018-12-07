@@ -63,7 +63,7 @@ while($row_tarif = mysql_fetch_array($requirest_tarif))
 ///////////////////////////////////////////////////////////////////////////////////////
 
 $tarif_name = strtoupper($tarif_name);
-$payment_info = "Заказ тарфиного плана: $tarif_name";
+$payment_info = "Order of the tariff plan $tarif_name";
 
 $sql = "INSERT INTO payments (payment_id, tarif_name, user_id, price, type, payment_info, payment_system, status) VALUES ('$payment_id', '$tarif_name', '$user_id', '$tarif_price', '$type', '$payment_info', '$pay_system', '$status');";
 $result = mysql_query($sql) or die("<script>alert('Error in payment');</script><script>javascript:window.location='".$_SERVER['HTTP_REFERER']."'</script>");

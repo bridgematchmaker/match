@@ -22,9 +22,11 @@ isset($_SESSION['email_client']) or die("<script>javascript:window.location='../
         <!-- Owl Carousel -->
         <link href="assets/css/owl.carousel.min.css" rel="stylesheet" type="text/css">
         <!-- Custom Style -->
+        <link href="assets/css/select2-conf.css" rel="stylesheet" type="text/css">
+
         <link href="assets/css/style.css" rel="stylesheet" type="text/css">
 		<!--Style Content Page-->
-        <link href="assets/css/style.content.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/style.pay.css" rel="stylesheet" type="text/css">
         <!-- Favicon -->
         <link rel="icon" href="" type="image/png" />
 
@@ -62,6 +64,7 @@ while($row_payment = mysql_fetch_array($requirest_payment))
        $payment_price = $row_payment['price'];
        $payment_type = $row_payment['type'];
        $payment_system = $row_payment['payment_system'];
+       $payment_info = $row_payment['payment_info'];
 	}
 ///////////////////////////////////////////////////////////////////////////////////////
 
@@ -90,16 +93,113 @@ require "./header.php";
 			
 			<!-- Main Page Content (start)-->
             <div class="main-content col-md-9">
-                <form action="<? echo $payment_redirect; ?>" method="POST">
-                    <input name="payment_id" type="hidden" value="<? echo $payment_id; ?>">
-                    Card number: <input name="card_number" type="text"><br>
-                    Card CVV: <input name="card_cvv" type="text"><br>
-                    Card Name holder: <input name="card_name" type="text"><br>
-                    MM: <input name="card_mm" type="text"> YY: <input name="card_yy" type="text"><br>
-                    <input type="submit" value="PAY">
-                </form>
-                <hr>
-                <? echo $card_error; ?>
+                <div class="row">
+                    <div class="col-lg-12 col-xl-11">
+                        <h2 class="page-title text-gray">
+                            Pay securely with your card
+                        </h2>
+
+                        <? if($card_error !== "") {
+                            echo('
+                                    <div class="warning-block">
+                                        <img src="assets/images/att-im.png" alt="">
+                                        <p class="warning-block-title">
+                                           ' . $card_error . '
+                                        </p>
+                                     </div>
+                                ');
+                            }  
+                        ?>
+
+                        <div class="row justify-content-lg-between">
+                            <div class="col-md-6 col-lg-5">
+                                <h2 class="text-accent">
+                                   Amount: <? echo $payment_price; ?> EUR
+                                </h2>
+                                <div class="description-block mt-4">
+                                    <p class="text-accent text-sbold">
+                                        Description:
+                                    </p>
+                                    <ul>
+                                        <li>
+                                           Paymnent info: <? echo $payment_info; ?>
+                                        </li>
+                                        <li>
+                                            Payment id: <? echo $payment_id; ?>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mt-4">
+                                    <p class="text-sbold text-gray">
+                                        Prompt:
+                                    </p>
+                                    <img src="assets/images/card-img.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-8 col-lg-6 mt-4 mt-lg-0">
+                                <img src="assets/images/pay-img.jpg" alt="">
+                                <form action="<? echo $payment_redirect; ?>" class="pay-form" method="POST">
+                                    <input name="payment_id" type="hidden" value="<? echo $payment_id; ?>">
+                                    <h4 class="text-gray text-sbold form-title">
+                                        <img src="assets/images/form-pay-icon.png" alt="">
+                                        <span>Card details</span>
+                                    </h4>
+                                    <div class="form-item">
+                                        <input type="text"  name="card_name" placeholder="Name on the card">
+                                    </div>
+                                    <div class="form-item">
+                                        <input type="text"  name="card_number" placeholder="Card number">
+                                    </div>
+                                    <p class="mt-4">
+                                        Card expires:
+                                    </p>
+                                    <div class="row">
+                                        <div class="col-sm-5">
+                                            <select name="card_mm" placeholder="Month" >
+                                                <option title="Month"> Month</option>   
+                                                <option value="01">01 </option>
+                                                <option value="02">02</option>
+                                                <option value="03">03</option>
+                                                <option value="04">04</option>
+                                                <option value="05">05 </option>
+                                                <option value="06">06</option>
+                                                <option value="07">07</option>
+                                                <option value="08">08</option>
+                                                <option value="09">09</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-4 mt-3 mt-sm-0">
+                                            <select name="card_yy" placeholder="Year" >
+                                                <option title="Year"> Year</option>                                               
+                                                <option value="18">18</option>
+                                                <option value="19">19</option>
+                                                <option value="20">20</option>
+                                                <option value="21">21</option>
+                                                <option value="22">22</option>
+                                                <option value="23">23</option>
+                                                <option value="24">24</option>
+                                                <option value="25">25</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-5 mt-3">
+                                            <div class="form-item">
+                                                <input type="password" name="card_cvv" placeholder="CSC/CVC">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btn-block text-center">
+                                        <button class="btn btn-gradient" type="submit">
+                                            PAY now securely
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 			<!-- Main Page Content (end)-->
         </div>
@@ -112,6 +212,8 @@ require "./header.php";
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/select2_2.min.js"></script>
+    <script src="assets/js/select2.js"></script>
     <script src="assets/js/custom.js"></script>
 <!-- Site Scripts (end)-->
 
