@@ -158,11 +158,11 @@ include "menu.php";
 						switch ($type)
 							{
 								case 0:
-									$type_print = "Тарифный план";
+									$type_print = "Покупка тарифного плана";
 								break;
 			
 								case 1:
-									$type_print = "Поадарок";
+									$type_print = "Покупка подарка";
 								break;
 							}
 						

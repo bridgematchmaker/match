@@ -174,7 +174,7 @@ try {
         ///////////////////////////////////////////////////////
         
         $date_payment = date("Y-m-d G:i:s");
-        $sql_payment = "UPDATE payments SET status = '1', date_payment = '$date_payment' WHERE payment_id = '$payment_id';";
+        $sql_payment = "UPDATE payments SET status = '1', date_payment = '$date_payment', payment_error = ''  WHERE payment_id = '$payment_id';";
         $result = mysql_query($sql_payment);
 
         echo("

@@ -22,6 +22,14 @@
             <li><a href="./match_add.php">Добавить мачмекера</a></li>    
           </ul>
 		</li>
+
+		<li class="dropdown <? if($page_name == "payments") { echo("active"); } ?>"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Платежи<span class="caret"></span></a>
+			<ul class="dropdown-menu">
+						<li><a href="./payments.php?view=all">Все платежи</a></li> 
+						<li><a href="./payments.php?view=success">Оплаченные платежи</a></li> 
+						<li><a href="./payments.php?view=pending">Не оплаченные платежи</a></li> 
+      </ul>
+		</li>
 		
 		<li class="dropdown <? if($page_name == "tarif") { echo("active"); } ?>"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Тарифы и услуги<span class="caret"></span></a>
 			<ul class="dropdown-menu">
