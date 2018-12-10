@@ -115,4 +115,5 @@
 		</div>
 	</div>
 </footer>
+<? include('./ads.php'); ?>
 <!-- Footer (end)-->

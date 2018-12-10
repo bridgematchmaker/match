@@ -59,7 +59,7 @@ require "./header.php";
                         <br>
                         <ul>
                             <li class="d-flex align-middle"><span class="number">1</span><p>First project, that unites matchmakers and people who look for serious relationships.</p></li>
-                            <li class="d-flex align-middle"><p>Unique method of  profiles reality control based on a blockchain technology. Fully isolated from spam, fraud and scam.</p><span class="number">2</span></li>
+                            <li class="d-flex align-middle"><p>Unique method of profiles reality control. Fully isolated from spam, fraud and scam.</p><span class="number">2</span></li>
                             <li class="d-flex align-middle"><span class="number">3</span><p>Professional team of matchmakers who helps to realize client's expectations  in shortest terms. A big client database.</p></li>
                             <li class="d-flex align-middle"><p>Individual work with each client. Loyal price policy. Administration is in hands of every customer.</p><span class="number">4</span></li>
                             <li class="d-flex align-middle"><span class="number">5</span><p>Free communication between men&women without any payments for correspondence.</p></li>
