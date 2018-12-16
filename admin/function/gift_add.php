@@ -17,11 +17,15 @@ if(empty($_POST['gift_name']) or empty($_POST['gift_description']))
 
 ////////////////Переменные////////////////
 $gift_name = $_POST['gift_name'];
+$gift_price = $_POST['gift_price'];
 $gift_description = $_POST['gift_description'];
 
 /////////////Фильтрация///////////////////
 $gift_name = htmlspecialchars($gift_name);
 $gift_name = mysql_escape_string($gift_name);
+
+$gift_price = htmlspecialchars($gift_price);
+$gift_price = mysql_escape_string($gift_price);
 
 
 $gift_description = mysql_escape_string($gift_description);
@@ -69,7 +73,7 @@ function make_upload($file){
 
 	$foto = 'uploads/gift/'.$name_foto;
 	/////////////SQL запрос//////////////////////
-	$sql = "INSERT INTO setting_gifts ( gift_name, gift_description, gift_foto) VALUES ('".$GLOBALS['gift_name']."', '".$GLOBALS['gift_description']."', '$foto')";
+	$sql = "INSERT INTO setting_gifts ( gift_name, gift_price, gift_description, gift_foto) VALUES ('".$GLOBALS['gift_name']."', '".$GLOBALS['gift_price']."', '".$GLOBALS['gift_description']."', '$foto')";
 	/////////////////////////////////////////////
 	$result = mysql_query($sql) or die("Ошибка при записи в базу");
 }

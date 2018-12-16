@@ -36,6 +36,11 @@ include "menu.php";
 					<label>Название подарка</label>
 					<input name="gift_name" type="text" class="form-control rounded">
 				</div>
+
+				<div class="form-group">
+					<label>Цена подарка</label>
+					<input name="gift_price" type="text" class="form-control rounded">
+				</div>
 				
 				<div class="form-group">
 					<label>Описание подарка</label>
@@ -59,6 +64,7 @@ include "menu.php";
 				<th></th>
 				<th></th>
 				<th>Название подарка:</th>
+				<th>Цена подарка:</th>
 				<th>Описание подарка:</th>
 			</tr>
 		</thead>
@@ -73,6 +79,7 @@ include "menu.php";
 					//////////////////////Загружаем данные пользователей/////////////////////////
 					$id = $row['gift_id'];					
 					$gift_name = $row['gift_name'];
+					$gift_price = $row['gift_price'];
 					$gift_description = $row['gift_description'];
 					$gift_foto = $row['gift_foto'];
 					////////////////////////////////////////////////////////////////////////////////////////
@@ -83,6 +90,7 @@ include "menu.php";
 						<td><a href='./function/gift_del.php?id=$id'><span style='font-size:22px; margin-left:10px;' class='glyphicon glyphicon-remove'></span></a></td>
 						<td><img height='100' weight='100' src='../$gift_foto'></td>
 						<td>$gift_name</td>
+						<td>$gift_price</td>
 						<td>$gift_description</td>
 					</tr>
 						");
