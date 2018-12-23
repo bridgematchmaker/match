@@ -159,7 +159,7 @@ include "header.php";
 								break;
 		
 								case 2:
-									$type_print = "Встреча";
+									$type_print = "Подарок";
 								break;
 		
 							}

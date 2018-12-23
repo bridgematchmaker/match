@@ -290,7 +290,7 @@ require "./header.php";
 																					</a>
 																				</li>
 																				<li>
-																					<a href="./temp_msg.php">
+																					<a href="./gifts_1.php?girl_id='.$girl_id.'">
 																						<span class="icon"><i class="fa fa-gift" aria-hidden="true"></i></span>
 																						<p>Send gifts</p>
 																					</a>
@@ -409,7 +409,7 @@ require "./header.php";
 																			</a>
 																		</li>
 																		<li>
-																			<a href="./temp_msg.php">
+																			<a href="./gifts_1.php?girl_id='.$girl_id.'">
 																				<span class="icon"><i class="fa fa-gift" aria-hidden="true"></i></span>
 																				<p>Send gifts</p>
 																			</a>

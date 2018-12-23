@@ -246,7 +246,7 @@ require "./header.php";
 
                                     <div class="form-group row list-agree-disagree">
 
-                                        <h4 class="col-md-12">What things from the list you agree or disagree with…?</h4>
+                                        <h4 class="col-md-12">What things from the list you agree with…?</h4>
                                         <div class="col-md-12">
                                             <div class="form-check">
                                                 <input type="checkbox" id="agree-disagree1" class="form-check-input" name="question26_1" value="1" <?if (in_array("When I get romantically involved, I tell about everything to my partner", $question26arr)) { echo('checked'); } ?>/>

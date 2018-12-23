@@ -419,7 +419,7 @@ for ($i=0; $i<31; $i++)
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="./temp_msg.php">
+                                        <a href="./gifts_1.php?girl_id=<? echo $girl_id; ?>">
                                             <span class="icon"><i class="fa fa-gift" aria-hidden="true"></i></span>
                                             <p>Send gifts</p>
                                         </a>

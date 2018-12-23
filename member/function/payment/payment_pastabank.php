@@ -20,6 +20,7 @@ $card_cvv = $_POST['card_cvv'];
 $card_mm = $_POST['card_mm'];
 $card_yy = $_POST['card_yy'];
 $ip = $_SERVER['REMOTE_ADDR'];
+$date_add = date("Y-m-d");
 
 $payment_id = htmlspecialchars($payment_id);
 $payment_id = mysql_escape_string($payment_id);
@@ -183,6 +184,19 @@ try {
 		exit();
         
 
+    }
+
+    if ($payment_type == 1) {
+        $sql_order = "UPDATE orders SET type = '2', date_add = '$date_add' WHERE order_id = '$payment_order_id';";
+        $result = mysql_query($sql_order);
+        $date_payment = date("Y-m-d G:i:s");
+        $sql_payment = "UPDATE payments SET status = '1', date_payment = '$date_payment', payment_error = ''  WHERE payment_id = '$payment_id';";
+        $result = mysql_query($sql_payment);
+
+        echo("
+					<script>javascript:window.location='../../msg.php?type=0&msg_id=10&redirect=0'</script>
+			");
+		exit();
     }
     ////////////////////////////////////////////////////////////////////////////////////////////
 
