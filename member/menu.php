@@ -17,6 +17,7 @@
 								<li class="menu-item <? if($page_menu_name == "More about me") echo("active-menu"); ?>"><a href="./profile_about_me.php">More about me</a></li>
 								<li class="menu-item <? if($page_menu_name == "Select service") echo("active-menu"); ?>"><a href="./choose_service.php">Select service</a></li>
                                 <!-- <li class="menu-item <? if($page_menu_name == "Account options") echo("active-menu"); ?>"><a href="#">Account options</a></li> -->
+                                <li class="menu-item <? if($page_menu_name == "Orders and Payments") echo("active-menu"); ?>"><a href="./orders.php">Orders and Payments</a></li>
                                 <li class="menu-item <? if($page_menu_name == "Purchase of services") echo("active-menu"); ?>"><a href="./temp_msg.php">Purchase of services</a></li>
                             </ul>
                         </div>
@@ -68,9 +69,9 @@
                                    
                                 }
                             ?>
-                            <li class="menu-item  <? if($page_menu_name == "Send E-mail to lady") echo("active-menu"); ?>"><a href="./send_email.php">Send E-mail to lady<? if($letters > 0) { echo "<span class='info_list'>$letters</span>"; } ?></a></li>
-                            <li class="menu-item" <? if($page_menu_name == "Skype") echo("active-menu"); ?>"><a href="./conference_1.php">Video-Conference<? if($skypes > 0) { echo "<span class='info_list'>$skypes</span>"; } ?></a></li>
-                            <li class="menu-item"><a href="./temp_msg.php">Send a Gift<? if($gifts > 0) { echo "<span class='info_list'>$gifts</span>"; } ?></a></li>
+                            <li class="menu-item <? if($page_menu_name == "Send E-mail to lady") echo("active-menu"); ?>"><a href="./send_email.php">Send E-mail to lady<? if($letters > 0) { echo "<span class='info_list'>$letters</span>"; } ?></a></li>
+                            <li class="menu-item <? if($page_menu_name == "Skype") echo("active-menu"); ?>"><a href="./conference_1.php">Video-Conference<? if($skypes > 0) { echo "<span class='info_list'>$skypes</span>"; } ?></a></li>
+                            <li class="menu-item <? if($page_menu_name == "Gifts") echo("active-menu"); ?>"><a href="./gifts_1.php">Send a Gift<? if($gifts > 0) { echo "<span class='info_list'>$gifts</span>"; } ?></a></li>
                             <li class="menu-item"><a href="./temp_msg.php">Individual Tour</a></li>
                             <!-- <li class="menu-item"><a href="./temp_msg.php">Group Tour</a></li> -->
                         </ul>
