@@ -39,8 +39,12 @@ include("./function/user_bd.php");
 include("./function/user_check.php");
 
 $payment_id = $_GET['payment_id'];
-$card_error = $_SESSION['card_error'];
-$_SESSION['card_error'] = '';
+if (!empty($_SESSION['card_error'])) {
+    $card_error = $_SESSION['card_error'];
+} else {
+    $card_error = '';
+    $_SESSION['card_error'] = '';
+}
 
 $payment_id = htmlspecialchars($payment_id);
 $payment_id = mysql_escape_string($payment_id);
