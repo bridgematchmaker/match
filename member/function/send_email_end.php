@@ -93,18 +93,18 @@ include("./girl_bd.php");
 
 /////////////////Проверяем доступность профиля девушки для клиента/////////////////////
 
-$result_access = mysql_query("SELECT * FROM clients_girl WHERE girl_id='$girl_id' AND user_id='$user_id';");
-$num_access = mysql_num_rows($result_access);
-if($num_access !== 1) 
-	{ 
-		if($girl_gallery_status <> "1")
-		{
-				echo("
-					<script>javascript:window.location='../msg.php?type=1&msg_id=4&redirect=0'</script>
-					");
-				exit();
-		}
-	} 
+// $result_access = mysql_query("SELECT * FROM clients_girl WHERE girl_id='$girl_id' AND user_id='$user_id';");
+// $num_access = mysql_num_rows($result_access);
+// if($num_access !== 1) 
+// 	{ 
+// 		if($girl_gallery_status <> "1")
+// 		{
+// 				echo("
+// 					<script>javascript:window.location='../msg.php?type=1&msg_id=4&redirect=0'</script>
+// 					");
+// 				exit();
+// 		}
+// 	} 
 
 ///////////////////////////////////////////////////////////////////////////////////////
 

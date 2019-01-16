@@ -84,6 +84,16 @@
 		</li>
 		');
 		} ?>
+
+		<? if($status_match == "1") {
+		echo('
+        <li class="dropdown '); if($page_name == "feeds") { echo('active'); } echo('"><a href="#" class="dropdown-toggle" data-toggle="dropdown">События<span class="caret"></span></a>
+			<ul class="dropdown-menu">
+			<li><a href="./feeds.php">Все события</a></li>
+          </ul>
+		</li>
+		');
+		} ?>
 		
 		<? if($status_match == "1") {
 		echo('
