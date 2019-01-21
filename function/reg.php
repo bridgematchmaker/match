@@ -322,11 +322,11 @@ $result_clients_services = mysql_query($sql_clients_services) or die("Ошибк
 
 ////////////////////////Редирект если все прошло успешно//////////////////////////////////////////////////////
 echo "
-		<form id='formLogin' action='../login.php' method='post'>
+		<form id='formLogin' action='../success_register.php' method='post'>
 			<input name='login' type='hidden' value='".$email_client."'>
 			<input name='pass' type='hidden' value='".$password."'>
 		</form>
-		<script>alert('Profile successfully created');</script><script>document.getElementById('formLogin').submit();</script>
+		<script>document.getElementById('formLogin').submit();</script>
 	";	
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
  
