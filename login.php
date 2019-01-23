@@ -117,8 +117,13 @@ if (!isset($_SESSION['email_client'])) {
      if (count($_POST) <= 0)
          draw_form();
      else {
-         if (check_login($login, $pass))
-             $_SESSION['email_client'] = $login;
+		 if (check_login($login, $pass))
+		 	{
+				$_SESSION['email_client'] = $login;
+				$last_login = date("Y-m-d G:i:s");
+				$sql = "UPDATE clients SET last_login = '".$last_login."' WHERE email_client='$login'";
+				$result = mysql_query($sql);
+			}	
          else
              draw_form(true);
      }

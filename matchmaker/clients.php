@@ -194,6 +194,7 @@ include "header.php";
 				<th>Матчмекер:</th>
 				<th>Cтатус:</th>
 				<th>Подписка:</th>
+				<th>Последний вход:</th>
 				
 			</tr>
 		</thead>
@@ -222,6 +223,7 @@ include "header.php";
 						$match_name = $row['name'];
 						$status_anketa2 = $row['status_anketa2'];
 						$service = $row['service'];
+						$last_login = $row['last_login'];
 						$status_verification = $row['status_verification'];
 						
 						if(($status_anketa2 == "1") AND ($status_verification == "0")) { 
@@ -315,6 +317,9 @@ include "header.php";
 									</td>
 									<td>
 										$status_tarif_print
+									</td>
+									<td>
+										$last_login
 									</td>
 									
 								</tr>
