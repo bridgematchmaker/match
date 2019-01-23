@@ -21,6 +21,7 @@
 		<li class="dropdown '); if($page_name == "clients") { echo('active'); } echo('"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Анкеты клиентов<span class="caret"></span></a>
 			<ul class="dropdown-menu">
 			<li><a href="./clients.php?view=all">Все пользователи сайта</a></li>
+			<li><a href="./clients.php?view=all_month">Все пользователи сайта (Вход в этом месяце)</a></li>
 			<li role="separator" class="divider"></li>
 			<li><a href="./clients.php?view=new_user">Новые пользователи</a></li>
 			<li><a href="./clients.php?view=active">Активные пользователи</a></li>
