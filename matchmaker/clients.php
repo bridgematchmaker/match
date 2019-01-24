@@ -81,6 +81,12 @@ switch ($view)
 			$result2 = mysql_query("SELECT * FROM clients WHERE status_system='4' AND MONTH(last_login) = MONTH(NOW()) AND YEAR(last_login) = YEAR(NOW());");
 			$num = mysql_num_rows($result2);
 		break;
+
+		case all_last_login:
+			// Узнаем количество всех доступных записей 
+			$result2 = mysql_query("SELECT * FROM clients WHERE status_system<>'4';");
+			$num = mysql_num_rows($result2);
+		break;
 		
 		
 	}
@@ -141,7 +147,11 @@ switch ($view)
 		break;
 
 		case all_month:
-			$zapros = "SELECT clients.*,matchmakers.name FROM clients LEFT JOIN matchmakers ON clients.matchmaker_login = matchmakers.login WHERE status_system<>'4' AND MONTH(last_login) = MONTH(NOW()) AND YEAR(last_login) = YEAR(NOW()) ORDER BY user_id DESC LIMIT $quantity OFFSET $list;";
+			$zapros = "SELECT clients.*,matchmakers.name FROM clients LEFT JOIN matchmakers ON clients.matchmaker_login = matchmakers.login WHERE status_system<>'4' AND MONTH(last_login) = MONTH(NOW()) AND YEAR(last_login) = YEAR(NOW()) ORDER BY last_login DESC LIMIT $quantity OFFSET $list;";
+		break;
+
+		case all_last_login:
+			$zapros = "SELECT clients.*,matchmakers.name FROM clients LEFT JOIN matchmakers ON clients.matchmaker_login = matchmakers.login WHERE status_system<>'4' ORDER BY last_login DESC LIMIT $quantity OFFSET $list;";
 		break;
 	}
 ?>

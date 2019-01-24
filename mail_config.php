@@ -9,6 +9,8 @@
 	$mail_replyto_email = "newsletter@bridgematchmaker.com";
 	$mail_replyto_name = "BridgeMatchMaker";
 
+	$admin_email = "admin@bridgematchmaker.com"
+
 	/*
 	require './lib/PHPMailer/PHPMailerAutoload.php';
 	$mail = new PHPMailer(); // инициализация класса

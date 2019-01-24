@@ -66,6 +66,7 @@ if($validation == "1")
 			include("./mail_config.php");	
 			
 			//////////////Подстановка макросов////////////////////////
+			$email_content = str_replace("{admin_email}", $admin_email, $email_content);
 			$email_content = str_replace("{first_name}", $first_name, $email_content);
 			$email_content = str_replace("{email}", $email_client, $email_content);
 			$email_content = str_replace("{unsubscribe_link}", $unsubscribe_link, $email_content);

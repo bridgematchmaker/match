@@ -105,6 +105,7 @@ $result = mysql_query($sql) or die("<script>alert('Ошибка при запи�
 	
 
 	/////Тело///////
+	$email_content = str_replace("{admin_email}", $admin_email, $email_content);
 	$email_content = str_replace("{girl_avatar}", $girl_avatar, $email_content);
 	$email_content = str_replace("{user_id}", $user_id, $email_content);
 	$email_content = str_replace("{girl_id}", $girl_id, $email_content);

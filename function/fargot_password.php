@@ -59,6 +59,7 @@ $num = mysql_num_rows($result_repeat);
 	include("../mail_config.php");	
 	
 	//////////////Подстановка макросов////////////////////////
+	$email_content = str_replace("{admin_email}", $admin_email, $email_content);
 	$email_content = str_replace("{first_name}", $first_name, $email_content);
 	$email_content = str_replace("{email}", $email, $email_content);
 	$email_content = str_replace("{reset_link}", $reset_link, $email_content);

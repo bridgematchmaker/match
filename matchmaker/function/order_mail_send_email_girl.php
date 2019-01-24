@@ -104,6 +104,7 @@ while($row_client = mysql_fetch_array($requirest_client))
 	$email_subject  = str_replace("{order_id}", $order_id, $email_subject);
 
 	/////Тело///////
+	$email_content = str_replace("{admin_email}", $admin_email, $email_content);
 	$email_content = str_replace("{first_name}", $first_name, $email_content);
 	$email_content = str_replace("{email}", $email_client, $email_content);
 	$email_content = str_replace("{client_avatar}", $client_avatar, $email_content);

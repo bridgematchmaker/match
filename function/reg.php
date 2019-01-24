@@ -274,6 +274,7 @@ $result_clients_services = mysql_query($sql_clients_services) or die("Ошибк
 	include("../mail_config.php");	
 	
 	//////////////Подстановка макросов////////////////////////
+	$email_content = str_replace("{admin_email}", $admin_email, $email_content);
 	$email_content = str_replace("{first_name}", $first_name, $email_content);
 	$email_content = str_replace("{email}", $email_client, $email_content);
 	$email_content = str_replace("{activation_key}", $activation_key, $email_content);

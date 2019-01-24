@@ -101,6 +101,7 @@ while($row_match = mysql_fetch_array($requirest_match))
 	$email_subject  = str_replace("{order_id}", $order_id, $email_subject);
 
 	/////Тело///////
+	$email_content = str_replace("{admin_email}", $admin_email, $email_content);
 	$email_content = str_replace("{first_name}", $first_name, $email_content);
 	$email_content = str_replace("{email}", $email_client, $email_content);
 	$email_content = str_replace("{girl_avatar}", $girl_avatar, $email_content);
