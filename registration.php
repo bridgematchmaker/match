@@ -29,7 +29,7 @@
     <link href="assets/css/jquery-ui.structure.min.css" rel="stylesheet" type="text/css">
 
 	<link href="assets/css/style-main.css" rel="stylesheet" type="text/css">
-	<link href="assets/css/intlTelInput.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/intlTelInput_new.css" rel="stylesheet" type="text/css">
 	<!-- Favicon -->
 	<link rel="icon" href="" type="image/png"/>
 
@@ -932,7 +932,8 @@ require "./header.php";
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="phone">Phone<span class="required"> *</span></label>
-                                            <input name="telefon" type="tel" class="form-control require" id="phone" value="">
+                                            <div class="require"><input type="tel" class="form-control" id="phone" value=""></div>
+                                            <input type="hidden" id="phone_code_country" name="telefon">
                                         </div>
                                     </div>
                                 </div>
@@ -980,14 +981,22 @@ require "./header.php";
 <script src="assets/js/registration.js"></script>
 <script src="assets/js/select2.min.js"></script>
 <script src="assets/js/jquery-ui.min.js"></script>
-<script src="assets/js/intlTelInput.js"></script>
+<script src="assets/js/intlTelInput-jquery.js"></script>
+
 <script src='https://www.google.com/recaptcha/api.js'></script>
 
 <script>
-		$("#phone").intlTelInput();
+    $("#phone").intlTelInput({
+      separateDialCode: true,
+      utilsScript: "assets/js/utils.js",
+    });
+
+    $("form").submit(function() {
+        $("#phone_code_country").val($("#phone").intlTelInput("getNumber"));
+    });
+
 </script>
 <!-- Site Scripts (end)-->
 
 </body>
-
 </html>

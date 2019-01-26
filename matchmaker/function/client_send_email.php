@@ -67,6 +67,7 @@ include("../../mail_config.php");
 
 
 /////Тело///////
+$email_content = str_replace("{admin_email}", $admin_email, $email_content);
 $email_content = str_replace("{first_name}", $first_name, $email_content);
 $email_content = str_replace("{last_name}", $last_name, $email_content);
 $email_content = str_replace("{email}", $email_client, $email_content);
