@@ -27,6 +27,24 @@
                         }
                     }
                 });
+
+                form.find('.require-phone').each(function(){
+
+                    if($(this).find('.phone').val() != ''){
+                        $(this).find('.phone').removeClass('empty-field');
+                        $(this).parent().find('span.required-field').remove();
+
+                    } else {
+                        $(this).find('.phone').addClass('empty-field');
+                        if($(this).find('span.required-field').length>0){
+                            return;
+                        }
+                        else{
+                            $(this).before('<span class="required-field">Field is required</span>');
+
+                        }
+                    }
+                });
             }
 
             function count_empty_field() {

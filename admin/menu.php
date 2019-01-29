@@ -49,6 +49,8 @@
 		
 		<li class="<? if($page_name == "email") { echo("active"); } ?>"><a href="email_templates.php">Шаблоны писем</a></li>
 
+		<li class="<? if($page_name == "emails") { echo("active"); } ?>"><a href="emails.php">E-Mail База</a></li>
+
         <li><a href="./index.php?logout" >Выход</a></li>	
       </ul>
     </div>

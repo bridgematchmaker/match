@@ -932,7 +932,7 @@ require "./header.php";
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="phone">Phone<span class="required"> *</span></label>
-                                            <div class="require"><input type="tel" class="form-control" id="phone" value=""></div>
+                                            <div class="require-phone"><input type="tel" class="form-control phone" id="phone" value=""></div>
                                             <input type="hidden" id="phone_code_country" name="telefon">
                                         </div>
                                     </div>
