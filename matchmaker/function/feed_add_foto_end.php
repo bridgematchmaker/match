@@ -15,6 +15,11 @@ $type = $_POST['type'];
 $description = $_POST['description'];
 $foto_description = $_POST['foto_description'];
 $waiting_description = $_POST['waiting_description'];
+$relation_description = $_POST['relation_description'];
+$relation_man = $_POST['relation_man'];
+$relation_girl = $_POST['relation_girl'];
+$present_property = $_POST['present_property'];
+$present_description = $_POST['present_description'];
 
 
 
@@ -36,6 +41,21 @@ $foto_description = mysql_escape_string($foto_description);
 
 $waiting_description = htmlspecialchars($waiting_description);
 $waiting_description = mysql_escape_string($waiting_description);
+
+$relation_description = htmlspecialchars($relation_description);
+$relation_description = mysql_escape_string($relation_description);
+
+$relation_man = htmlspecialchars($relation_man);
+$relation_man = mysql_escape_string($relation_man);
+
+$relation_girl = htmlspecialchars($relation_girl);
+$relation_girl = mysql_escape_string($relation_girl);
+
+$present_property = htmlspecialchars($present_property);
+$present_property = mysql_escape_string($present_property);
+
+$present_description = htmlspecialchars($present_description);
+$present_description = mysql_escape_string($present_description);
 
 
 function can_upload($file){
@@ -87,7 +107,15 @@ function make_upload($file){
         break;
 
         case 4:
-        	$zapros = "INSERT INTO feeds (match_add, match_add_login, type, girl_id, description, foto, waiting_description) VALUES ('".$GLOBALS['match_add']."', '".$GLOBALS['match_add_login']."', '".$GLOBALS['type']."', '".$GLOBALS['girl_id']."', '".$GLOBALS['description']."', '$foto', '".$GLOBALS['waiting_description']."')";
+        	$zapros = "INSERT INTO feeds (match_add, match_add_login, type, girl_id, description, waiting_foto, waiting_description) VALUES ('".$GLOBALS['match_add']."', '".$GLOBALS['match_add_login']."', '".$GLOBALS['type']."', '".$GLOBALS['girl_id']."', '".$GLOBALS['description']."', '$foto', '".$GLOBALS['waiting_description']."')";
+		break;
+		
+		case 6:
+        	$zapros = "INSERT INTO feeds (match_add, match_add_login, type, girl_id, description, relation_description, relation_man, relation_girl,  relation_foto) VALUES ('".$GLOBALS['match_add']."', '".$GLOBALS['match_add_login']."', '".$GLOBALS['type']."', '".$GLOBALS['girl_id']."', '".$GLOBALS['description']."', '".$GLOBALS['relation_description']."', '".$GLOBALS['relation_man']."', '".$GLOBALS['relation_girl']."', '$foto')";
+		break;
+		
+		case 7:
+        	$zapros = "INSERT INTO feeds (match_add, match_add_login, type, girl_id, description, present_property, present_description, present_foto) VALUES ('".$GLOBALS['match_add']."', '".$GLOBALS['match_add_login']."', '".$GLOBALS['type']."', '".$GLOBALS['girl_id']."', '".$GLOBALS['description']."', '".$GLOBALS['present_property']."', '".$GLOBALS['present_description']."', '$foto')";
         break;
     }
 

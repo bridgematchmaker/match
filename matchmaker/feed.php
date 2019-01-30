@@ -38,8 +38,10 @@ while($row = mysql_fetch_array($requirest))
         $feed_relation_description = $row['relation_description'];
         $feed_relation_girl = $row['relation_girl'];
         $feed_relation_man = $row['relation_man'];
+        $feed_relation_foto = $row['relation_foto'];
         $feed_present_property = $row['present_property'];
         $feed_present_description = $row['present_description'];
+        $feed_present_foto = $row['present_foto'];
         $feed_description = $row['description'];
         $feed_type = $row['type'];
         $feed_match_add = $row['match_add'];
@@ -199,6 +201,7 @@ include "header.php";
                                                      <tr><td class='active'>Описание как девушка видит отношения:</td><td>$feed_relation_description</td></tr>
                                                      <tr><td class='active'>Вопрос к мужчине:</td><td>$feed_relation_man</td></tr>
                                                      <tr><td class='active'>Как я отвечаю на этот вопрос:</td><td>$feed_relation_girl</td></tr>
+                                                     <tr><td class='active'>Фотография:</td><td><img width='300' src='../$feed_relation_foto'></td></tr>
                                                 ");
                                         }
 
@@ -206,6 +209,7 @@ include "header.php";
                                             echo("
                                                      <tr><td class='active'>Описания качеств девушек:</td><td>$feed_present_property</td></tr>
                                                      <tr><td class='active'>Дополнительное описание:</td><td>$feed_present_description</td></tr>
+                                                     <tr><td class='active'>Фотография:</td><td><img width='300' src='../$feed_present_foto'></td></tr>
                                                 ");
                                         }
 

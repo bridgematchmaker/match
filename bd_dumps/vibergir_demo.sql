@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: vibergir.mysql.ukraine.com.ua
--- Время создания: Янв 23 2019 г., 19:50
+-- Время создания: Янв 30 2019 г., 11:35
 -- Версия сервера: 5.7.16-10-log
 -- Версия PHP: 7.0.33
 
@@ -136,8 +136,10 @@ CREATE TABLE `feeds` (
   `relation_description` text NOT NULL,
   `relation_man` text NOT NULL,
   `relation_girl` text NOT NULL,
+  `relation_foto` text NOT NULL,
   `present_property` text NOT NULL,
   `present_description` text NOT NULL,
+  `present_foto` text NOT NULL,
   `description` text NOT NULL,
   `type` varchar(8) NOT NULL,
   `match_add` varchar(64) NOT NULL,

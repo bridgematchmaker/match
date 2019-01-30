@@ -21,6 +21,8 @@ while($row = mysql_fetch_array($requirest))
 	{
 		$foto = $row['foto'];
 		$waiting_foto = $row['waiting_foto'];	
+		$present_foto = $row['present_foto'];
+		$relation_foto = $row['relation_foto'];
 	}
 
 if($foto <> "")
@@ -31,6 +33,16 @@ if($foto <> "")
 if($waiting_foto <> "")
 {
     unlink('../../'.$waiting_foto);
+}
+
+if($relation_foto <> "")
+{
+    unlink('../../'.$relation_foto);
+}
+
+if($present_foto <> "")
+{
+    unlink('../../'.$present_foto);
 }
 
 ////////////////Удаляем из базы/////////////////////////////

@@ -38,7 +38,7 @@ include "header.php";
 		<div class="col-lg-4 col-md-4 col-sm-8 col-xs-12">
             <h1>Matchmaker presents a lady</h1>
             <hr>
-            <form action="./function/feed_add.php" method="post">
+            <form enctype='multipart/form-data' action="./function/feed_add_foto_end.php" method="post">
                 <input type="hidden" name="match_add" value="<? echo $match_name; ?>">
                 <input type="hidden" name="type" value="7">
                 <input type="hidden" name="description" value="">
@@ -71,6 +71,11 @@ include "header.php";
                     <label for="comment">Поле для  дополнительного описания:</label>
                     <textarea class="form-control" name="present_description" rows="5" id="comment" required="required"></textarea>
                 </div>
+
+                <div class="form-group">
+					<label>Фотография</label>
+					<input type='file' name='file'/>
+				</div>
 
                 <div class="form-group">
 					<button type="submit" class="btn btn-success">Создать событие</button>

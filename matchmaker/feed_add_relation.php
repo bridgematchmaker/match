@@ -38,7 +38,7 @@ include "header.php";
 		<div class="col-lg-4 col-md-4 col-sm-8 col-xs-12">
             <h1>My future relationship</h1>
             <hr>
-            <form action="./function/feed_add.php" method="post">
+            <form enctype='multipart/form-data' action="./function/feed_add_foto_end.php" method="post">
                 <input type="hidden" name="match_add" value="<? echo $match_name; ?>">
                 <input type="hidden" name="type" value="6">
                 <input type="hidden" name="description" value="">
@@ -75,6 +75,11 @@ include "header.php";
                 <div class="form-group">
 					<label>Как я отвечаю на этот вопрос</label>
 					<input name="relation_girl" type="text" class="form-control rounded" required="required">
+				</div>
+
+                <div class="form-group">
+					<label>Фотография</label>
+					<input type='file' name='file'/>
 				</div>
 
                 <div class="form-group">
