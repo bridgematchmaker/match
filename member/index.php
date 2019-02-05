@@ -58,7 +58,7 @@ require "./header.php";
                                             </div>
                                         </div>
                                         <div class="col-md-6 d-flex align-items-center justify-content-end site-usage-rules">
-                                                <a href="./temp_msg.php">How to start using the site</a>
+                                                <a href="../how_to_start.php">How to start using the site</a>
                                         </div>
                                     </div>
                                 </div>
