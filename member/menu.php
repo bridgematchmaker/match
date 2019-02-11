@@ -14,6 +14,7 @@
                             <ul>
 								<li class="menu-item <? if($page_menu_name == "Home") echo("active-menu"); ?>"><a class="" href="./index.php">Home</a></li>
                                 <li class="menu-item <? if($page_menu_name == "My Profile") echo("active-menu"); ?>"><a class="" href="./my_profile.php">My Profile</a></li>
+                                <li class="menu-item <? if($page_menu_name == "My fotos") echo("active-menu"); ?>"><a class="" href="./my_fotos.php">My photo</a></li>
 								<li class="menu-item <? if($page_menu_name == "More about me") echo("active-menu"); ?>"><a href="./profile_about_me.php">More about me</a></li>
 								<li class="menu-item <? if($page_menu_name == "Select service") echo("active-menu"); ?>"><a href="./choose_service.php">Select service</a></li>
                                 <!-- <li class="menu-item <? if($page_menu_name == "Account options") echo("active-menu"); ?>"><a href="#">Account options</a></li> -->

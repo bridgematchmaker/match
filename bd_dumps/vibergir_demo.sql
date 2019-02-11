@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: vibergir.mysql.ukraine.com.ua
--- Время создания: Янв 30 2019 г., 11:35
+-- Время создания: Фев 11 2019 г., 14:45
 -- Версия сервера: 5.7.16-10-log
 -- Версия PHP: 7.0.33
 
@@ -50,6 +50,19 @@ CREATE TABLE `clients` (
   `last_login` datetime NOT NULL,
   `utm_source` varchar(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `clients_foto`
+--
+
+CREATE TABLE `clients_foto` (
+  `foto_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `foto` text NOT NULL,
+  `status` varchar(16) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -595,6 +608,12 @@ ALTER TABLE `clients`
   ADD PRIMARY KEY (`user_id`);
 
 --
+-- Индексы таблицы `clients_foto`
+--
+ALTER TABLE `clients_foto`
+  ADD PRIMARY KEY (`foto_id`);
+
+--
 -- Индексы таблицы `clients_girl`
 --
 ALTER TABLE `clients_girl`
@@ -729,6 +748,12 @@ ALTER TABLE `translators`
 --
 ALTER TABLE `clients`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT для таблицы `clients_foto`
+--
+ALTER TABLE `clients_foto`
+  MODIFY `foto_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT для таблицы `clients_girl`
