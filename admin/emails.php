@@ -16,7 +16,7 @@ include("../connect.php");
 </head>
 
 <?
-$page_name = "emails";
+$page_name = "email";
 include "menu.php";
 ?>
 

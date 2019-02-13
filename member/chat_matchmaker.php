@@ -62,7 +62,8 @@ if($matchmaker_login == "None")
                         </h2>
 
                         <h5>
-                            This page contains your correspondence with a professional Matchmaker’s
+                            This page contains your correspondence with a professional Matchmaker’s<br>
+                            <font color="red">Attention!!! This is free chat with the site employee. This is not chat with a ladies.</font>
                         </h5>
                         <div class="block-chat">
                             <div class="block-chat-header">
