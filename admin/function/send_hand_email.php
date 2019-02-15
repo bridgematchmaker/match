@@ -14,9 +14,6 @@ $email_send_to = mysql_escape_string($email_send_to);
 $email_subject = htmlspecialchars($email_subject);
 $email_subject = mysql_escape_string($email_subject);
 
-$email_content = htmlspecialchars($email_content);
-$email_content = mysql_escape_string($email_content);
-
 include("../../mail_config.php");	
 require '../../lib/PHPMailer/PHPMailerAutoload.php';
 $mail = new PHPMailer(); // инициализация класса
