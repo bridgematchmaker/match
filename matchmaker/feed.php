@@ -68,7 +68,7 @@ switch ($feed_type)
     break;	
 
     case 5:
-        $type_print = "Question to my mactermaker";
+        $type_print = "Question to my matchmaker";
     break;
     
     case 6:

@@ -36,7 +36,7 @@ include "header.php";
 <div style="padding:20px;">
 	<div class="row">
 		<div class="col-lg-4 col-md-4 col-sm-8 col-xs-12">
-            <h1>Question to my mactermaker</h1>
+            <h1>Question to my matchmaker</h1>
             <hr>
             <form action="./function/feed_add.php" method="post">
                 <input type="hidden" name="match_add" value="<? echo $match_name; ?>">

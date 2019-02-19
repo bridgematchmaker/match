@@ -124,7 +124,7 @@ include "header.php";
 						  <option value="2">My new video</option>
 						  <option value="3">Events of My day</option>	 
 						  <option value="4">I’m waiting for…</option>
-                          <option value="5">Question to my mactermaker</option>
+                          <option value="5">Question to my matchmaker</option>
                           <option value="6">My future relationship</option>
                           <option value="7">Matchmaker presents a lady</option>		
 					</select>

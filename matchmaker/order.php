@@ -194,7 +194,7 @@ include "header.php";
 									<? if($type == "1") { echo("<tr><td class='active'>Дата / Время Skype конференции:</td><td>$skype_time</td></tr>"); } ?>
 									<? if($type == "1") { echo("<tr><td class='active'>Коментирий клиента к заказу:</td><td>$description2</td></tr>"); } ?>
 									<? if($type == "2") { echo("<tr><td class='active'>ID Платежа:</td><td>$description2</td></tr>"); } ?>
-									<tr><td class="active">ID девушки:</td><td><? echo $girl_id; ?></td></tr>
+									<tr><td class="active">ID девушки:</td><td><a href="./girl_profile.php?girl_id=<? echo $girl_id; ?>"><? echo $girl_id; ?></a></td></tr>
 									<tr><td class="active">Мачмекер клиента:</td><td><? echo $matchmaker_login_print; ?></td></tr>
 									<tr><td class="active">Мачмекер выполнивший заказ:</td><td><? echo $match_login_processed; ?></td></tr>
 									<tr><td class="active">Дата выполнения заказа:</td><td><? echo $date_end; ?></td></tr>
