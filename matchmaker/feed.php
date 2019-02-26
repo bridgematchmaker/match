@@ -183,7 +183,7 @@ include "header.php";
 
                                         if ($feed_type == "4") {
                                             echo("
-                                                     <tr><td class='active'>Фотография:</td><td><img width='300' src='../$waiting_foto'></td></tr>
+                                                     <tr><td class='active'>Фотография:</td><td><img width='300' src='../$feed_waiting_foto'></td></tr>
                                                      <tr><td class='active'>Описание что ждет девушка:</td><td>$feed_waiting_description</td></tr>
                                                 ");
                                         }

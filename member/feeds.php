@@ -47,7 +47,7 @@ require "./header.php";
 
                 <div class="content-container">
 
-                    <h1 class="feeds-title">My messages</h1>
+                    <h1 class="feeds-title">Message Feed</h1>
 
                     <!-- START feeds menu -->
                     <ul class="feeds-menu">

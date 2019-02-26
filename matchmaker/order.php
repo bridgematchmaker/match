@@ -254,7 +254,7 @@ include "header.php";
 								<input name="order_id" type="hidden" value="<? echo $order_id; ?>">
 								
 								<div class="form-group">
-									<label>Ответ от девушки:</label>
+									<label>Ответ от девушки:<br>(Вставить полученный ответ от девушки в это поле и нажать отправить клиенту)</label>
 									<textarea name="mail_girl" class="form-control rounded" style="height: 200px;" <? if($status <> "1") { echo("disabled"); } ?> ><? echo $mail_girl; ?></textarea>
 								</div>
 							
