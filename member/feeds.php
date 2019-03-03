@@ -111,7 +111,7 @@ require "./header.php";
                                             if ($feed_type == "1") {
                                                 $feed_icon = "icon-photo.png";
                                                 $feed_title = "My new photo";
-                                                $feed_url = "";
+                                                $feed_url = "./feed_foto.php?feed_id=" . $feed_id;
                                             } elseif ($feed_type == "2") {
                                                 $feed_icon = "icon-video.png";
                                                 $feed_title = "My new video";
@@ -176,13 +176,13 @@ require "./header.php";
                                                                 <b>EVENTS</b>
                                                                 '.$feed_title.'
                                                             </div>
-                                                            <a href="#" class="read-feed">Read this feed</a>
+                                                            <a href="'.$feed_url.'" class="read-feed">Read this feed</a>
                                                         </div>
                                                         <div class="feeds-right">
                                                             <div class="time">
                                                                 <span>'.$feed_date_add.'</span>
                                                             </div>
-                                                            <a href="#" class="read-arrow">
+                                                            <a href="'.$feed_url.'" class="read-arrow">
                                                                 <img src="assets/images/read-arrow.png" alt="">
                                                             </a>
                                                         </div>
