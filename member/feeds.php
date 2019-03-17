@@ -115,7 +115,7 @@ require "./header.php";
                                             } elseif ($feed_type == "2") {
                                                 $feed_icon = "icon-video.png";
                                                 $feed_title = "My new video";
-                                                $feed_url = "";                
+                                                $feed_url = "./feed_video.php?feed_id=" . $feed_id;             
                                             } elseif ($feed_type == "3") {
                                                 $feed_icon = "icon-day.png";
                                                 $feed_title = "Events of My day";
@@ -135,7 +135,7 @@ require "./header.php";
                                             } elseif ($feed_type == "7") {
                                                 $feed_icon = "icon-matchmaker.png";
                                                 $feed_title = "Matchmaker presents a lady";
-                                                $feed_url = "";
+                                                $feed_url = "./feed_present.php?feed_id=" . $feed_id;
                                             }
 
                                             ///////////Загружаем данные девки////////////
@@ -155,11 +155,12 @@ require "./header.php";
                                                     <div class="feeds-post clearfix" id="feed-1">
                                                         <div class="feeds-left clearfix">
                                                             <div class="picture">
-                                                                <img width="100" src="../'.$feed_girl_foto.'" alt="">
+                                                                <a href="'.$feed_url.'"><img width="100" src="../'.$feed_girl_foto.'" alt=""></a>
                                                             </div>
                                                             <div class="profile-info">
                                                                 <div class="name">
                                                                     <a href="#">'.$feed_girl_first_name.'</a>
+                                                                    
                                                                 </div>
                                                                 <ul class="profile-menu">
                                                                     <li><a href="./send_email.php?girl_id='.$feed_girl_id.'" class="btn-wl">Write latters</a></li>
@@ -170,7 +171,7 @@ require "./header.php";
                                                         </div>
                                                         <div class="feeds-middle clearfix">
                                                             <div class="icon">
-                                                                <img src="assets/images/'.$feed_icon.'" alt="">
+                                                                <a href="'.$feed_url.'"><img src="assets/images/'.$feed_icon.'" alt=""></a>
                                                             </div>
                                                             <div class="feeds-title">
                                                                 <b>EVENTS</b>
