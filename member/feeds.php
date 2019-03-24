@@ -119,11 +119,11 @@ require "./header.php";
                                             } elseif ($feed_type == "3") {
                                                 $feed_icon = "icon-day.png";
                                                 $feed_title = "Events of My day";
-                                                $feed_url = "";
+                                                $feed_url = "./feed_day.php?feed_id=" . $feed_id;
                                             } elseif ($feed_type == "4") {
                                                 $feed_icon = "icon-timer.png";
                                                 $feed_title = "I’m waiting for…";
-                                                $feed_url = "";
+                                                $feed_url = "./feed_waiting.php?feed_id=" . $feed_id;
                                             } elseif ($feed_type == "5") {
                                                 $feed_icon = "icon-question.png";
                                                 $feed_title = "Question to my matchmaker";

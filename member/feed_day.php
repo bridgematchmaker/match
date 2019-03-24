@@ -22,7 +22,7 @@ isset($_SESSION['email_client']) or die("<script>javascript:window.location='../
         <link href="assets/css/owl.carousel.min.css" rel="stylesheet" type="text/css">
         <!-- Custom Style -->
         <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-        <link href="assets/css/feed_present.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/feed_day.css" rel="stylesheet" type="text/css">
 		<!--Style Content Page-->
         <!-- Favicon -->
         <link rel="icon" href="" type="image/png" />
@@ -40,7 +40,7 @@ $feed_id = $_GET['feed_id'];
 $feed_id = htmlspecialchars($feed_id);
 $feed_id = mysql_escape_string($feed_id);
 
-$feed_current_type = '7'; // Present
+$feed_current_type = '3'; // Day
 
 if($feed_id <> '') {
     ////////////////////Проверка фида на существование///////////////////////////
@@ -118,18 +118,139 @@ if($feed_id <> '') {
     echo("<script>javascript:window.location='./feeds.php'</script>");
     exit();
 }
+
+if ($feed_day_rating == 0) {
+    $print_rating = '<ul class="list-inline rating-list">
+    <li class="list-inline-item">
+        <i class="fa fa-star-o"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star-o"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star-o"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star-o"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star-o"></i>
+    </li>
+</ul>';
+}
+
+if ($feed_day_rating == 1) {
+    $print_rating = '<ul class="list-inline rating-list">
+    <li class="list-inline-item">
+        <i class="fa fa-star"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star-o"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star-o"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star-o"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star-o"></i>
+    </li>
+</ul>';
+}
+
+if ($feed_day_rating == 2) {
+    $print_rating = '<ul class="list-inline rating-list">
+    <li class="list-inline-item">
+        <i class="fa fa-star"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star-o"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star-o"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star-o"></i>
+    </li>
+</ul>';
+}
+
+if ($feed_day_rating == 3) {
+    $print_rating = '<ul class="list-inline rating-list">
+    <li class="list-inline-item">
+        <i class="fa fa-star"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star-o"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star-o"></i>
+    </li>
+</ul>';
+}
+
+if ($feed_day_rating == 4) {
+    $print_rating = '<ul class="list-inline rating-list">
+    <li class="list-inline-item">
+        <i class="fa fa-star"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star"></i>
+    </li>
+</ul>';
+}
+
+if ($feed_day_rating >= 5) {
+    $print_rating = '<ul class="list-inline rating-list">
+    <li class="list-inline-item">
+        <i class="fa fa-star"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star"></i>
+    </li>
+</ul>';
+}
+
 ?>
+
 <div class="site-wrapper">
     <div class="container">
         <div class="row">
 			<? require "./menu.php"; ?>
-			
-			<!-- Main Page Content (start)-->
-            <div class="main-content col-md-9 col-xl-8">
+<!-- Main Page Content (start)-->
+<div class="main-content col-md-9 col-xl-8">
                 <h4 class="content-title">
-                Feed: Matchmaker presents a lady
+                    Feed:  Events of My day
                 </h4>
-                <a href="./feeds.php" class="button-back">
+                <a href="#" class="button-back">
                     Back to feeds
                 </a>
                 <div class="photo-block">
@@ -154,10 +275,10 @@ if($feed_id <> '') {
                             </div>
                             <div class="col-lg-5 col-xl-6">
                                 <div class="photo-block-title">
-                                    <img src="assets/images/icon-present.png" alt="">
+                                    <img src="assets/images/img-day-icon.png" alt="">
                                     <h5>
                                         <span>Events</span>
-                                        Matchmaker presents a lady
+                                        Events of My day
                                     </h5>
                                 </div>
                             </div>
@@ -166,17 +287,13 @@ if($feed_id <> '') {
                                     <li>
                                         Date:<span><? echo $feed_date_add; ?></span>
                                     </li>
-                                    
                                 </ul>
                             </div>
                         </div>
 
                     </div>
                     <div class="photo-block-body">
-                        <div class="photo-block-body-inner media">
-                            <div class="img-block mr-3">
-                                <img width="200" src="../<? echo $feed_present_foto; ?>" alt="">
-                            </div>
+                        <div class="photo-block-body-inner">
                             <div class="media-body">
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
@@ -189,14 +306,16 @@ if($feed_id <> '') {
                                         <a href="./function/blacklist_add.php?girl_id=<? echo $girl_id ?>&user_id=<? echo $user_id; ?>" class="button-service button-dark">  + Add to black list</a>
                                     </li>
                                 </ul>
-                                <p class="text-boxed">
-                                    <? echo $feed_present_property; ?>
+                                <h6>
+                                    Feed events of my day
+                                </h6>
+                                <? echo $print_rating;?>
+                                <p>
+                                <? echo $feed_day_description; ?>
                                 </p>
                             </div>
                         </div>
-                        <p class="text-boxed text-chated">
-                            <? echo $feed_present_description; ?>
-                        </p>
+
                         <?
                         if ($matchmaker_login !== "None") {
                             echo('
@@ -236,6 +355,7 @@ if($feed_id <> '') {
                             ');
                         }
                         ?>
+
                     </div>
                 </div>
             </div>
@@ -251,8 +371,6 @@ if($feed_id <> '') {
     <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/custom.js"></script>
-    <script src="assets/js/custom-description.js"></script>
-    <script src="assets/js/feed_present.js"></script>
 <!-- Site Scripts (end)-->
 
 </body>

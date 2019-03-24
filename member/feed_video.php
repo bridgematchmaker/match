@@ -95,6 +95,7 @@ if($feed_id <> '') {
                 $girl_country = $row['country'];
                 $girl_city  = $row['city'];
                 $girl_foto = $row['foto'];
+                $girl_birthday = $row['birthday'];
             }
         
         if($girl_foto == "")

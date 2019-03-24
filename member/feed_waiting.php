@@ -22,7 +22,7 @@ isset($_SESSION['email_client']) or die("<script>javascript:window.location='../
         <link href="assets/css/owl.carousel.min.css" rel="stylesheet" type="text/css">
         <!-- Custom Style -->
         <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-        <link href="assets/css/feed_present.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/feed_waiting.css" rel="stylesheet" type="text/css">
 		<!--Style Content Page-->
         <!-- Favicon -->
         <link rel="icon" href="" type="image/png" />
@@ -40,7 +40,7 @@ $feed_id = $_GET['feed_id'];
 $feed_id = htmlspecialchars($feed_id);
 $feed_id = mysql_escape_string($feed_id);
 
-$feed_current_type = '7'; // Present
+$feed_current_type = '4'; // Waiting
 
 if($feed_id <> '') {
     ////////////////////Проверка фида на существование///////////////////////////
@@ -127,9 +127,9 @@ if($feed_id <> '') {
 			<!-- Main Page Content (start)-->
             <div class="main-content col-md-9 col-xl-8">
                 <h4 class="content-title">
-                Feed: Matchmaker presents a lady
+                    Feed: I’m waiting for…
                 </h4>
-                <a href="./feeds.php" class="button-back">
+                <a href="#" class="button-back">
                     Back to feeds
                 </a>
                 <div class="photo-block">
@@ -154,10 +154,10 @@ if($feed_id <> '') {
                             </div>
                             <div class="col-lg-5 col-xl-6">
                                 <div class="photo-block-title">
-                                    <img src="assets/images/icon-present.png" alt="">
+                                    <img src="assets/images/img-waiting-icon.png" alt="">
                                     <h5>
                                         <span>Events</span>
-                                        Matchmaker presents a lady
+                                        I’m waiting for…
                                     </h5>
                                 </div>
                             </div>
@@ -166,7 +166,6 @@ if($feed_id <> '') {
                                     <li>
                                         Date:<span><? echo $feed_date_add; ?></span>
                                     </li>
-                                    
                                 </ul>
                             </div>
                         </div>
@@ -175,7 +174,7 @@ if($feed_id <> '') {
                     <div class="photo-block-body">
                         <div class="photo-block-body-inner media">
                             <div class="img-block mr-3">
-                                <img width="200" src="../<? echo $feed_present_foto; ?>" alt="">
+                                <img width="200" src="../<? echo $feed_waiting_foto; ?>" alt="">
                             </div>
                             <div class="media-body">
                                 <ul class="list-inline">
@@ -189,14 +188,13 @@ if($feed_id <> '') {
                                         <a href="./function/blacklist_add.php?girl_id=<? echo $girl_id ?>&user_id=<? echo $user_id; ?>" class="button-service button-dark">  + Add to black list</a>
                                     </li>
                                 </ul>
-                                <p class="text-boxed">
-                                    <? echo $feed_present_property; ?>
+
+                                <p>
+                                    <? echo $feed_waiting_description; ?>
                                 </p>
                             </div>
                         </div>
-                        <p class="text-boxed text-chated">
-                            <? echo $feed_present_description; ?>
-                        </p>
+                       
                         <?
                         if ($matchmaker_login !== "None") {
                             echo('
@@ -236,6 +234,7 @@ if($feed_id <> '') {
                             ');
                         }
                         ?>
+
                     </div>
                 </div>
             </div>
@@ -251,8 +250,6 @@ if($feed_id <> '') {
     <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/custom.js"></script>
-    <script src="assets/js/custom-description.js"></script>
-    <script src="assets/js/feed_present.js"></script>
 <!-- Site Scripts (end)-->
 
 </body>
