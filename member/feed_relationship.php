@@ -22,7 +22,7 @@ isset($_SESSION['email_client']) or die("<script>javascript:window.location='../
         <link href="assets/css/owl.carousel.min.css" rel="stylesheet" type="text/css">
         <!-- Custom Style -->
         <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-        <link href="assets/css/feed_waiting.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/feed_relationship.css" rel="stylesheet" type="text/css">
 		<!--Style Content Page-->
         <!-- Favicon -->
         <link rel="icon" href="" type="image/png" />
@@ -40,7 +40,7 @@ $feed_id = $_GET['feed_id'];
 $feed_id = htmlspecialchars($feed_id);
 $feed_id = mysql_escape_string($feed_id);
 
-$feed_current_type = '4'; // Waiting
+$feed_current_type = '6'; // Relationship
 
 if($feed_id <> '') {
     ////////////////////Проверка фида на существование///////////////////////////
@@ -94,7 +94,6 @@ if($feed_id <> '') {
                 $girl_country = $row['country'];
                 $girl_city  = $row['city'];
                 $girl_foto = $row['foto'];
-                $girl_birthday = $row['birthday'];
             }
         
         if($girl_foto == "")
@@ -124,11 +123,12 @@ if($feed_id <> '') {
         <div class="row">
 			<? require "./menu.php"; ?>
 			
-			<!-- Main Page Content (start)-->
-            <div class="main-content col-md-9 col-xl-8">
+<!-- Main Page Content (start)-->
+<div class="main-content col-md-9 col-xl-8">
                 <h4 class="content-title">
-                    Feed: I’m waiting for…
+                    Feed: My future relationship
                 </h4>
+
                 <a href="./feeds.php" class="button-back">
                     Back to feeds
                 </a>
@@ -154,10 +154,10 @@ if($feed_id <> '') {
                             </div>
                             <div class="col-lg-5 col-xl-6">
                                 <div class="photo-block-title">
-                                    <img src="assets/images/img-waiting-icon.png" alt="">
+                                    <img src="assets/images/icon-relationship.png" alt="">
                                     <h5>
                                         <span>Events</span>
-                                        I’m waiting for…
+                                        My future relationship
                                     </h5>
                                 </div>
                             </div>
@@ -172,10 +172,7 @@ if($feed_id <> '') {
 
                     </div>
                     <div class="photo-block-body">
-                        <div class="photo-block-body-inner media">
-                            <div class="img-block mr-3">
-                                <img width="200" src="../<? echo $feed_waiting_foto; ?>" alt="">
-                            </div>
+                        <div class="photo-block-body-inner">
                             <div class="media-body">
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
@@ -189,12 +186,27 @@ if($feed_id <> '') {
                                     </li>
                                 </ul>
 
+                                <p><? echo $feed_relation_description; ?></p>
+                            </div>
+                        </div>
+                        <div class="question-block media flex-column flex-sm-row">
+                            <div class="media-left">
+                                <img width = "65" src="<? echo $foto_print; ?>" alt="">
+                            </div>
+                            <div class="media-body">
+                                <h6>
+                                    Question for you:
+                                </h6>
                                 <p>
-                                    <? echo $feed_waiting_description; ?>
+                                <? echo $feed_relation_man; ?>
                                 </p>
                             </div>
                         </div>
-                       
+                        <div class="text-boxed">
+                            <h6>My answer:</h6>
+                            <p><? echo $feed_relation_girl; ?></p>
+                        </div>
+
                         <?
                         if ($matchmaker_login !== "None") {
                             echo('
@@ -234,7 +246,7 @@ if($feed_id <> '') {
                             ');
                         }
                         ?>
-
+                        
                     </div>
                 </div>
             </div>

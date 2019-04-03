@@ -127,11 +127,11 @@ require "./header.php";
                                             } elseif ($feed_type == "5") {
                                                 $feed_icon = "icon-question.png";
                                                 $feed_title = "Question to my matchmaker";
-                                                $feed_url = "";
+                                                $feed_url = "./feed_question.php?feed_id=" . $feed_id;
                                             } elseif ($feed_type == "6") {
                                                 $feed_icon = "icon-relationship.png";
                                                 $feed_title = "My future relationship";
-                                                $feed_url = "";
+                                                $feed_url = "./feed_relationship.php?feed_id=" . $feed_id;
                                             } elseif ($feed_type == "7") {
                                                 $feed_icon = "icon-matchmaker.png";
                                                 $feed_title = "Matchmaker presents a lady";

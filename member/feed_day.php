@@ -250,7 +250,7 @@ if ($feed_day_rating >= 5) {
                 <h4 class="content-title">
                     Feed:  Events of My day
                 </h4>
-                <a href="#" class="button-back">
+                <a href="./feeds.php" class="button-back">
                     Back to feeds
                 </a>
                 <div class="photo-block">

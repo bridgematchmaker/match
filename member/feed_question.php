@@ -22,7 +22,7 @@ isset($_SESSION['email_client']) or die("<script>javascript:window.location='../
         <link href="assets/css/owl.carousel.min.css" rel="stylesheet" type="text/css">
         <!-- Custom Style -->
         <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-        <link href="assets/css/feed_waiting.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/feed_question.css" rel="stylesheet" type="text/css">
 		<!--Style Content Page-->
         <!-- Favicon -->
         <link rel="icon" href="" type="image/png" />
@@ -40,7 +40,7 @@ $feed_id = $_GET['feed_id'];
 $feed_id = htmlspecialchars($feed_id);
 $feed_id = mysql_escape_string($feed_id);
 
-$feed_current_type = '4'; // Waiting
+$feed_current_type = '5'; // Question
 
 if($feed_id <> '') {
     ////////////////////Проверка фида на существование///////////////////////////
@@ -94,7 +94,6 @@ if($feed_id <> '') {
                 $girl_country = $row['country'];
                 $girl_city  = $row['city'];
                 $girl_foto = $row['foto'];
-                $girl_birthday = $row['birthday'];
             }
         
         if($girl_foto == "")
@@ -118,6 +117,126 @@ if($feed_id <> '') {
     echo("<script>javascript:window.location='./feeds.php'</script>");
     exit();
 }
+
+if ($feed_question_rating == 0) {
+    $print_rating = '<ul class="list-inline rating-list">
+    <li class="list-inline-item">
+        <i class="fa fa-star-o"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star-o"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star-o"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star-o"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star-o"></i>
+    </li>
+</ul>';
+}
+
+if ($feed_question_rating == 1) {
+    $print_rating = '<ul class="list-inline rating-list">
+    <li class="list-inline-item">
+        <i class="fa fa-star"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star-o"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star-o"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star-o"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star-o"></i>
+    </li>
+</ul>';
+}
+
+if ($feed_question_rating == 2) {
+    $print_rating = '<ul class="list-inline rating-list">
+    <li class="list-inline-item">
+        <i class="fa fa-star"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star-o"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star-o"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star-o"></i>
+    </li>
+</ul>';
+}
+
+if ($feed_question_rating == 3) {
+    $print_rating = '<ul class="list-inline rating-list">
+    <li class="list-inline-item">
+        <i class="fa fa-star"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star-o"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star-o"></i>
+    </li>
+</ul>';
+}
+
+if ($feed_question_rating == 4) {
+    $print_rating = '<ul class="list-inline rating-list">
+    <li class="list-inline-item">
+        <i class="fa fa-star"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star"></i>
+    </li>
+</ul>';
+}
+
+if ($feed_question_rating >= 5) {
+    $print_rating = '<ul class="list-inline rating-list">
+    <li class="list-inline-item">
+        <i class="fa fa-star"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star"></i>
+    </li>
+    <li class="list-inline-item">
+        <i class="fa fa-star"></i>
+    </li>
+</ul>';
+}
 ?>
 <div class="site-wrapper">
     <div class="container">
@@ -127,8 +246,9 @@ if($feed_id <> '') {
 			<!-- Main Page Content (start)-->
             <div class="main-content col-md-9 col-xl-8">
                 <h4 class="content-title">
-                    Feed: I’m waiting for…
+                    Feed:  Question to my mactermaker
                 </h4>
+            
                 <a href="./feeds.php" class="button-back">
                     Back to feeds
                 </a>
@@ -154,10 +274,10 @@ if($feed_id <> '') {
                             </div>
                             <div class="col-lg-5 col-xl-6">
                                 <div class="photo-block-title">
-                                    <img src="assets/images/img-waiting-icon.png" alt="">
+                                    <img src="assets/images/icon-question.png" alt="">
                                     <h5>
                                         <span>Events</span>
-                                        I’m waiting for…
+                                        Question to my mactermaker
                                     </h5>
                                 </div>
                             </div>
@@ -166,16 +286,14 @@ if($feed_id <> '') {
                                     <li>
                                         Date:<span><? echo $feed_date_add; ?></span>
                                     </li>
+                                   
                                 </ul>
                             </div>
                         </div>
 
                     </div>
                     <div class="photo-block-body">
-                        <div class="photo-block-body-inner media">
-                            <div class="img-block mr-3">
-                                <img width="200" src="../<? echo $feed_waiting_foto; ?>" alt="">
-                            </div>
+                        <div class="photo-block-body-inner">
                             <div class="media-body">
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
@@ -189,12 +307,25 @@ if($feed_id <> '') {
                                     </li>
                                 </ul>
 
-                                <p>
-                                    <? echo $feed_waiting_description; ?>
-                                </p>
                             </div>
                         </div>
-                       
+                        <div class="question-block media flex-column flex-sm-row">
+                            <div class="media-left">
+                                <img width = "65" src="<? echo $foto_print; ?>" alt="">
+                            </div>
+                            <div class="media-body">
+                                <h6>
+                                    Question for you:
+                                </h6>
+                                <p><? echo $feed_question_girl; ?></p>
+                            </div>
+                        </div>
+                        <div class="text-boxed">
+
+                            <p><? echo $feed_question_match; ?></p>
+                            <? echo $print_rating; ?>
+                        </div>
+
                         <?
                         if ($matchmaker_login !== "None") {
                             echo('
