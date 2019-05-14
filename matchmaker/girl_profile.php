@@ -1105,9 +1105,54 @@ include "header.php";
 			</p>
 		</form>
 	</div>
+
+
+
+<div class="col-lg-12 col-md-12 col-xs-12">
+	<hr>
+	<h4>Загруженные документы:</h4>
+	<div class="row">
+			<?  
+			
+				$zapros_foto = "SELECT * FROM girls_foto_document WHERE girl_id='".$girl_id."'";
+				$requirest_foto = mysql_query($zapros_foto);
+				while($row_foto = mysql_fetch_array($requirest_foto)) 
+					{  
+						$girl_id = $row_foto['girl_id'];
+						$foto_id = $row_foto['foto_document_id'];
+						$foto = $row_foto['foto'];
+
+						////////////////////////////Вывод таблицы на экран/////////////////////////////// 
+							echo ("
+									<div class='col-6 col-sm-6 col-lg-3'> 
+										<table class='table table-striped'>
+											<tr>
+												<td>
+													<a href='#' class='thumbnail'><img src='../$foto' width='150'></a>
+													<a href='./function/girl_del_foto_document.php?foto_id=$foto_id&girl_id=$girl_id'><span style='font-size:22px; margin-left:10px;' class='glyphicon glyphicon-remove'></span></a>
+												</td>
+											</tr>
+										</table>
+									</div>
+								");
+						/////////////////////////////////////////////////////////////////////////////////////////////
+					}
+			?>
 	</div>
+	<hr>
+	<h4>Добавить фото документа:</h4>
+	<form name='form' enctype='multipart/form-data' method='post' action='./function/girl_add_foto_document.php'>
+		<input name="girl_id" type="hidden" value="<? echo $girl_id ?>">
+		<p class="text-left">
+			<input type='file' name='file'/>
+			<br>
+			<button type="submit" class="btn btn-success btn-md" data-original-title="" title="">Добавить документ</button>
+		</p>
+	</form>
 </div>
 
+</div>
+</div>
 
 <div class="modal fade" id="image-modal" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-lg">

@@ -951,7 +951,7 @@ require "./header.php";
                                 <div class="col-md-12">
                                 <div class="form-check license-agreement">
                                     <input type="checkbox" id="license-agreement" class="form-check-input" name="" value="">
-                                    <label class="form-check-label" for="license-agreement">By clicking "Register" you agree with the <a href="./rules.php">Terms and Conditions</a> and <a href="./privacy_policy.php">Privacy Policy</a>.</label>
+                                    <label class="form-check-label" for="license-agreement">By clicking "Register" you agree with the <a href="./rules.php" style="margin:2px">Terms and Conditions</a> and <a href="./privacy_policy.php" style="margin:2px"> Privacy Policy</a>.</label>
 									
                                 </div>	
                                 </div>
