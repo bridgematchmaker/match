@@ -1,6 +1,7 @@
 <?
 session_start();
 isset($_SESSION['email_client']) or die("<script>javascript:window.location='../login.php'</script>");
+$page_menu_name = "Feeds";
 ?>
 <!DOCTYPE html>
 <html lang="en">

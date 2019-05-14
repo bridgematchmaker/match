@@ -19,7 +19,7 @@
 								<li class="menu-item <? if($page_menu_name == "Select service") echo("active-menu"); ?>"><a href="./choose_service.php">Select service</a></li>
                                 <!-- <li class="menu-item <? if($page_menu_name == "Account options") echo("active-menu"); ?>"><a href="#">Account options</a></li> -->
                                 <li class="menu-item <? if($page_menu_name == "Orders and Payments") echo("active-menu"); ?>"><a href="./orders.php">Orders and Payments</a></li>
-                                <li class="menu-item <? if($page_menu_name == "Purchase of services") echo("active-menu"); ?>"><a href="./temp_msg.php">Purchase of services</a></li>
+                                <li class="menu-item <? if($page_menu_name == "Purchase of services") echo("active-menu"); ?>"><a href="./services.php">Purchase of services</a></li>
                             </ul>
                         </div>
                     </div>
@@ -55,7 +55,7 @@
 					 </a>
                     <div id="collapseThree" class="collapse show" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
                         <ul>
-                        <li class="menu-item"><a href="./temp_msg.php">Message Feed</a></li>
+                        <li class="menu-item  <? if($page_menu_name == "Feeds") echo("active-menu"); ?>"><a href="./feeds.php">Message Feed</a></li>
                             <?
                             if($matchmaker_login !== "None") 
                                 {
