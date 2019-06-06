@@ -47,7 +47,10 @@ $gift_id = $_POST['gift_id'];
 $gift_id = htmlspecialchars($gift_id);
 $gift_id = mysql_escape_string($gift_id);
 
-if($gifts < 1) { echo("<script>javascript:window.location='./index.php'</script>"); }
+if($gifts < 1) { 
+    echo("<script>javascript:window.location='../msg.php?type=1&msg_id=1&redirect=0'</script>");
+	exit();
+}
 
 if($girl_id <> '') {
     ////////////////////Проверка анкеты девушки на существование///////////////////////////

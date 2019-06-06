@@ -49,7 +49,10 @@ $page_menu_name = "Skype";
 date_default_timezone_set('UTC+3');
 
 
-if($skypes < 1) { echo("<script>javascript:window.location='./index.php'</script>"); } 
+if($skypes < 1) { 
+    echo("<script>javascript:window.location='../msg.php?type=1&msg_id=1&redirect=0'</script>");
+	exit();
+ } 
 
 $girl_id = $_POST['girl_id'];
 $girl_id = htmlspecialchars($girl_id);

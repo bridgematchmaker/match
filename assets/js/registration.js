@@ -86,11 +86,16 @@
         $('.languages').select2();
         $('select').select2();
         //Init Datepicker
-        $( "#date-birth" ).datepicker({
+
+        var dt = new Date();
+        dt.setFullYear(new Date().getFullYear()-18);
+
+        $("#date-birth").datepicker({
             dateFormat: "yy-mm-dd",
             changeMonth: true,
             changeYear: true,
-            yearRange: '1930:'+(new Date).getFullYear()
+            yearRange: '1930:'+((new Date).getFullYear()-18),
+            maxDate: '-18Y'
         });
 
     });
