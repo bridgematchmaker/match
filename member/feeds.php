@@ -52,7 +52,7 @@ require "./header.php";
 
                     <!-- START feeds menu -->
                     <ul class="feeds-menu">
-                        <li><a href="#">Messages</a></li>
+                        <li><a href="./messages.php">Messages</a></li>
                         <li class="active"><a href="./feeds.php">Feeds</a></li>
                     </ul>
                     <!-- end feeds menu -->

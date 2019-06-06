@@ -318,8 +318,61 @@ $result_clients_services = mysql_query($sql_clients_services) or die("Ошибк
 		$result_email_log = mysql_query($sql_email_log) or die("Ошибка при записи в таблицу email_log");
 	}
 	//////////////////////////////////////////////////////
+
+/*******************************Отправка письма админу/****************************************/
+	$admin_to = "afrikanez78@gmail.com";
+	/////////////Загружаем шаблон письма/////////////////////
+	$email_name = "auto_email_12"; // Название шаблона письма
+	$zapros_email = "SELECT * FROM email_templates WHERE name='$email_name'";
+	$result_email = mysql_query($zapros_email);
+	while ($row_email = mysql_fetch_assoc($result_email)) 
+		{ 
+			$email_subject_admin = $row_email['subject'];
+			$email_content_admin = $row_email['content'];
+		}
+	/////////////////////////////////////////////////////////
+
+	//////////////Подстановка макросов////////////////////////
+	$email_content_admin = str_replace("{first_name}", $first_name, $email_content_admin);
+	$email_content_admin = str_replace("{unsubscribe_link}", $unsubscribe_link, $email_content_admin);
+	$email_content_admin = str_replace("{country}", $country, $email_content_admin);
+	$email_content_admin = str_replace("{user_id}", $user_id, $email_content_admin);
+
+	$mail_admin = new PHPMailer(); // инициализация класса
+	$mail_admin->CharSet = 'utf-8';
+
+	$mail_admin->isSMTP(); // указали, что работаем по протоколу SMTP
+	$mail_admin->SMTPDebug = 0; // 0 - отключить отладку
+	$mail_admin->SMTPAuth = true;
+	$mail_admin->SMTPSecure = "tls";
+
+	$mail_admin->Host = $mail_host;
+	$mail_admin->Port = $mail_port; // порт SMTP
+
+	$mail_admin->Username = $mail_username;
+	$mail_admin->Password = $mail_password;
+
+	$mail_admin->setFrom($mail_from_email, $mail_from_name); // от кого
+	$mail_admin->addReplyTo($mail_replyto_email, $mail_replyto_name); // кому ответить
+	$mail_admin->addAddress($admin_to);  // получатель
+
+	$mail_admin->Subject = $email_subject_admin; // Тема письма
+	$mail_admin->msgHTML($email_content_admin); // Текст письма
+
+	//$mail_admin->send();
+
+	$date_add_log = date("Y-m-d G:i:s");
+	if ($mail_admin->send()) {
+		$sql_email_log = "INSERT INTO email_log (date_add, email, subject, status) VALUES ('$date_add_log', '$admin_to', '$email_subject', 'OK')";
+		$result_email_log = mysql_query($sql_email_log) or die("Ошибка при записи в таблицу email_log");
+	}
+	else 
+	{
+		$sql_email_log = "INSERT INTO email_log (date_add, email, subject, status) VALUES ('$date_add_log', '$admin_to', '$email_subject', 'ERROR')";
+		$result_email_log = mysql_query($sql_email_log) or die("Ошибка при записи в таблицу email_log");
+	}
 	
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////***********************************************************************/////////////////////
 
 ////////////////////////Редирект если все прошло успешно//////////////////////////////////////////////////////
 echo "

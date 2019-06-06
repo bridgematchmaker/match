@@ -180,7 +180,7 @@ require "./header.php";
                                                         switch ($payment_status)
                                                             {
                                                                 case 0:
-                                                                    $payment_status_print = "Unpaid (<a href='./pay.php?payment_id=$payment_id'>PAY</a>)";
+                                                                    $payment_status_print = "Unpaid (<a href='./function/payment/payment_pastabank.php?payment_id=$payment_id'>PAY</a>)";
                                                                 break;
 
                                                                 case 1:

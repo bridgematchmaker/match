@@ -41,11 +41,11 @@ function make_upload($file){
 	$foto = 'uploads/girls/gallery_foto/document/'.$name;
 	
 	////////////////////////Ресайз фото////////////////////////
-	$img = AcImage::createImage('../../uploads/girls/gallery_foto/document/' . $name);
-	$img->cropCenter('3pr', '4pr'); // Manual - true-coder.ru/php/toolkit-dlya-resajza-i-kropa-izobrazhenij-na-php.html
-	$img->resizeByWidth(300);
-	unlink('../../uploads/girls/gallery_foto/document/' . $name);
-	$img->save('../../uploads/girls/gallery_foto/document/' . $name);
+	//$img = AcImage::createImage('../../uploads/girls/gallery_foto/document/' . $name);
+	//$img->cropCenter('3pr', '4pr'); // Manual - true-coder.ru/php/toolkit-dlya-resajza-i-kropa-izobrazhenij-na-php.html
+	//$img->resizeByWidth(300);
+	//unlink('../../uploads/girls/gallery_foto/document/' . $name);
+	//$img->save('../../uploads/girls/gallery_foto/document/' . $name);
 	///////////////////////////////////////////////////////////
 	
 	$sql = "INSERT INTO girls_foto_document (girl_id,foto) VALUES ('$girl_id', '$foto')";
