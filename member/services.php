@@ -207,6 +207,29 @@ require "./header.php";
                                         Making a choice of the tariff plan on this page you confirm that you agree and understand all the conditions on which this tariff plan is provided to you and also fully agree with its validity period. The services of the tariff plan will be suspended to you in independence that there is end the term of its validity or the number of services in the package. More information about the service and its providing you can
                                         <a href="#">read on this page...</a>
                                     </p>
+                                   <p>
+                                    <ul class="contact-info-list">
+                                            <li>
+                                                Tingoit Business s.r.o
+                                            </li>
+                                            <li>
+                                                <span>Adress:</span>
+                                                855/19 Bilkova, Old Town,
+                                                110 00, Prague 1
+                                            </li>
+                                            <li>
+                                                <span>Business registration number:</span>
+                                                059 30 481
+                                            </li>
+                                            <li>
+                                                <span>Phones:</span>
+                                                +420228886920
+                                            </li>
+                                            <li>
+                                                <a href="mailto:#">support@bridgematchmaker.com</a>
+                                            </li>
+                                        </ul>
+                                   </p>
                                 </div>
                             </div>
                         </form>
