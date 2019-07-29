@@ -84,7 +84,7 @@ include "menu.php";
 							</div>
                             <div class="form-group">
 								<label>Описание тура "Luxe"</label><br>
-                                <b>Цена:</b> <input type="text" name="basic_price" value="<? echo $luxe_price; ?>"><br><br>
+                                <b>Цена:</b> <input type="text" name="luxe_price" value="<? echo $luxe_price; ?>"><br><br>
 								<textarea name="luxe_description" rows="7" id="area_luxe" class="form-control"><? echo $luxe_description; ?></textarea>
 							</div>
 							
