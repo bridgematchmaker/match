@@ -85,7 +85,7 @@ $result = mysql_query($sql) or die("<script>alert('Error in payment');</script><
 
 /////////////////Перенаправление в анкету///////////////
 echo	("
-			<script>javascript:window.location='../member/function/payment/payment_tour_pastabank.php?payment_id=$payment_id'</script>
+			<script>javascript:window.location='../member/function/payment/crypt/paykassa_tour_send.php?payment_id=$payment_id'</script>
 		");
 ///////////////////////////////////////////////////////
 

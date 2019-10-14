@@ -136,7 +136,7 @@ require "./header.php";
                                         <div class="pay-block block-1 block-focus">
                                             <div class="pay-block-header">
                                                 <label for="pay1">
-                                                    <input type="radio" name="pay" id="pay1" value="pastabank" checked>
+                                                    <input type="radio" name="pay" id="pay1" value="pastabank" disabled="disabled">
                                                     Pasta Bank
                                                     <span></span>
                                                 </label>
@@ -184,7 +184,7 @@ require "./header.php";
                                         <div class="pay-block block-3">
                                             <div class="pay-block-header">
                                                 <label for="pay3">
-                                                    <input type="radio" name="pay" id="pay3" disabled="disabled" >
+                                                    <input type="radio" name="pay" id="pay3" value="bitcoin" checked>
                                                     Bitcoin
                                                     <span></span>
                                                 </label>

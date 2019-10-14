@@ -227,7 +227,7 @@ require "./header.php";
 						<div class="row">
 							<div class="col-md-4">
 								<div class="box">
-									<input type="radio" name="payments_list" value="PastaBank" id="pastabank" checked required>
+									<input type="radio" name="payments_list" value="PastaBank" id="pastabank" disabled>
 									<label for="pastabank">Pasta
 										Bank
 										<img src="assets/images/icon-lpb.jpg" alt="">
@@ -250,7 +250,7 @@ require "./header.php";
 							</div>
 							<div class="col-md-4">
 								<div class="box">
-									<input type="radio" name="payments_list" value="bitcoin" id="bitcoin" disabled>
+									<input type="radio" name="payments_list" value="bitcoin" id="bitcoin" checked required>
 									<label for="bitcoin">
 										Bitcoin
 										<img src="assets/images/icon-bit.jpg" alt="">

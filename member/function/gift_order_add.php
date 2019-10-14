@@ -118,7 +118,7 @@ $result = mysql_query($sql) or die("<script>alert('Error in payment');</script><
 
 /////////////////Перенаправление в анкету///////////////
 echo	("
-			<script>javascript:window.location='../pay.php?payment_id=$payment_id'</script>
+			<script>javascript:window.location='payment/crypt/paykassa_send.php?payment_id=$payment_id'</script>
 		");
 ///////////////////////////////////////////////////////
 
